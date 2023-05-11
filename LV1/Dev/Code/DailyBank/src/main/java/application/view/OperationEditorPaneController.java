@@ -65,9 +65,20 @@ public class OperationEditorPaneController {
 			this.cbTypeOpe.getSelectionModel().select(0);
 			break;
 		case CREDIT:
-			AlertUtilities.showAlert(this.primaryStage, "Non implémenté", "Modif de compte n'est pas implémenté", null,
-					AlertType.ERROR);
-			return null;
+			String info2 = "Cpt. : " + this.compteEdite.idNumCompte + "  "
+					+ String.format(Locale.ENGLISH, "%12.02f", this.compteEdite.solde) + "  /  "
+					+ String.format(Locale.ENGLISH, "%8d", this.compteEdite.debitAutorise);
+			this.lblMessage.setText(info2);
+
+			this.btnOk.setText("Effectuer Crédit");
+			this.btnCancel.setText("Annuler Crédit");
+
+			ObservableList<String> listTypesOpesPossibles2 = FXCollections.observableArrayList();
+			listTypesOpesPossibles2.addAll(ConstantesIHM.OPERATIONS_CREDIT_GUICHET);
+
+			this.cbTypeOpe.setItems(listTypesOpesPossibles2);
+			this.cbTypeOpe.getSelectionModel().select(0);
+			break;
 		// break;
 		}
 
@@ -155,8 +166,21 @@ public class OperationEditorPaneController {
 			this.primaryStage.close();
 			break;
 		case CREDIT:
-			// ce genre d'operation n'est pas encore géré
-			this.operationResultat = null;
+			double montant2;
+			String typeOp2 = this.cbTypeOpe.getValue();
+			try {
+				montant2 = Double.parseDouble(this.txtMontant.getText().trim());
+				this.operationResultat = new Operation(-1, montant2, null, null, this.compteEdite.idNumCli, typeOp2);
+				if (montant2 <= 0)
+					throw new NumberFormatException();
+			} catch (NumberFormatException nfe) {
+				this.txtMontant.getStyleClass().add("borderred");
+				this.lblMontant.getStyleClass().add("borderred");
+				this.txtMontant.requestFocus();
+				return;
+			}
+			
+			
 			this.primaryStage.close();
 			break;
 		}
