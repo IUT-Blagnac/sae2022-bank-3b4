@@ -6,6 +6,7 @@ import application.control.DailyBankMainFrame;
  * 
  * Classe principale de lancement.
  * bonour bradley
+ * aurevoir
  */
 
 public class DailyBankApp {
