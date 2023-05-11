@@ -5,7 +5,7 @@ import application.control.DailyBankMainFrame;
 /**
  * 
  * Classe principale de lancement.
- *
+ * bonour bradley
  */
 
 public class DailyBankApp {
