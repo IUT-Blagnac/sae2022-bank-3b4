@@ -8,6 +8,9 @@ import application.control.DailyBankMainFrame;
  * bonour bradley
  * aurevoir
  */
+/*
+ * Coucou c'est Clément
+ */
 
 public class DailyBankApp {
 
