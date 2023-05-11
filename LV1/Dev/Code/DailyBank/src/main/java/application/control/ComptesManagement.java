@@ -61,8 +61,7 @@ public class ComptesManagement {
 	}
 
 	public void gererOperationsDUnCompte(CompteCourant cpt) {
-		OperationsManagement om = new OperationsManagement(this.primaryStage, this.dailyBankState,
-				this.clientDesComptes, cpt);
+		OperationsManagement om = new OperationsManagement(this.primaryStage, this.dailyBankState,this.clientDesComptes, cpt);
 		om.doOperationsManagementDialog();
 	}
 
