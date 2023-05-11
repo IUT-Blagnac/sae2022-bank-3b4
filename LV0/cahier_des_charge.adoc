@@ -22,7 +22,7 @@ L'application doit permettre la gestion des comptes bancaires de dépôt pour le
 === 3.1. Version existante (V0)
 Dans la version existante (V0), les guichetiers peuvent :
 
-- Modifier les informations client (adresse, téléphone, etc.).
+- Modifier les informations client (adresse, téléphone, etc.). 
 - Créer de nouveaux clients.
 - Consulter les comptes.
 - Débiter un compte.
