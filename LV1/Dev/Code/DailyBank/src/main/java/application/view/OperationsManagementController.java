@@ -79,6 +79,8 @@ public class OperationsManagementController {
 	private Button btnDebit;
 	@FXML
 	private Button btnCredit;
+	@FXML
+	private Button btnAutre;
 
 	@FXML
 	private void doCancel() {
@@ -105,13 +107,19 @@ public class OperationsManagementController {
 	}
 
 	@FXML
-	private void doAutre() {
+	private void doTransaction() {
+		Operation op = this.omDialogController.enregistrerVirement();
+		if (op != null) {
+			this.updateInfoCompteClient();
+			this.validateComponentState();
+		}
 	}
 
 	private void validateComponentState() {
 		// Non implémenté => désactivé
 		this.btnCredit.setDisable(false);
 		this.btnDebit.setDisable(false);
+		this.btnAutre.setDisable(false);
 	}
 
 	private void updateInfoCompteClient() {

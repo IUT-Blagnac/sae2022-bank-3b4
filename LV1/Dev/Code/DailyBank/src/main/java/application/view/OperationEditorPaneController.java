@@ -57,7 +57,6 @@ public class OperationEditorPaneController {
 
 			this.btnOk.setText("Effectuer Débit");
 			this.btnCancel.setText("Annuler débit");
-
 			ObservableList<String> listTypesOpesPossibles = FXCollections.observableArrayList();
 			listTypesOpesPossibles.addAll(ConstantesIHM.OPERATIONS_DEBIT_GUICHET);
 
