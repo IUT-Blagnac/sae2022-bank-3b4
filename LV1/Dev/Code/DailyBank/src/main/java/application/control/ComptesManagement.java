@@ -76,7 +76,6 @@ public class ComptesManagement {
 				// compte = null;
 				Access_BD_CompteCourant acc = new Access_BD_CompteCourant();
 				acc.insertCompte(compte);
-				System.out.println("ca a marché");
 				
 				if (Math.random() < -1) {
 					throw new ApplicationException(Table.CompteCourant, Order.INSERT, "todo : test exceptions", null);
