@@ -72,12 +72,16 @@ public class ComptesManagement {
 		if (compte != null) {
 			try {
 				// Temporaire jusqu'à implémentation
-				compte = null;
-				AlertUtilities.showAlert(this.primaryStage, "En cours de développement", "Non implémenté",
-						"Enregistrement réel en BDD du compe non effectué\nEn cours de développement", AlertType.ERROR);
+				// compte = null;
+				Access_BD_CompteCourant acc = new Access_BD_CompteCourant();
+				acc.insertCompte(compte);
+				System.out.println("ca a marché");
+				// AlertUtilities.showAlert(this.primaryStage, "En cours de développement", "Non implémenté",
+				// 		"Enregistrement réel en BDD du compe non effectué\nEn cours de développement", AlertType.ERROR);
 
 				// TODO : enregistrement du nouveau compte en BDD (la BDD donne de nouvel id
 				// dans "compte")
+
 
 				// if JAMAIS vrai
 				// existe pour compiler les catchs dessous
@@ -96,6 +100,29 @@ public class ComptesManagement {
 		return compte;
 	}
 
+	
+		public CompteCourant cloturerCompte(CompteCourant c) {
+			CompteEditorPane cep = new CompteEditorPane(this.primaryStage, this.dailyBankState);
+			CompteCourant result = cep.doCompteEditorDialog(this.clientDesComptes,c, EditionMode.SUPPRESSION);
+			if (result != null) {
+				try {
+					Access_BD_CompteCourant ac = new Access_BD_CompteCourant();
+					result.setCloturer();
+					ac.deleteCompte(result);
+				} catch (DatabaseConnexionException e) {
+					ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dailyBankState, e);
+					ed.doExceptionDialog();
+					result = null;
+					this.primaryStage.close();
+				} catch (ApplicationException ae) {
+					ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dailyBankState, ae);
+					ed.doExceptionDialog();
+					result = null;
+				}
+			}
+			return result;
+		}
+	
 	public ArrayList<CompteCourant> getComptesDunClient() {
 		ArrayList<CompteCourant> listeCpt = new ArrayList<>();
 

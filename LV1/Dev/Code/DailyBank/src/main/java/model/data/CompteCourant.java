@@ -47,4 +47,7 @@ public class CompteCourant {
 		return s;
 	}
 
+	public void setCloturer(){
+		this.estCloture="O";
+	}
 }

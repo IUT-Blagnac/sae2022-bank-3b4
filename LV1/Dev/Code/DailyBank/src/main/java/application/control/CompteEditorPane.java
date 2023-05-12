@@ -1,5 +1,8 @@
 package application.control;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import application.DailyBankApp;
 import application.DailyBankState;
 import application.tools.EditionMode;
@@ -14,7 +17,7 @@ import model.data.Client;
 import model.data.CompteCourant;
 
 public class CompteEditorPane {
-
+	
 	private Stage primaryStage;
 	private CompteEditorPaneController cepcViewController;
 
@@ -46,4 +49,5 @@ public class CompteEditorPane {
 	public CompteCourant doCompteEditorDialog(Client client, CompteCourant cpte, EditionMode em) {
 		return this.cepcViewController.displayDialog(client, cpte, em);
 	}
+		
 }
