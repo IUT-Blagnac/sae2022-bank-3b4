@@ -187,6 +187,12 @@ public class Access_BD_Operation {
 			throw new DataAccessException(Table.Operation, Order.INSERT, "Erreur accès", e);}
 
     }
+	//on creer un insert virement qui va appeler insertDebit et insertCredit
+	public void insertVirement(int idNumCompte, double montant, String idTypeOp) throws DatabaseConnexionException, DataAccessException, ManagementRuleViolation{
+		insertCredit(idNumCompte, montant, idTypeOp);
+		insertDebit(idNumCompte, montant, idTypeOp);
+
+	} 
 
 	/*
 	 * Fonction utilitaire qui retourne un ordre sql "to_date" pour mettre une date

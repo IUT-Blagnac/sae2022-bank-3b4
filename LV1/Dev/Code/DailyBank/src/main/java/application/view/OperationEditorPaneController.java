@@ -64,18 +64,31 @@ public class OperationEditorPaneController {
 			this.cbTypeOpe.getSelectionModel().select(0);
 			break;
 		case CREDIT:
-			String info2 = "Cpt. : " + this.compteEdite.idNumCompte + "  "
+			info = "Cpt. : " + this.compteEdite.idNumCompte + "  "
 					+ String.format(Locale.ENGLISH, "%12.02f", this.compteEdite.solde) + "  /  "
 					+ String.format(Locale.ENGLISH, "%8d", this.compteEdite.debitAutorise);
-			this.lblMessage.setText(info2);
+			this.lblMessage.setText(info);
 
 			this.btnOk.setText("Effectuer Crédit");
 			this.btnCancel.setText("Annuler Crédit");
 
-			ObservableList<String> listTypesOpesPossibles2 = FXCollections.observableArrayList();
-			listTypesOpesPossibles2.addAll(ConstantesIHM.OPERATIONS_CREDIT_GUICHET);
+			listTypesOpesPossibles = FXCollections.observableArrayList();
+			listTypesOpesPossibles.addAll(ConstantesIHM.OPERATIONS_CREDIT_GUICHET);
 
-			this.cbTypeOpe.setItems(listTypesOpesPossibles2);
+			this.cbTypeOpe.setItems(listTypesOpesPossibles);
+			this.cbTypeOpe.getSelectionModel().select(0);
+			break;
+		case VIREMENT:
+			info = "Cpt. : " + this.compteEdite.idNumCompte + "  "
+					+ String.format(Locale.ENGLISH, "%12.02f", this.compteEdite.solde) + "  /  "
+					+ String.format(Locale.ENGLISH, "%8d", this.compteEdite.debitAutorise);
+			this.lblMessage.setText(info);
+			this.btnOk.setText("Effectuer Virement");
+			this.btnCancel.setText("Annuler Virement");
+			listTypesOpesPossibles = FXCollections.observableArrayList();
+			listTypesOpesPossibles.addAll(ConstantesIHM.OPERATIONS_VIREMENT_GUICHET);
+			
+			this.cbTypeOpe.setItems(listTypesOpesPossibles);
 			this.cbTypeOpe.getSelectionModel().select(0);
 			break;
 		// break;
