@@ -106,20 +106,15 @@ public class OperationsManagementController {
 		}
 	}
 
-//	@FXML
-//	private void doTransaction() {
-//		Operation op = this.omDialogController.enregistrerVirement();
-//		if (op != null) {
-//			this.updateInfoCompteClient();
-//			this.validateComponentState();
-//		}
-//	}
+	@FXML
+	private void doAutre() {
+		
+	}
 
 	private void validateComponentState() {
 		// Non implémenté => désactivé
 		this.btnCredit.setDisable(false);
 		this.btnDebit.setDisable(false);
-		this.btnAutre.setDisable(false);
 	}
 
 	private void updateInfoCompteClient() {
