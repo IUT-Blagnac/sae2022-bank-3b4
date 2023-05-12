@@ -149,7 +149,7 @@ public class Access_BD_CompteCourant {
 			}
 			Connection con = LogToDatabase.getConnexion();
 
-			String query = "UPDATE CompteCourant SET " + "debitAutorise = ? " + "WHERE idNumCompte = ?";
+			String query = "UPDATE CompteCourant SET " + "solde = ? " + "WHERE idNumCompte = ?";
 
 			PreparedStatement pst = con.prepareStatement(query);
 			pst.setInt(1, cc.debitAutorise);
@@ -169,4 +169,77 @@ public class Access_BD_CompteCourant {
 			throw new DataAccessException(Table.CompteCourant, Order.UPDATE, "Erreur accès", e);
 		}
 	}
+
+	public void insertCompte(CompteCourant compte)
+			throws RowNotFoundOrTooManyRowsException, DataAccessException, DatabaseConnexionException {
+		try {
+
+			Connection con = LogToDatabase.getConnexion();
+
+			String query = "INSERT INTO comptecourant VALUES (" + "seq_id_compte.NEXTVAL" + ", " + "?" + ", " + "?" + ", "
+			+ "?" + ", " + "?"+ ")";
+			PreparedStatement pst = con.prepareStatement(query);
+			pst.setInt(1, compte.debitAutorise);
+			pst.setDouble(2, compte.solde);
+			pst.setInt(3, compte.idNumCli);
+			pst.setString(4, "" + compte.estCloture.charAt(0));
+
+			System.err.println(query);
+
+			int result = pst.executeUpdate();
+			pst.close();
+
+			if (result != 1) {
+				con.rollback();
+				throw new RowNotFoundOrTooManyRowsException(Table.CompteCourant, Order.INSERT,
+						"Insert anormal (insert de moins ou plus d'une ligne)", null, result);
+			}
+
+			query = "SELECT seq_id_compte.CURRVAL from DUAL";
+
+			System.err.println(query);
+			PreparedStatement pst2 = con.prepareStatement(query);
+
+			ResultSet rs = pst2.executeQuery();
+			rs.next();
+			int idNumCompte = rs.getInt(1);
+
+			con.commit();
+			rs.close();
+			pst2.close();
+
+			compte.idNumCompte = idNumCompte;
+		} catch (SQLException e) {
+			throw new DataAccessException(Table.CompteCourant, Order.INSERT, "Erreur accès", e);
+		}
+	}
+
+    public void deleteCompte(CompteCourant cc) throws RowNotFoundOrTooManyRowsException, DataAccessException,
+	DatabaseConnexionException, ManagementRuleViolation {
+try {
+
+	
+	Connection con = LogToDatabase.getConnexion();
+
+	String query = "UPDATE CompteCourant SET " + "estcloture = ? " + "WHERE idNumCompte = ?";
+
+	PreparedStatement pst = con.prepareStatement(query);
+	pst.setString(1, ""+ cc.estCloture.charAt(0));
+	pst.setInt(2, cc.idNumCompte);
+
+	System.err.println(query);
+
+	int result = pst.executeUpdate();
+	pst.close();
+	if (result != 1) {
+		con.rollback();
+		throw new RowNotFoundOrTooManyRowsException(Table.CompteCourant, Order.UPDATE,
+				"Update anormal (update de moins ou plus d'une ligne)", null, result);
+	}
+	con.commit();
+} catch (SQLException e) {
+	throw new DataAccessException(Table.CompteCourant, Order.UPDATE, "Erreur accès", e);
 }
+
+    
+	}}

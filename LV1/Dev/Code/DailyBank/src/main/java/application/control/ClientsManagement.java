@@ -13,6 +13,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import model.data.Client;
+import model.data.CompteCourant;
 import model.orm.Access_BD_Client;
 import model.orm.exception.ApplicationException;
 import model.orm.exception.DatabaseConnexionException;
@@ -75,8 +76,9 @@ public class ClientsManagement {
 
 	public Client nouveauClient() {
 		Client client;
+		CompteCourant compte;
 		ClientEditorPane cep = new ClientEditorPane(this.primaryStage, this.dailyBankState);
-		client = cep.doClientEditorDialog(null, EditionMode.CREATION);
+		client = cep.doClientEditorDialog(null,EditionMode.CREATION);
 		if (client != null) {
 			try {
 				Access_BD_Client ac = new Access_BD_Client();

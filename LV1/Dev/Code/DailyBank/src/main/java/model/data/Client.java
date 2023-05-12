@@ -39,4 +39,8 @@ public class Client {
 				+ this.telephone + "}";
 	}
 
+	public int getnumClient(){
+		return idNumCli;
+	}
+
 }

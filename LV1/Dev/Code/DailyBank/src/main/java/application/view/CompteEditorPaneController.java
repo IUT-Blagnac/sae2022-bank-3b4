@@ -67,21 +67,25 @@ public class CompteEditorPaneController {
 			this.btnCancel.setText("Annuler");
 			break;
 		case MODIFICATION:
-			AlertUtilities.showAlert(this.primaryStage, "Non implémenté", "Modif de compte n'est pas implémenté", null,
-					AlertType.ERROR);
+			System.out.println("test");
 			return null;
 		// break;
 		case SUPPRESSION:
-			AlertUtilities.showAlert(this.primaryStage, "Non implémenté", "Suppression de compte n'est pas implémenté",
-					null, AlertType.ERROR);
-			return null;
-		// break;
+		this.txtDecAutorise.setDisable(true);
+			this.txtSolde.setDisable(true);
+			this.lblMessage.setText("Cloturation du compte");
+			this.lblSolde.setText("Solde");
+			this.btnOk.setText("Supprimer");
+			this.btnCancel.setText("Annuler");
+			
+		break;
 		}
 
 		// Paramétrages spécifiques pour les chefs d'agences
 		if (ConstantesIHM.isAdmin(this.dailyBankState.getEmployeActuel())) {
 			// rien pour l'instant
 		}
+		
 
 		// initialisation du contenu des champs
 		this.txtIdclient.setText("" + this.compteEdite.idNumCli);
@@ -91,7 +95,6 @@ public class CompteEditorPaneController {
 		this.txtSolde.setText(String.format(Locale.ENGLISH, "%10.02f", this.compteEdite.solde));
 
 		this.compteResultat = null;
-
 		this.primaryStage.showAndWait();
 		return this.compteResultat;
 	}
@@ -188,7 +191,15 @@ public class CompteEditorPaneController {
 	}
 
 	private boolean isSaisieValide() {
-
-		return true;
+		 if (txtIdclient.getText().isEmpty()
+		 		|| txtIdAgence.getText().isEmpty()
+		 		|| txtIdNumCompte.getText().isEmpty()
+		 		|| txtDecAutorise.getText().isEmpty()
+		 		|| txtSolde.getText().isEmpty()) {
+		 	return false; // Au moins un champ est vide
+		 } else {
+		 	return true; // Tous les champs sont remplis
+		 }
 	}
+	
 }

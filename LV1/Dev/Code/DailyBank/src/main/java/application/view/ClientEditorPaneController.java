@@ -22,7 +22,7 @@ import model.orm.exception.Order;
 import model.orm.exception.Table;
 
 public class ClientEditorPaneController {
-
+	
 	// Etat courant de l'application
 	private DailyBankState dailyBankState;
 
