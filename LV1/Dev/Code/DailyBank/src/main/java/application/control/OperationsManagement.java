@@ -116,10 +116,8 @@ public class OperationsManagement {
 			try {
 				Access_BD_Operation ao = new Access_BD_Operation();
 
-				ao.insertCredit(this.compteConcerne.idNumCompte, op.montant, op.idTypeOp);
-				//Operation op2 = oep.doOperationEditorDialog(this.compteConcerne, CategorieOperation.DEBIT);
-				ao.insertDebit(this.compteConcerne.idNumCompte, op.montant, op.idTypeOp);
-
+				ao.insertVirement(this.compteConcerne.idNumCompte,op.idNumCompte, op.montant, op.idTypeOp);
+				
 			} catch (DatabaseConnexionException e) {
 				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dailyBankState, e);
 				ed.doExceptionDialog();
