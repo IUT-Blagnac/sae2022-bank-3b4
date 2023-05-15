@@ -26,7 +26,7 @@ Entrez votre identifiant et votre mot de passe et cliquez sur ‘Valider’
  
 Vous êtes maintenant connecté à l’application bancaire !
 Les fonctions pour le Guichetier
-==Créditer/Débiter
+== Créditer/Débiter
 • Une fois connecté, cliquez sur 'Gestion' puis sélectionnez 'Clients'.
  
 • Renseignez les informations du client et cliquez sur 'Rechercher'.
@@ -46,7 +46,7 @@ Une nouvelle fenêtre s’ouvre on y ajoute Nom, Prénom, Adresse, Téléphone, 
 Enfin on clique sur ajouter pour finaliser la création du client.
   
  
-==Créer un Compte
+== Créer un Compte
 Une fois connecté, cliquez sur 'Gestion' puis sélectionnez 'Clients'.
 Renseigner les informations du client et cliquer sur 'Rechercher'.
 Sélectionnez le client recherché et cliquez sur 'Comptes client'.
@@ -56,7 +56,7 @@ Indiquez le montant du découvert autorisé ainsi que le solde de début (qui do
  
  
 
-==Clôturer un Compte
+== Clôturer un Compte
 Après s’être connecté, cliquer sur 'Gestion' et sélectionner 'Client'.
 Renseigner les informations du client et cliquer sur rechercher.
 Sélectionner le client et cliquer sur Comptes client.
@@ -70,17 +70,17 @@ Sélectionner un client, son compte
 Cliquer sur 'Virement' et choisir le montant puis l’identifiant du compte visé
  
  
-=Fonctions pour le Chef d’agence
+= Fonctions pour le Chef d’agence
 Note : ces fonctions ne sont pas encore implémentées dans l’application mais seront bientôt disponible
-==Désactiver un employé
+== Désactiver un employé
 Après s’être connecté, cliquer sur gestion et sélectionner 'Employé'.
 Renseigner les informations du client et cliquer sur 'Rechercher'.
 Sélectionner l’employé et cliquer sur 'Désactiver Employé'.
-==Modifier un employé
+== Modifier un employé
 Après s’être connecté, cliquer sur gestion et sélectionner 'Employé'.
 Renseigner les informations du client et cliquer sur 'Rechercher'.
 Sélectionner l’employé et cliquer sur 'Modifier Employé'.
-==Ajouter un nouvel employé
+== Ajouter un nouvel employé
 Après s’être connecté, cliquer sur gestion et sélectionner 'Employé'.
 Renseigner les informations du client et cliquer sur 'Rechercher'.
 Sélectionner l’employé et cliquer sur 'Nouveau Employé'.
