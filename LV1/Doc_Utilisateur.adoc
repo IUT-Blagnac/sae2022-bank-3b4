@@ -1,0 +1,89 @@
+=SOMMAIRE
+===1.	Présentation générale
+===2.	Installation 
+===3.	Utilisation
+==Présentation Générale
+Dans le cadre de la restructuration de ses services bancaires, la banque ‘DailyBank’ a décidé de développer une application Java-Oracle pour gérer les comptes clients. Cette application remplacera plusieurs outils obsolètes. Voici les fonctionnalités proposées par notre application :
+Pour le guichetier :
+Générer un relevé mensuel d’un compte en PDF
+Gérer les prélèvements automatiques
+Créditer un compte client
+Effectuer un Débit exceptionnel
+Pour le chef d’agence :
+Effectuer un Débit exceptionnel
+Simuler un emprunt
+Simuler une assurance d’emprunt
+==Installation et utilisation
+• Pour l'installation et l'utilisation, il suffit de double-cliquer sur le fichier avec l'extension .jar ou de lancer l'extraction du fichier compressé. 
+• Afin de modifier les employés et les autres chefs d'agence, une connexion à un compte chef d'agence est requise. 
+• Lorsque vous naviguez sur les pages de type "management" des clients ou des employés, il est important de rechercher et de cliquer sur le nom d'une personne pour savoir quelles fonctionnalités elle peut accéder.
+
+
+==Connexion
+Cliquez sur le bouton ‘connexion’ situé en bas de la fenêtre
+ 
+Entrez votre identifiant et votre mot de passe et cliquez sur ‘Valider’
+ 
+Vous êtes maintenant connecté à l’application bancaire !
+Les fonctions pour le Guichetier
+==Créditer/Débiter
+• Une fois connecté, cliquez sur 'Gestion' puis sélectionnez 'Clients'.
+ 
+• Renseignez les informations du client et cliquez sur 'Rechercher'.
+ 
+• Sélectionnez le client recherché et cliquez sur 'Comptes client'.
+• Sélectionnez le compte concerné et cliquez sur 'Voir opérations' pour enregistrer un crédit ou un débit.
+ 
+• Vous n’avez plus qu’à sélectionner ‘Enregistrer débit’ ou ‘Enregistrer un crédit’ et indiquer un montant avant de valider 
+ 
+
+
+==Créer un Client
+ Une fois connecté, cliquez sur 'Gestion' puis sélectionnez 'Clients'.
+ Ensuite on clique en bas a droite sur ‘Nouveau client’ 
+ 
+Une nouvelle fenêtre s’ouvre on y ajoute Nom, Prénom, Adresse, Téléphone, et Email en spécifiant si le client est actif ou non.
+Enfin on clique sur ajouter pour finaliser la création du client.
+  
+ 
+==Créer un Compte
+Une fois connecté, cliquez sur 'Gestion' puis sélectionnez 'Clients'.
+Renseigner les informations du client et cliquer sur 'Rechercher'.
+Sélectionnez le client recherché et cliquez sur 'Comptes client'.
+Cliquer ensuite sur 'Nouveau compte'.
+ 
+Indiquez le montant du découvert autorisé ainsi que le solde de début (qui doit être supérieur ou égal à 50).
+ 
+ 
+
+==Clôturer un Compte
+Après s’être connecté, cliquer sur 'Gestion' et sélectionner 'Client'.
+Renseigner les informations du client et cliquer sur rechercher.
+Sélectionner le client et cliquer sur Comptes client.
+Sélectionner ensuite un compte.
+Cliquer sur ‘Supprimer compte’.
+ 
+Puis valider la clôturassions du compte.
+Virement Compte à Compte
+Après s’être connecté, cliquer sur 'Gestion'
+Sélectionner un client, son compte
+Cliquer sur 'Virement' et choisir le montant puis l’identifiant du compte visé
+ 
+ 
+=Fonctions pour le Chef d’agence
+Note : ces fonctions ne sont pas encore implémentées dans l’application mais seront bientôt disponible
+==Désactiver un employé
+Après s’être connecté, cliquer sur gestion et sélectionner 'Employé'.
+Renseigner les informations du client et cliquer sur 'Rechercher'.
+Sélectionner l’employé et cliquer sur 'Désactiver Employé'.
+==Modifier un employé
+Après s’être connecté, cliquer sur gestion et sélectionner 'Employé'.
+Renseigner les informations du client et cliquer sur 'Rechercher'.
+Sélectionner l’employé et cliquer sur 'Modifier Employé'.
+==Ajouter un nouvel employé
+Après s’être connecté, cliquer sur gestion et sélectionner 'Employé'.
+Renseigner les informations du client et cliquer sur 'Rechercher'.
+Sélectionner l’employé et cliquer sur 'Nouveau Employé'.
+Use Case Diagram
+ 
+
