@@ -23,14 +23,14 @@ Lorsque vous naviguez sur les pages de type "management" des clients ou des empl
 
 == Utilisation
 
-===Connexion :
+=== Connexion :
 
 Cliquez sur le bouton 'connexion' situé en bas de la fenêtre.
 Entrez votre identifiant et votre mot de passe et cliquez sur 'Valider'.
 Vous êtes maintenant connecté à l'application bancaire !
 Les fonctions pour le Guichetier :
 
-===Créditer/Débiter :
+=== Créditer/Débiter :
 
 Une fois connecté, cliquez sur 'Gestion' puis sélectionnez 'Clients'.
 Renseignez les informations du client et cliquez sur 'Rechercher'.
