@@ -118,6 +118,7 @@ public class ComptesManagement {
 			return result;
 		}
 	
+	
 	public ArrayList<CompteCourant> getComptesDunClient() {
 		ArrayList<CompteCourant> listeCpt = new ArrayList<>();
 
