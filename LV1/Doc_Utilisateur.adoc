@@ -30,7 +30,7 @@ Lorsque vous naviguez sur les pages de type "management" des clients ou des empl
 
 Cliquez sur le bouton 'connexion' situé en bas de la fenêtre.
 
-![BoutonConnexion](https://raw.githubusercontent.com/loispacqueteau/IUT-Blagnac/sae2022-bank-3b4/LV1/connexion.png)
+![BoutonConnexion](https://raw.githubusercontent.com/loispacqueteau/sae2022-bank-3b4/main/connexion.png)
 
 Entrez votre identifiant et votre mot de passe et cliquez sur 'Valider'.
 Vous êtes maintenant connecté à l'application bancaire !
