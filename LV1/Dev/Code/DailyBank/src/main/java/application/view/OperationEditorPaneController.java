@@ -27,6 +27,11 @@ public class OperationEditorPaneController {
 	// Fenêtre physique ou est la scène contenant le fichier xml contrôlé par this
 	private Stage primaryStage;
 
+	// attribut pour l'identifiant du compte destinataire que l'on va venir recuperer dans operationsmanagement
+	private int idCompteDestinataire;
+
+
+
 	// Données de la fenêtre
 	private CategorieOperation categorieOperation;
 	private CompteCourant compteEdite;
@@ -46,15 +51,19 @@ public class OperationEditorPaneController {
 	public Operation displayDialog(CompteCourant cpte, CategorieOperation mode) {
 		this.categorieOperation = mode;
 		this.compteEdite = cpte;
+		
 
+		this.primaryStage.setWidth(600);
+		this.primaryStage.setHeight(350);
 		switch (mode) {
 		case DEBIT:
-
+			
 			String info = "Cpt. : " + this.compteEdite.idNumCompte + "  "
 					+ String.format(Locale.ENGLISH, "%12.02f", this.compteEdite.solde) + "  /  "
 					+ String.format(Locale.ENGLISH, "%8d", this.compteEdite.debitAutorise);
 			this.lblMessage.setText(info);
-
+			this.lblCompteDestinataire.setVisible(false);
+			this.txtCompteDestinataire.setVisible(false);
 			this.btnOk.setText("Effectuer Débit");
 			this.btnCancel.setText("Annuler débit");
 			ObservableList<String> listTypesOpesPossibles = FXCollections.observableArrayList();
@@ -64,18 +73,37 @@ public class OperationEditorPaneController {
 			this.cbTypeOpe.getSelectionModel().select(0);
 			break;
 		case CREDIT:
-			String info2 = "Cpt. : " + this.compteEdite.idNumCompte + "  "
+			
+			info = "Cpt. : " + this.compteEdite.idNumCompte + "  "
 					+ String.format(Locale.ENGLISH, "%12.02f", this.compteEdite.solde) + "  /  "
 					+ String.format(Locale.ENGLISH, "%8d", this.compteEdite.debitAutorise);
-			this.lblMessage.setText(info2);
+			this.lblMessage.setText(info);
 
 			this.btnOk.setText("Effectuer Crédit");
 			this.btnCancel.setText("Annuler Crédit");
+			this.lblCompteDestinataire.setVisible(false);
+			this.txtCompteDestinataire.setVisible(false);
+			listTypesOpesPossibles = FXCollections.observableArrayList();
+			listTypesOpesPossibles.addAll(ConstantesIHM.OPERATIONS_CREDIT_GUICHET);
 
-			ObservableList<String> listTypesOpesPossibles2 = FXCollections.observableArrayList();
-			listTypesOpesPossibles2.addAll(ConstantesIHM.OPERATIONS_CREDIT_GUICHET);
-
-			this.cbTypeOpe.setItems(listTypesOpesPossibles2);
+			this.cbTypeOpe.setItems(listTypesOpesPossibles);
+			this.cbTypeOpe.getSelectionModel().select(0);
+			break;
+		case VIREMENT:
+			
+			info = "Cpt. : " + this.compteEdite.idNumCompte + "  "
+					+ String.format(Locale.ENGLISH, "%12.02f", this.compteEdite.solde) + "  /  "
+					+ String.format(Locale.ENGLISH, "%8d", this.compteEdite.debitAutorise);
+			this.lblMessage.setText(info);
+			this.lblCompteDestinataire.setText("Compte destinataire");
+			this.txtCompteDestinataire.setVisible(true);
+			this.btnOk.setText("Effectuer Virement");
+			this.btnCancel.setText("Annuler Virement");
+			listTypesOpesPossibles = FXCollections.observableArrayList();
+			listTypesOpesPossibles.addAll(ConstantesIHM.OPERATIONS_VIREMENT_GUICHET);
+			
+			
+			this.cbTypeOpe.setItems(listTypesOpesPossibles);
 			this.cbTypeOpe.getSelectionModel().select(0);
 			break;
 		// break;
@@ -114,11 +142,20 @@ public class OperationEditorPaneController {
 	private Button btnOk;
 	@FXML
 	private Button btnCancel;
+	@FXML
+	private Label lblCompteDestinataire;
+	@FXML
+	private TextField txtCompteDestinataire;
+	
 
 	@FXML
 	private void doCancel() {
 		this.operationResultat = null;
 		this.primaryStage.close();
+	}
+	//getter de l'identifiant du compte destinataire
+	public int getIdCompteDestinataire() {
+		return idCompteDestinataire;
 	}
 
 	@FXML
@@ -161,6 +198,7 @@ public class OperationEditorPaneController {
 				return;
 			}
 			String typeOp = this.cbTypeOpe.getValue();
+			System.out.println(typeOp);
 			this.operationResultat = new Operation(-1, montant, null, null, this.compteEdite.idNumCli, typeOp);
 			this.primaryStage.close();
 			break;
@@ -182,6 +220,28 @@ public class OperationEditorPaneController {
 			
 			this.primaryStage.close();
 			break;
+		case VIREMENT:
+			double montant3;
+			//ici on declare l'indentifiant du compte destinataire
+			
+			String typeOp3 = this.cbTypeOpe.getValue();
+			try {
+				montant3 = Double.parseDouble(this.txtMontant.getText().trim());
+				this.idCompteDestinataire =Integer.parseInt(this.txtCompteDestinataire.getText().trim()) ;
+				this.operationResultat = new Operation(-1, montant3, null, null,idCompteDestinataire, typeOp3);
+				if (montant3 <= 0)
+					throw new NumberFormatException();
+			} catch (NumberFormatException nfe) {
+				this.txtMontant.getStyleClass().add("borderred");
+				this.lblMontant.getStyleClass().add("borderred");
+				this.txtMontant.requestFocus();
+				return;
+			}
+			
+			
+			this.primaryStage.close();
+			break;
 		}
+
 	}
 }
