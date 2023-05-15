@@ -27,7 +27,6 @@ public class OperationEditorPaneController {
 	// Fenêtre physique ou est la scène contenant le fichier xml contrôlé par this
 	private Stage primaryStage;
 
-	// attribut pour l'identifiant du compte destinataire que l'on va venir recuperer dans operationsmanagement
 	private int idCompteDestinataire;
 
 
