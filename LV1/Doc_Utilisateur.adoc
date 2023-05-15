@@ -14,7 +14,7 @@ Effectuer un débit exceptionnel
 
 Effectuer un débit exceptionnel
 Simuler un emprunt
-Simuler une assurance d'emprunt
+Simuler une assurance d'emprunt +
 == Installation
 
 Pour l'installation et l'utilisation, il suffit de double-cliquer sur le fichier avec l'extension .jar ou de lancer l'extraction du fichier compressé.
