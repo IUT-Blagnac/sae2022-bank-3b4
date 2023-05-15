@@ -29,6 +29,7 @@ Lorsque vous naviguez sur les pages de type "management" des clients ou des empl
 === Connexion 
 
 Cliquez sur le bouton 'connexion' situé en bas de la fenêtre.
+![Bouton connexion](sae2022-bank-3b4/LV1/connexion)
 Entrez votre identifiant et votre mot de passe et cliquez sur 'Valider'.
 Vous êtes maintenant connecté à l'application bancaire !
 Les fonctions pour le Guichetier :
