@@ -206,7 +206,6 @@ public class DailyBankMainFrameController {
 	 */
 	@FXML
 	private void doEmployeOption() {
-
 		LocalDate current_date;
 
 		current_date = LocalDate.now();
