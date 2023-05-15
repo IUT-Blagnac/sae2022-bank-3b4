@@ -1,7 +1,5 @@
 = SOMMAIRE +
-== 1	Présentation générale +
-== 2	Installation +
-== 3	Utilisation +
+:toc:
 === Présentation Générale +
 Dans le cadre de la restructuration de ses services bancaires, la banque ‘DailyBank’ a +
 décidé de développer une application Java-Oracle pour gérer les comptes clients. Cette application +
