@@ -38,7 +38,7 @@ Les fonctions pour le Guichetier
  
 
 
-== Créer un Client
+== Créer un Client +
  Une fois connecté, cliquez sur 'Gestion' puis sélectionnez 'Clients'.
  Ensuite on clique en bas a droite sur ‘Nouveau client’ 
  
@@ -46,7 +46,7 @@ Une nouvelle fenêtre s’ouvre on y ajoute Nom, Prénom, Adresse, Téléphone, 
 Enfin on clique sur ajouter pour finaliser la création du client.
   
  
-== Créer un Compte
+== Créer un Compte +
 Une fois connecté, cliquez sur 'Gestion' puis sélectionnez 'Clients'.
 Renseigner les informations du client et cliquer sur 'Rechercher'.
 Sélectionnez le client recherché et cliquez sur 'Comptes client'.
@@ -56,7 +56,7 @@ Indiquez le montant du découvert autorisé ainsi que le solde de début (qui do
  
  
 
-== Clôturer un Compte
+== Clôturer un Compte +
 Après s’être connecté, cliquer sur 'Gestion' et sélectionner 'Client'.
 Renseigner les informations du client et cliquer sur rechercher.
 Sélectionner le client et cliquer sur Comptes client.
@@ -64,25 +64,25 @@ Sélectionner ensuite un compte.
 Cliquer sur ‘Supprimer compte’.
  
 Puis valider la clôturassions du compte.
-Virement Compte à Compte
+== Virement Compte à Compte
 Après s’être connecté, cliquer sur 'Gestion'
 Sélectionner un client, son compte
 Cliquer sur 'Virement' et choisir le montant puis l’identifiant du compte visé
  
  
-= Fonctions pour le Chef d’agence
+= Fonctions pour le Chef d’agence +
 Note : ces fonctions ne sont pas encore implémentées dans l’application mais seront bientôt disponible
-== Désactiver un employé
+== Désactiver un employé +
 Après s’être connecté, cliquer sur gestion et sélectionner 'Employé'.
-Renseigner les informations du client et cliquer sur 'Rechercher'.
-Sélectionner l’employé et cliquer sur 'Désactiver Employé'.
-== Modifier un employé
-Après s’être connecté, cliquer sur gestion et sélectionner 'Employé'.
-Renseigner les informations du client et cliquer sur 'Rechercher'.
-Sélectionner l’employé et cliquer sur 'Modifier Employé'.
-== Ajouter un nouvel employé
-Après s’être connecté, cliquer sur gestion et sélectionner 'Employé'.
-Renseigner les informations du client et cliquer sur 'Rechercher'.
+Renseigner les informations du client et cliquer sur 'Rechercher'. +
+Sélectionner l’employé et cliquer sur 'Désactiver Employé'. +
+== Modifier un employé +
+Après s’être connecté, cliquer sur gestion et sélectionner 'Employé'. +
+Renseigner les informations du client et cliquer sur 'Rechercher'. +
+Sélectionner l’employé et cliquer sur 'Modifier Employé'. +
+== Ajouter un nouvel employé +
+Après s’être connecté, cliquer sur gestion et sélectionner 'Employé'. +
+Renseigner les informations du client et cliquer sur 'Rechercher'. +
 Sélectionner l’employé et cliquer sur 'Nouveau Employé'.
 Use Case Diagram
  
