@@ -1,7 +1,7 @@
 = SOMMAIRE +
-=== 1.	Présentation générale +
-=== 2.	Installation +
-=== 3.	Utilisation +
+ 1.	Présentation générale +
+ 2.	Installation +
+ 3.	Utilisation +
 == Présentation Générale +
 Dans le cadre de la restructuration de ses services bancaires, la banque ‘DailyBank’ a décidé de développer une application Java-Oracle pour gérer les comptes clients. Cette application remplacera plusieurs outils obsolètes. Voici les fonctionnalités proposées par notre application :
 Pour le guichetier :
