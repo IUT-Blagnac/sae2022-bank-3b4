@@ -1,8 +1,8 @@
-=SOMMAIRE +
-===1.	Présentation générale +
-===2.	Installation +
-===3.	Utilisation +
-==Présentation Générale +
+= SOMMAIRE +
+=== 1.	Présentation générale +
+=== 2.	Installation +
+=== 3.	Utilisation +
+== Présentation Générale +
 Dans le cadre de la restructuration de ses services bancaires, la banque ‘DailyBank’ a décidé de développer une application Java-Oracle pour gérer les comptes clients. Cette application remplacera plusieurs outils obsolètes. Voici les fonctionnalités proposées par notre application :
 Pour le guichetier :
 Générer un relevé mensuel d’un compte en PDF
@@ -19,7 +19,7 @@ Simuler une assurance d’emprunt
 • Lorsque vous naviguez sur les pages de type "management" des clients ou des employés, il est important de rechercher et de cliquer sur le nom d'une personne pour savoir quelles fonctionnalités elle peut accéder.
 
 
-==Connexion
+== Connexion
 Cliquez sur le bouton ‘connexion’ situé en bas de la fenêtre
  
 Entrez votre identifiant et votre mot de passe et cliquez sur ‘Valider’
@@ -38,7 +38,7 @@ Les fonctions pour le Guichetier
  
 
 
-==Créer un Client
+== Créer un Client
  Une fois connecté, cliquez sur 'Gestion' puis sélectionnez 'Clients'.
  Ensuite on clique en bas a droite sur ‘Nouveau client’ 
  
