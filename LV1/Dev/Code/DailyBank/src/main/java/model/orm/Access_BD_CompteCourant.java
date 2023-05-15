@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import application.tools.AlertUtilities;
 import model.data.CompteCourant;
 import model.orm.exception.DataAccessException;
 import model.orm.exception.DatabaseConnexionException;
@@ -218,7 +219,6 @@ public class Access_BD_CompteCourant {
 	DatabaseConnexionException, ManagementRuleViolation {
 try {
 
-	
 	Connection con = LogToDatabase.getConnexion();
 
 	String query = "UPDATE CompteCourant SET " + "estcloture = ? " + "WHERE idNumCompte = ?";
@@ -237,6 +237,7 @@ try {
 				"Update anormal (update de moins ou plus d'une ligne)", null, result);
 	}
 	con.commit();
+	
 } catch (SQLException e) {
 	throw new DataAccessException(Table.CompteCourant, Order.UPDATE, "Erreur accès", e);
 }

@@ -97,6 +97,10 @@ public class ComptesManagement {
 			CompteCourant result = cep.doCompteEditorDialog(this.clientDesComptes,c, EditionMode.SUPPRESSION);
 			if (result != null) {
 				try {
+					if(c.solde>0){
+						AlertUtilities.showAlert(primaryStage, "Erreur cloturation", "Le solde trop grand", "Le solde doit etre égal a 0", AlertType.ERROR);
+						return null;
+					}
 					Access_BD_CompteCourant ac = new Access_BD_CompteCourant();
 					result.setCloturer();
 					ac.deleteCompte(result);
