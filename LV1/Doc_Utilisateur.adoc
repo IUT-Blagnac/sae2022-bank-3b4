@@ -47,7 +47,8 @@ Une fois connecté, cliquez sur 'Gestion' puis sélectionnez 'Clients'.
 Ensuite, cliquez en bas à droite sur 'Nouveau client'.
 Une nouvelle fenêtre s'ouvre, ajoutez Nom, Prénom, Adresse, Téléphone et Email en spécifiant si le client est actif ou non.
 Enfin, cliquez sur ajouter pour finaliser la création du client.
-== Créer un Compte :
+
+=== Créer un Compte :
 
 Une fois connecté, cliquez sur 'Gestion' puis sélectionnez 'Clients'.
 Renseignez les informations du client et cliquez sur 'Rechercher'.
@@ -57,6 +58,7 @@ Indiquez le montant du découvert autorisé ainsi que le solde de début (qui do
  
 
 === Clôturer un Compte 
+
 Après s’être connecté, cliquer sur 'Gestion' et sélectionner 'Client'.
 Renseigner les informations du client et cliquer sur rechercher.
 Sélectionner le client et cliquer sur Comptes client.
@@ -64,15 +66,20 @@ Sélectionner ensuite un compte.
 Cliquer sur ‘Supprimer compte’.
  
 Puis valider la clôturassions du compte.
+
 === Virement Compte à Compte
+
 Après s’être connecté, cliquer sur 'Gestion'
 Sélectionner un client, son compte
 Cliquer sur 'Virement' et choisir le montant puis l’identifiant du compte visé
  
  
 === Fonctions pour le Chef d’agence +
+
 Note : ces fonctions ne sont pas encore implémentées dans l’application mais seront bientôt disponible
+
 === Désactiver un employé +
+
 Après s’être connecté, cliquer sur gestion et sélectionner 'Employé'.
 Renseigner les informations du client et cliquer sur 'Rechercher'. +
 Sélectionner l’employé et cliquer sur 'Désactiver Employé'. +
