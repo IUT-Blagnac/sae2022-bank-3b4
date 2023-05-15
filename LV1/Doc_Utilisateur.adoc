@@ -10,7 +10,7 @@ Générer un relevé mensuel d'un compte en PDF
 Gérer les prélèvements automatiques
 Créditer un compte client
 Effectuer un débit exceptionnel
-=== Pour le chef d'agence :
+=== Pour le chef d'agence 
 
 Effectuer un débit exceptionnel
 Simuler un emprunt
