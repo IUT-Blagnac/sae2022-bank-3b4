@@ -4,13 +4,13 @@
 
 Dans le cadre de la restructuration de ses services bancaires, la banque 'DailyBank' a décidé de développer une application Java-Oracle pour gérer les comptes clients. Cette application remplacera plusieurs outils obsolètes. Voici les fonctionnalités proposées par notre application 
 
-==Pour le guichetier 
+== Pour le guichetier 
 
 Générer un relevé mensuel d'un compte en PDF
 Gérer les prélèvements automatiques
 Créditer un compte client
 Effectuer un débit exceptionnel
-===Pour le chef d'agence :
+=== Pour le chef d'agence :
 
 Effectuer un débit exceptionnel
 Simuler un emprunt
