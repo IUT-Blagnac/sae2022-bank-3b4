@@ -38,23 +38,39 @@ Entrez votre identifiant et votre mot de passe et cliquez sur 'Valider'.
 
 Vous êtes maintenant connecté à l'application bancaire !
 
-Les fonctions pour le Guichetier :
+===Les fonctions pour le Guichetier :
 
 === Créditer/Débiter 
 
 
 Une fois connecté, cliquez sur 'Gestion' puis sélectionnez 'Clients'.
+
+![BoutonConnexion](https://raw.githubusercontent.com/loispacqueteau/sae2022-bank-3b4/main/crediterdebiter.png)
+
 Renseignez les informations du client et cliquez sur 'Rechercher'.
+
+![BoutonConnexion](https://raw.githubusercontent.com/loispacqueteau/sae2022-bank-3b4/main/crediterdebiter2.png)
+
 Sélectionnez le client recherché et cliquez sur 'Comptes client'.
 Sélectionnez le compte concerné et cliquez sur 'Voir opérations' pour enregistrer un crédit ou un débit.
+
+![BoutonConnexion](https://raw.githubusercontent.com/loispacqueteau/sae2022-bank-3b4/main/crediterdebiter3.png)
+
 Vous n'avez plus qu'à sélectionner 'Enregistrer débit' ou 'Enregistrer un crédit' et indiquer un montant avant de valider.
+
+![BoutonConnexion](https://raw.githubusercontent.com/loispacqueteau/sae2022-bank-3b4/main/crediterdebiter4.png)
 
 === Créer un Client :
 
 Une fois connecté, cliquez sur 'Gestion' puis sélectionnez 'Clients'.
 Ensuite, cliquez en bas à droite sur 'Nouveau client'.
+
+![BoutonConnexion](https://raw.githubusercontent.com/loispacqueteau/sae2022-bank-3b4/main/creeclient.png)
+
 Une nouvelle fenêtre s'ouvre, ajoutez Nom, Prénom, Adresse, Téléphone et Email en spécifiant si le client est actif ou non.
 Enfin, cliquez sur ajouter pour finaliser la création du client.
+
+![BoutonConnexion](https://raw.githubusercontent.com/loispacqueteau/sae2022-bank-3b4/main/creeclient2.png)
 
 === Créer un Compte :
 
@@ -62,8 +78,12 @@ Une fois connecté, cliquez sur 'Gestion' puis sélectionnez 'Clients'.
 Renseignez les informations du client et cliquez sur 'Rechercher'.
 Sélectionnez le client recherché et cliquez sur 'Comptes client'.
 Cliquez ensuite sur 'Nouveau compte'.
+
+![BoutonConnexion](https://raw.githubusercontent.com/loispacqueteau/sae2022-bank-3b4/main/creecompte.png)
+
 Indiquez le montant du découvert autorisé ainsi que le solde de début (qui doit être supérieur ou égal à 50).
- 
+
+![BoutonConnexion](https://raw.githubusercontent.com/loispacqueteau/sae2022-bank-3b4/main/creecompte2.png)
 
 === Clôturer un Compte 
 
@@ -72,6 +92,8 @@ Renseigner les informations du client et cliquer sur rechercher.
 Sélectionner le client et cliquer sur Comptes client.
 Sélectionner ensuite un compte.
 Cliquer sur ‘Supprimer compte’.
+
+![BoutonConnexion](https://raw.githubusercontent.com/loispacqueteau/sae2022-bank-3b4/main/cloturercompte.png)
  
 Puis valider la clôturassions du compte.
 
@@ -80,6 +102,8 @@ Puis valider la clôturassions du compte.
 Après s’être connecté, cliquer sur 'Gestion'
 Sélectionner un client, son compte
 Cliquer sur 'Virement' et choisir le montant puis l’identifiant du compte visé
+
+![BoutonConnexion](https://raw.githubusercontent.com/loispacqueteau/sae2022-bank-3b4/main/virementcompte.png)
  
  
 === Fonctions pour le Chef d’agence +
@@ -104,5 +128,7 @@ Après s’être connecté, cliquer sur gestion et sélectionner 'Employé'. +
 Renseigner les informations du client et cliquer sur 'Rechercher'. +
 Sélectionner l’employé et cliquer sur 'Nouveau Employé'.
 Use Case Diagram
+
+![BoutonConnexion](https://raw.githubusercontent.com/loispacqueteau/sae2022-bank-3b4/main/diagrammedeclasse.png)
  
 
