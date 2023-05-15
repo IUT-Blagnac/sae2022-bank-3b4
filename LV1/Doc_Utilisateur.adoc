@@ -38,13 +38,13 @@ Sélectionnez le client recherché et cliquez sur 'Comptes client'.
 Sélectionnez le compte concerné et cliquez sur 'Voir opérations' pour enregistrer un crédit ou un débit.
 Vous n'avez plus qu'à sélectionner 'Enregistrer débit' ou 'Enregistrer un crédit' et indiquer un montant avant de valider.
 
-===Créer un Client :
+=== Créer un Client :
 
 Une fois connecté, cliquez sur 'Gestion' puis sélectionnez 'Clients'.
 Ensuite, cliquez en bas à droite sur 'Nouveau client'.
 Une nouvelle fenêtre s'ouvre, ajoutez Nom, Prénom, Adresse, Téléphone et Email en spécifiant si le client est actif ou non.
 Enfin, cliquez sur ajouter pour finaliser la création du client.
-===Créer un Compte :
+== Créer un Compte :
 
 Une fois connecté, cliquez sur 'Gestion' puis sélectionnez 'Clients'.
 Renseignez les informations du client et cliquez sur 'Rechercher'.
