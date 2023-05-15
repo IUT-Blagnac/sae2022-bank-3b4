@@ -83,11 +83,15 @@ Note : ces fonctions ne sont pas encore implémentées dans l’application mais
 Après s’être connecté, cliquer sur gestion et sélectionner 'Employé'.
 Renseigner les informations du client et cliquer sur 'Rechercher'. +
 Sélectionner l’employé et cliquer sur 'Désactiver Employé'. +
+
 === Modifier un employé +
+
 Après s’être connecté, cliquer sur gestion et sélectionner 'Employé'. +
 Renseigner les informations du client et cliquer sur 'Rechercher'. +
 Sélectionner l’employé et cliquer sur 'Modifier Employé'. +
+
 === Ajouter un nouvel employé +
+
 Après s’être connecté, cliquer sur gestion et sélectionner 'Employé'. +
 Renseigner les informations du client et cliquer sur 'Rechercher'. +
 Sélectionner l’employé et cliquer sur 'Nouveau Employé'.
