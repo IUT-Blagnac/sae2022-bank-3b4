@@ -1,9 +1,9 @@
 === Exemple readme étudiant
 
 ==== Présentation de l'équipe et rôles respectifs
-Etudiant 1: Loïs Pacqueteau
-Etudiant 2: Bradley Djedje
-Etudiant 3: Clement Dejean-Gourrié
+Etudiant 1: Loïs Pacqueteau /n
+Etudiant 2: Bradley Djedje /n
+Etudiant 3: Clement Dejean-Gourrié /n
 
 ==== Répartition des tâches et état d'avancement
 [options="header,footer"]
