@@ -109,7 +109,7 @@ image::virementcompte.png[width=500, alt=Exemple d'image, title= ]
  
 === Fonctions pour le Chef d’agence +
 
-Note : ces fonctions ne sont pas encore implémentées dans l’application mais seront bientôt disponible
+Note:  ces fonctions ne sont pas encore implémentées dans l’application mais seront bientôt disponible
 
 === Désactiver un employé +
 
