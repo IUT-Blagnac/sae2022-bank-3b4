@@ -104,10 +104,10 @@ Après s’être connecté, cliquer sur 'Gestion'
 Sélectionner un client, son compte
 Cliquer sur 'Virement' et choisir le montant puis l’identifiant du compte visé
 
-image::virementcompte.png[width=500, alt=Exemple d'image, title= ] +
+image::virementcompte.png[width=500, alt=Exemple d'image, title= ] 
  
  
-=== Fonctions pour le Chef d’agence +
+=== Fonctions pour le Chef d agence +
 
 Note: ces fonctions ne sont pas encore implémentées dans l’application mais seront bientôt disponible
 
