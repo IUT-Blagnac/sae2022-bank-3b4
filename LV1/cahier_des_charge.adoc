@@ -21,32 +21,41 @@ L'application doit permettre la gestion des comptes bancaires de dépôt pour le
 === 3.1. Version existante (V0)
 Dans la version existante (V0), les guichetiers peuvent :
 
-Modifier les informations client (adresse, téléphone, etc.).
-Créer de nouveaux clients.
-Consulter les comptes.
-Débiter un compte.
+- Modifier les informations client (adresse, téléphone, etc.).
+- Créer de nouveaux clients.
+- Consulter les comptes.
+- Débiter un compte.
+
 === 3.2. Versions à développer
-Dans la version 1 (V1), les fonctionnalités à développer sont :
-Guichetier :
+==== Dans la version 1 (V1), les fonctionnalités à développer sont :
 
-Créditer/débiter un compte (Java et BD avec procédure stockée).
-Créer un compte.
-Effectuer un virement de compte à compte.
-Clôturer un compte.
-Chef d'Agence :
-Gérer les employés (guichetier et chef d'agence).
-Dans la version 2 (V2), les fonctionnalités à développer sont :
-Guichetier :
+- Guichetier :
 
-Générer un relevé mensuel d'un compte en PDF.
-Gérer les prélèvements automatiques.
-Chef d'Agence :
-Uniquement les spécifications.
-Éventuellement :
-Chef d'Agence :
-Spécifications finalisées de la version 2.
-Supers options pour les tops.
-Développer une ou plusieurs fonctionnalités au choix en fonction des compétences.
+.. Créditer/débiter un compte (Java et BD avec procédure stockée).
+.. Créer un compte.
+.. Effectuer un virement de compte à compte.
+.. Clôturer un compte.
+
+- Chef d'Agence :
+.. Gérer les employés (guichetier et chef d'agence).
+
+==== Dans la version 2 (V2), les fonctionnalités à développer sont :
+
+- Guichetier :
+
+.. Générer un relevé mensuel d'un compte en PDF.
+.. Gérer les prélèvements automatiques.
+
+- Chef d'Agence :
+.. Uniquement les spécifications.
+
+- Éventuellement :
+
+- Chef d'Agence :
+.. Spécifications finalisées de la version 2.
+.. Supers options pour les tops.
+.. Développer une ou plusieurs fonctionnalités au choix en fonction des compétences.
+
 == 4. Analyse des Contraintes
 Cette section du cahier des charges vise à analyser les différentes contraintes techniques et organisationnelles qui doivent être prises en compte lors du développement et du déploiement de l'application de gestion des comptes clients de la banque DailyBank.
 
@@ -59,6 +68,7 @@ Base de données : L'application doitêtre intégrée à une base de données po
 Performance : L'application doit être conçue de manière à garantir des performances optimales, même en cas d'utilisation intensive par de nombreux utilisateurs simultanés. Cela peut nécessiter l'utilisation de techniques d'optimisation du code, de mise en cache des données, etc.
 Intégration avec les systèmes existants : Il est possible que l'application de gestion des comptes clients ait besoin d'être intégrée à d'autres systèmes ou applications existants au sein de la banque DailyBank. Il est important de prendre en compte ces intégrations potentielles et de s'assurer de leur compatibilité.
 Documentation technique : Il est essentiel de fournir une documentation technique détaillée qui explique l'architecture de l'application, les choix technologiques, les configurations requises, les dépendances, etc., afin de faciliter la maintenance future de l'application.
+
 === 4.2. Contraintes Organisationnelles
 Les contraintes organisationnelles suivantes doivent également être prises en compte :
 
