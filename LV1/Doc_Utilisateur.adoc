@@ -66,12 +66,12 @@ image::crediterdebiter4.png[width=500, alt=Exemple d'image, title=Mon image]
 Une fois connecté, cliquez sur 'Gestion' puis sélectionnez 'Clients'.
 Ensuite, cliquez en bas à droite sur 'Nouveau client'.
 
-![BoutonConnexion](https://raw.githubusercontent.com/loispacqueteau/sae2022-bank-3b4/main/creeclient.png)
+image::creeclient.png[width=500, alt=Exemple d'image, title=Mon image] 
 
 Une nouvelle fenêtre s'ouvre, ajoutez Nom, Prénom, Adresse, Téléphone et Email en spécifiant si le client est actif ou non.
 Enfin, cliquez sur ajouter pour finaliser la création du client.
 
-![BoutonConnexion](https://raw.githubusercontent.com/loispacqueteau/sae2022-bank-3b4/main/creeclient2.png)
+image::creeclient2.png[width=500, alt=Exemple d'image, title=Mon image]
 
 === Créer un Compte :
 
@@ -80,11 +80,11 @@ Renseignez les informations du client et cliquez sur 'Rechercher'.
 Sélectionnez le client recherché et cliquez sur 'Comptes client'.
 Cliquez ensuite sur 'Nouveau compte'.
 
-![BoutonConnexion](https://raw.githubusercontent.com/loispacqueteau/sae2022-bank-3b4/main/creecompte.png)
+image::creecompte.png[width=500, alt=Exemple d'image, title=Mon image] 
 
 Indiquez le montant du découvert autorisé ainsi que le solde de début (qui doit être supérieur ou égal à 50).
 
-![BoutonConnexion](https://raw.githubusercontent.com/loispacqueteau/sae2022-bank-3b4/main/creecompte2.png)
+image::creecompte2.png[width=500, alt=Exemple d'image, title=Mon image] 
 
 === Clôturer un Compte 
 
@@ -94,7 +94,7 @@ Sélectionner le client et cliquer sur Comptes client.
 Sélectionner ensuite un compte.
 Cliquer sur ‘Supprimer compte’.
 
-![BoutonConnexion](https://raw.githubusercontent.com/loispacqueteau/sae2022-bank-3b4/main/cloturercompte.png)
+image:: cloturercompte.png[width=500, alt=Exemple d'image, title=Mon image]
  
 Puis valider la clôturassions du compte.
 
@@ -104,7 +104,7 @@ Après s’être connecté, cliquer sur 'Gestion'
 Sélectionner un client, son compte
 Cliquer sur 'Virement' et choisir le montant puis l’identifiant du compte visé
 
-![BoutonConnexion](https://raw.githubusercontent.com/loispacqueteau/sae2022-bank-3b4/main/virementcompte.png)
+image:: virementcompte.png[width=500, alt=Exemple d'image, title=Mon image]
  
  
 === Fonctions pour le Chef d’agence +
