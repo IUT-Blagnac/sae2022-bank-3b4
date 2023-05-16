@@ -94,7 +94,7 @@ Sélectionner le client et cliquer sur Comptes client.
 Sélectionner ensuite un compte.
 Cliquer sur ‘Supprimer compte’.
 
-image:: cloturercompte.png[width=500, alt=Exemple d'image, title=Mon image]
+image::cloturercompte.png[width=500, alt=Exemple d'image, title=Mon image]
  
 Puis valider la clôturassions du compte.
 
@@ -104,7 +104,7 @@ Après s’être connecté, cliquer sur 'Gestion'
 Sélectionner un client, son compte
 Cliquer sur 'Virement' et choisir le montant puis l’identifiant du compte visé
 
-image:: virementcompte.png[width=500, alt=Exemple d'image, title=Mon image]
+image::virementcompte.png[width=500, alt=Exemple d'image, title=Mon image]
  
  
 === Fonctions pour le Chef d’agence +
@@ -130,6 +130,6 @@ Renseigner les informations du client et cliquer sur 'Rechercher'. +
 Sélectionner l’employé et cliquer sur 'Nouveau Employé'.
 Use Case Diagram
 
-![BoutonConnexion](https://raw.githubusercontent.com/loispacqueteau/sae2022-bank-3b4/main/diagrammedeclasse.png)
+image::diagrammedeclasse.png[width=500, alt=Exemple d'image, title=Mon image]
  
 
