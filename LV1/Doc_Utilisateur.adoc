@@ -73,7 +73,7 @@ Enfin, cliquez sur ajouter pour finaliser la création du client.
 
 image::creeclient2.png[width=500, alt=Exemple d'image, title= ]
 
-=== Créer un Compte :
+=== Créer un Compte 
 
 Une fois connecté, cliquez sur 'Gestion' puis sélectionnez 'Clients'.
 Renseignez les informations du client et cliquez sur 'Rechercher'.
