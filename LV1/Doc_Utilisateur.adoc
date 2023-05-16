@@ -35,7 +35,7 @@ image::connexion.png[width=150, alt=Exemple d'image, title=Mon image]
 
 Entrez votre identifiant et votre mot de passe et cliquez sur 'Valider'.
 
-![BoutonConnexion](https://raw.githubusercontent.com/loispacqueteau/sae2022-bank-3b4/main/valider.png)
+image::valider.png[width=150, alt=Exemple d'image, title=Mon image]
 
 Vous êtes maintenant connecté à l'application bancaire !
 
@@ -46,7 +46,7 @@ Vous êtes maintenant connecté à l'application bancaire !
 
 Une fois connecté, cliquez sur 'Gestion' puis sélectionnez 'Clients'.
 
-![BoutonConnexion](https://raw.githubusercontent.com/loispacqueteau/sae2022-bank-3b4/main/crediterdebiter.png)
+image::crediterdebiter.png[width=150, alt=Exemple d'image, title=Mon image] 
 
 Renseignez les informations du client et cliquez sur 'Rechercher'.
 
