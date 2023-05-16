@@ -30,7 +30,7 @@ Lorsque vous naviguez sur les pages de type "management" des clients ou des empl
 
 Cliquez sur le bouton 'connexion' situé en bas de la fenêtre.
 
-image::connexion.png[width=300, alt=Exemple d'image, title=Mon image]
+image::connexion.png[width=150, alt=Exemple d'image, title=Mon image]
 
 
 Entrez votre identifiant et votre mot de passe et cliquez sur 'Valider'.
