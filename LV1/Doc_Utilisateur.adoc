@@ -50,7 +50,7 @@ image::crediterdebiter.png[width=500, alt=Exemple d'image, title=Credit debit]
 
 Renseignez les informations du client et cliquez sur 'Rechercher'.
 
-image::crediterdebiter2.png[width=500, alt=Exemple d'image, title=Mon image] 
+image::crediterdebiter2.png[width=500, alt=Exemple d'image, title= ] 
 
 Sélectionnez le client recherché et cliquez sur 'Comptes client'.
 Sélectionnez le compte concerné et cliquez sur 'Voir opérations' pour enregistrer un crédit ou un débit.
