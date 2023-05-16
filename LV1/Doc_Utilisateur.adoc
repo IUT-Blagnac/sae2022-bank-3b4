@@ -30,7 +30,7 @@ Lorsque vous naviguez sur les pages de type "management" des clients ou des empl
 
 Cliquez sur le bouton 'connexion' situé en bas de la fenêtre.
 
-![BoutonConnexion](https://raw.githubusercontent.com/loispacqueteau/sae2022-bank-3b4/main/connexion.png)
+![BoutonConnexion](https://raw.githubusercontent.com/loispacqueteau/sae2022-bank-3b4/main/LV1/connexion.png)
 
 Entrez votre identifiant et votre mot de passe et cliquez sur 'Valider'.
 
