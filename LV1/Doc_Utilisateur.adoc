@@ -130,6 +130,6 @@ Renseigner les informations du client et cliquer sur 'Rechercher'. +
 Sélectionner l’employé et cliquer sur 'Nouveau Employé'.
 Use Case Diagram
 
-image::diagrammedeclasse.png[width=500, alt=Exemple d'image, title=Mon image]
+image::diagrammedeclasse.jpg[width=500, alt=Exemple d'image, title=Mon image]
  
 
