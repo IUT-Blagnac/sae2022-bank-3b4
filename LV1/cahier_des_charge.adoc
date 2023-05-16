@@ -85,3 +85,39 @@ Le chef de projet est responsable de la gestion complète du projet, depuis la p
 === 6.2 Guichetier
 
 En tant qu'utilisateur principal de l'application, le guichetier est chargé d'effectuer diverses tâches liées à la gestion des comptes bancaires des clients. Il peut créditer ou débiter un compte, enregistrer les dépôts et les retraits, et maintenir un suivi précis des transactions financières. Le guichetier peut également créer de nouveaux comptes pour les clients, en collectant les informations nécessaires et en les enregistrant dans le système. Il est responsable des virements entre les comptes des clients, en respectant les instructions fournies et en vérifiant la disponibilité des fonds. De plus, il peut clôturer un compte bancaire sur demande du client en suivant les procédures établies par la banque. En exécutant ces tâches, le guichetier assure un service de qualité aux clients, en traitant leurs opérations de manière précise, sécurisée et efficace.
+
+== 7. Livrable et date de rendu
+
+=== SAE 2.05
+
+- Semaine 19 : 
+.. Rendu GANT V1.
+.. CDCU V1.
+
+- Semaine 20 : 
+.. Doc. Util. V1. 
+.. CDCU V2.
+.. Gantt V2.
+
+- Semaine 21 :
+.. Doc Util V2.
+.. Gantt V2 Réalisé.
+.. Chiffrage projet.
+
+- Semaine 22 :
+.. Soutenace oral.
+
+=== SAE 2.01
+
+- Semaine 20 : 
+.. Doc. Tech. V1. 
+.. Cahier Test V1.
+.. Jar V1.
+
+- Semaine 21 :
+.. Doc. Tech. V2.
+.. Cahier Test V2 et recette finale.
+.. Jar V2.
+
+- Semaine 22 :
+.. Eval indiv.
