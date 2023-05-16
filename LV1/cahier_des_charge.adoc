@@ -1,13 +1,5 @@
-= Sommaire
-
-== 1. Contexte général
-== 2. Sujet
-== 3. Objectifs/Analyse de l'existant
-=== 3.1. Version existante (V0)
-=== 3.2. Versions à développer
-== 4. Analyse des Contraintes
-=== 4.1. Contraintes Techniques
-=== 4.2. Contraintes Organisationnelles
+:toc:
+:toc-title: Sommaire
 
 == 1. Contexte général
 Les banques françaises ont intensifié leurs efforts de modernisation et de transformation digitale pour répondre aux attentes de leurs clients en termes d'instantanéité et de services bancaires rapides. Cela implique des investissements importants dans les outils bureautiques, l'automatisation des tâches et la restructuration des réseaux bancaires.
