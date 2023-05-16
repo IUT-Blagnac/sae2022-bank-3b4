@@ -8,6 +8,7 @@ Les banques françaises ont intensifié leurs efforts de modernisation et de tra
 La banque DailyBank souhaite développer une application JAVA-Oracle de gestion des comptes clients pour remplacer ses outils obsolètes. L'objectif est de moderniser ses services bancaires et de déployer l'application dans ses 100 agences.
 
 == 3. Problematique
+Comment développer et déployer de manière efficace une application de gestion des comptes clients pour répondre aux besoins de modernisation et de transformation digitale de la banque DailyBank, tout en tenant compte des contraintes techniques et organisationnelles spécifiques ?
 
 == 4. Objectifs/Analyse de l'existant
 L'application doit permettre la gestion des comptes bancaires de dépôt pour les clients existants. Elle doit offrir la possibilité de réaliser des opérations de débit, de crédit et de virement entre comptes. Les fonctionnalités doivent être développées en plusieurs versions (V1, V2).
