@@ -7,10 +7,12 @@ Les banques françaises ont intensifié leurs efforts de modernisation et de tra
 == 2. Sujet
 La banque DailyBank souhaite développer une application JAVA-Oracle de gestion des comptes clients pour remplacer ses outils obsolètes. L'objectif est de moderniser ses services bancaires et de déployer l'application dans ses 100 agences.
 
-== 3. Objectifs/Analyse de l'existant
+== 3. Problematique
+
+== 4. Objectifs/Analyse de l'existant
 L'application doit permettre la gestion des comptes bancaires de dépôt pour les clients existants. Elle doit offrir la possibilité de réaliser des opérations de débit, de crédit et de virement entre comptes. Les fonctionnalités doivent être développées en plusieurs versions (V1, V2).
 
-=== 3.1. Version existante (V0)
+=== 4.1. Version existante (V0)
 Dans la version existante (V0), les guichetiers peuvent :
 
 - Modifier les informations client (adresse, téléphone, etc.).
@@ -18,7 +20,7 @@ Dans la version existante (V0), les guichetiers peuvent :
 - Consulter les comptes.
 - Débiter un compte.
 
-=== 3.2. Versions à développer
+=== 4.2. Versions à développer
 ==== Dans la version 1 (V1), les fonctionnalités à développer sont :
 
 - Guichetier :
@@ -48,10 +50,10 @@ Dans la version existante (V0), les guichetiers peuvent :
 .. Supers options pour les tops.
 .. Développer une ou plusieurs fonctionnalités au choix en fonction des compétences.
 
-== 4. Analyse des Contraintes
+== 5. Analyse des Contraintes
 Cette section du cahier des charges vise à analyser les différentes contraintes techniques et organisationnelles qui doivent être prises en compte lors du développement et du déploiement de l'application de gestion des comptes clients de la banque DailyBank.
 
-=== 4.1. Contraintes Techniques
+=== 5.1. Contraintes Techniques
 Les contraintes techniques suivantes doivent être considérées :
 
 - Plateforme : L'application doit être développée en utilisant la technologie Java-Oracle. Il est nécessaire de s'assurer que l'environnement de développement et les serveurs d'exécution prennent en charge cette plateforme.
@@ -64,7 +66,7 @@ Les contraintes techniques suivantes doivent être considérées :
 
 - Documentation technique : Il est essentiel de fournir une documentation technique détaillée qui explique l'architecture de l'application, les choix technologiques, les configurations requises, les dépendances, etc., afin de faciliter la maintenance future de l'application.
 
-=== 4.2. Contraintes Organisationnelles
+=== 5.2. Contraintes Organisationnelles
 Les contraintes organisationnelles suivantes doivent également être prises en compte :
 
 - Restructuration des services bancaires : L'application de gestion des comptes clients fait partie intégrante de la restructuration des services bancaires de la banque DailyBank. Il est nécessaire de collaborer avec les équipes concernées et de s'aligner sur les objectifs de cette restructuration.
