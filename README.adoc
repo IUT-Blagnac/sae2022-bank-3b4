@@ -3,7 +3,7 @@
 ==== Présentation de l'équipe et rôles respectifs
 Etudiant 1: Loïs Pacqueteau +
 Etudiant 2: Bradley Djedje +
-Etudiant 3: Clement Dejean-Gourrié +
+Etudiant 3: Clement Dejean-Gourrier +
 
 ==== Répartition des tâches et état d'avancement
 [options="header,footer"]
