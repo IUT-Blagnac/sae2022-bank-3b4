@@ -25,7 +25,7 @@ Dans la version existante (V0), les guichetiers peuvent :
 ==== Dans la version 1 (V1), les fonctionnalités à développer sont :
 
 - Guichetier :
- -- a
+
 .. Créditer/débiter un compte (Java et BD avec procédure stockée).
 .. Créer un compte.
 .. Effectuer un virement de compte à compte.
