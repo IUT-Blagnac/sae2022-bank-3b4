@@ -30,12 +30,12 @@ Lorsque vous naviguez sur les pages de type "management" des clients ou des empl
 
 Cliquez sur le bouton 'connexion' situé en bas de la fenêtre.
 
-image::connexion.png[width=150, alt=Exemple d'image, title=Mon image]
+image::connexion.png[width=150, alt=Exemple d'image, title=Bouton connexion]
 
 
 Entrez votre identifiant et votre mot de passe et cliquez sur 'Valider'.
 
-image::valider.png[width=150, alt=Exemple d'image, title=Mon image]
+image::valider.png[width=150, alt=Exemple d'image, title=Bouton valider]
 
 Vous êtes maintenant connecté à l'application bancaire !
 
@@ -46,7 +46,7 @@ Vous êtes maintenant connecté à l'application bancaire !
 
 Une fois connecté, cliquez sur 'Gestion' puis sélectionnez 'Clients'.
 
-image::crediterdebiter.png[width=500, alt=Exemple d'image, title=Mon image] 
+image::crediterdebiter.png[width=500, alt=Exemple d'image, title=Credit debit] 
 
 Renseignez les informations du client et cliquez sur 'Rechercher'.
 
