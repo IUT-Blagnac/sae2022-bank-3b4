@@ -45,6 +45,14 @@ Dans la version existante (V0), les guichetiers peuvent :
 ** Uniquement les spécifications.
 
 * Éventuellement :
+** Chef d’Agence :
+*** Les spécifications finalisées de la version 2
+*** Supers options pour les tops …
+*** Développer une ou plusieurs fonctionnalités au choix et selon vos compétences
+
+** « Batch »:
+*** Générer les relevés mensuels en PDF
+*** Exécuter les prélèvements automatiques
 
 * Chef d'Agence :
 ** Spécifications finalisées de la version 2.
