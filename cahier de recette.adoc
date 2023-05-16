@@ -150,11 +150,30 @@ autorisé est de -100 euros.
 
 ^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
 ^|All_G_COP.1 ^|Cliquer sur le bouton "Nouveau Compte". ^|La page de creation du compte s’affiche. ^| Aucune ^|OK
-^|All_G_COP.2  ^|Rentrer un montant 200 dans le champ "Decouvert autorisé" et 200 dans le champ "Solde" et valider en cliquant "Ajouter" . ^|Le nouveau compte crée a un solde de 200euros et un decouvert autorisé de -200. ^|
+^|All_G_COP.2  ^|Rentrer un montant 200 dans le champ "Decouvert autorisé" et 200 dans le champ "Solde" et valider en cliquant "Ajouter". ^|Le nouveau compte crée a un solde de 200euros et un decouvert autorisé de -200. ^|Aucune
  ^|OK
 
   
 |====
+
+
+
+|====
+
+>|Cas de test 4+|Test-01-03-01
+>|Titre 4+|Cloturer un compte
+>|Objectif 4+| Vérifier qu'il est possible de cloturer un compte
+
+5+|
+
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|All_G_COP.1 ^|Dans le gestionnaire des comptes cliquer sur un compte. ^|Les boutons "Modifier Compte" et "Supprimer Compte" du compte s’affiche. ^|le client doit au moins avoir un compte non cloturé ^|OK
+^|All_G_COP.2  ^|Cliquer sur Supprimmer compte. ^|Une page de confirmation va s'ouvrir ^|Seulement si le compte n'est pas deja cloturé ^|OK
+^|All_G_COP.3  ^|Cliquer sur Supprimmer . ^|Le message se ferme est le compte est supprimé ^|Aucune ^|OK
+
+  
+|====
+
 
 
 
