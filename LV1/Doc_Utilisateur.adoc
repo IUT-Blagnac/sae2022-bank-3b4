@@ -46,20 +46,20 @@ Vous êtes maintenant connecté à l'application bancaire !
 
 Une fois connecté, cliquez sur 'Gestion' puis sélectionnez 'Clients'.
 
-image::crediterdebiter.png[width=150, alt=Exemple d'image, title=Mon image] 
+image::crediterdebiter.png[width=500, alt=Exemple d'image, title=Mon image] 
 
 Renseignez les informations du client et cliquez sur 'Rechercher'.
 
-![BoutonConnexion](https://raw.githubusercontent.com/loispacqueteau/sae2022-bank-3b4/main/crediterdebiter2.png)
+image::crediterdebiter2.png[width=500, alt=Exemple d'image, title=Mon image] 
 
 Sélectionnez le client recherché et cliquez sur 'Comptes client'.
 Sélectionnez le compte concerné et cliquez sur 'Voir opérations' pour enregistrer un crédit ou un débit.
 
-![BoutonConnexion](https://raw.githubusercontent.com/loispacqueteau/sae2022-bank-3b4/main/crediterdebiter3.png)
+image::crediterdebiter3.png[width=500, alt=Exemple d'image, title=Mon image] 
 
 Vous n'avez plus qu'à sélectionner 'Enregistrer débit' ou 'Enregistrer un crédit' et indiquer un montant avant de valider.
 
-![BoutonConnexion](https://raw.githubusercontent.com/loispacqueteau/sae2022-bank-3b4/main/crediterdebiter4.png)
+image::crediterdebiter4.png[width=500, alt=Exemple d'image, title=Mon image] 
 
 === Créer un Client :
 
