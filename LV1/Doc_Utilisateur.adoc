@@ -106,7 +106,7 @@ Cliquer sur 'Virement' et choisir le montant puis l’identifiant du compte vis�
 
 image::virementcompte.png[width=500, alt=Exemple d'image, title= ] 
  
-puis valilder le virement
+puis valilder le virement +
  
 === Fonctions pour le Chef d'agence +
 
