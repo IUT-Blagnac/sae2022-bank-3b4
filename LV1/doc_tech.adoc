@@ -22,7 +22,6 @@ Nous avons des packages :
 === Use Case de l’application :
 image::image/Capture d'écran 2023-05-17 155056.png[]
 
-
 Nous avons deux types d’utilisateurs :
 
 * Le guichetier peut : 
