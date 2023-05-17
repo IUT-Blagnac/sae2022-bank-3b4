@@ -1,4 +1,4 @@
-=== Exemple readme étudiant
+Lien du jar de l'application (impossible de l'upload sur github): https://we.tl/t-0fOHhBaf6x
 
 ==== Présentation de l'équipe et rôles respectifs
 Etudiant 1: Loïs Pacqueteau +
