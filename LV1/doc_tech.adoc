@@ -1,15 +1,15 @@
-= Doc technique
-
+= *Doc technique*
+:toc:
 :doctype: book
 :toc: left
 :toc-title: Sommaire
 :sectnums:
 :Equipe:
 
-== Présentation de l’Application
+== *Présentation de l’Application*
 L’application permet de gérer des comptes bancaires de dépôt pour des clients. L’application possède actuellement quelques fonctionnalités tels que modifier les informations clients, créer un nouveau client, consulter un compte, créer un compte, créditer/débiter un compte, effectuer un virement, clôturer un compte, gérer les employés et rendre inactif un client à l’aide des boutons interactifs et des champs à remplir.
 
-== Architecture
+== *Architecture*
 Le projet de l’application est travaillé sous Eclipse ou Visual Studio Code. Ces applications nous permettent de catégoriser les classes sous des packages afin d’avoir une meilleure visibilité et un meilleur repère pour travailler.
 
 Nous avons des packages :
@@ -20,12 +20,12 @@ Nous avons des packages :
 * application.view : contient les classes qui gère les actions du fichier fxml.
 * application.control : contient les classes qui gère les différentes opérations des contrôleurs.
 
-== Présentation et explication de tous les diagrammes demandés
+== *Présentation et explication de tous les diagrammes demandés*
 
-=== Use Case de l’application :
+=== *Use Case de l’application* :
 image::image/Capture d'écran 2023-05-17 155056.png[]
 
-Nous avons deux types d’utilisateurs :
+==== Nous avons deux types d’utilisateurs :
 
 * Le guichetier peut : 
 ** Modifier les infos client 
@@ -44,4 +44,18 @@ Nous avons deux types d’utilisateurs :
 
 image::image/Capture d'écran 2023-05-17 155956.png[]
 
-== Éléments de codes significatifs commentés
+== *Éléments de codes significatifs commentés*
+
+=== Créer/ Cloturer un compte
+Pour créer un compte, certaines conditions doivent être remplies. Tout d'abord, le solde initial du compte doit être supérieur à zéro, ce qui signifie que le client doit déposer une somme d'argent minimale pour ouvrir le compte. De plus, le compte doit disposer d'une autorisation de découvert égale ou supérieure à zéro, ce qui permet au titulaire du compte de retirer de l'argent même s'il n'y a pas suffisamment de fonds disponibles. Ces deux critères sont essentiels pour pouvoir créer un compte.
+
+En ce qui concerne la clôture d'un compte, la principale exigence est que le solde du compte soit supérieur à zéro. Cela signifie que le titulaire du compte doit s'assurer qu'il ne reste aucun montant dû ou de transactions en attente sur le compte avant de pouvoir le clôturer. Une fois que le solde est positif, le compte peut être fermé conformément aux procédures établies par la banque.
+
+Ces règles garantissent une gestion saine des comptes et contribuent à maintenir l'intégrité financière des clients et de la banque.
+
+=== Faire un virement
+
+Pour faire un virement, il faut que le compte source et le compte destination soient distinct. Il faut aussi que le compte source ait un solde supérieur ou égal au montant du virement. Et le compte destinataire doit exister et etre actif.
+//insertion image nommée conditionVirement
+image::image/LV1/conditionVirement.png[]
+
