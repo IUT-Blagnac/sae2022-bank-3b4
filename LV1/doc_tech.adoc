@@ -10,16 +10,21 @@ L’application permet de gérer des comptes bancaires de dépôt pour des clien
 Le projet de l’application est travaillé sous Eclipse ou Visual Studio Code. Ces applications nous permettent de catégoriser les classes sous des packages afin d’avoir une meilleure visibilité et un meilleur repère pour travailler.
 
 Nous avons des packages :
+
 * application : contient tous les packages dans lesquels on retrouve les .java liés à l’application.
 * model.orm : contient les classes qui contrôlent les accès à la base de données.
 * model.data : contient toutes nos classe d’objet (Employe, Client, AgenceBancaire, ect..).
 * application.view : contient les classes qui gère les actions du fichier fxml.
 * application.control : contient les classes qui gère les différentes opérations des contrôleurs.
 
-== Présentation et explication de tous les diagrammes demandés 
-=== Use Case de l’application :  
+== Présentation et explication de tous les diagrammes demandés
 
-Nous avons deux types d’utilisateurs : 
+=== Use Case de l’application :
+image::image/Capture d'écran 2023-05-17 155056.png[]
+
+
+Nous avons deux types d’utilisateurs :
+
 * Le guichetier peut : 
 ** Modifier les infos client 
 ** Créer un nouveau client
@@ -34,6 +39,7 @@ Nous avons deux types d’utilisateurs :
 ** Rendre inactif un client
 
 == Diagramme des classes
-image::image/Capture d'écran 2023-05-17 155056.png[]
+
+image::image/Capture d'écran 2023-05-17 155956.png[]
 
 == Éléments de codes significatifs commentés
