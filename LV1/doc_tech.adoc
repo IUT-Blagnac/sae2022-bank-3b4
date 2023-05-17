@@ -55,11 +55,32 @@ Ces règles garantissent une gestion saine des comptes et contribuent à mainten
 === Faire un virement
 
 Pour faire un virement, il faut que le compte source et le compte destination soient distinct. Il faut aussi que le compte source ait un solde supérieur ou égal au montant du virement. Et le compte destinataire doit exister et etre actif.
+
 //insertion image nommée conditionVirement
+
 image::image/conditionVirement.png[]
 
+le premiers "if" sert a controler que le montant du virement est supérieur à 0. Si c'est le cas, on continue, sinon on affiche un message d'erreur en mettant le label et le textfield du montant en rouge et on return.
+
+le deuxieme "if" sert a controler que le compte destinataire existe et est actif. Si c'est le cas, on continue, sinon on affiche un message d'erreur en mettant le label et le textfield du compte destinataire en rouge et on return.
+
+Le troisieme "if" sert a controler que le compte source et le compte destination sont distinct. Si c'est le cas, on continue, sinon on affiche un message d'erreur en mettant le label et le textfield du compte destination en rouge et on return.
+
+
+
+
 === CRDU
-==== Créer un employer
-==== Consulter un employé
-==== Supprimer un employé
-==== Modifié un employé
+==== Créer un employé(Create)
+Créer un employe : Permet de créer un nouvel employe avec ses informations personnelles telles que nom, prénom, adresse, etc. Cette fonctionnalité permet d'ajouter un nouvel employe à la base de données.
+
+==== Consulter un employé(Read)
+Consulter les informations employe : Permet de visualiser les informations détaillées d'un employe spécifique, telles que son nom, prénom, adresse, numéro de téléphone, etc. Cela permet de récupérer les données d'un employe existant.
+
+==== Modifié un employé(Update)
+Modifier les informations employe : Permet de mettre à jour les informations d'un employe existant, telles que son adresse, numéro de téléphone, etc. Cette fonctionnalité permet de modifier les détails d'un employe dans la base de données.
+
+==== Supprimer un employé(Delete)
+Supprimer un employe : Permet de supprimer un employe de la base de données. Cette fonctionnalité est utilisée lorsque l'employe est licensié ou quitte l'entreprise.
+Ces actions constituent le CRUD (Create, Read, Update, Delete) spécifique aux employés de l'application de gestion des comptes bancaires.
+
+Ces fonctionnalités n'ont pas étés implémentés dans la v1 dû à des complications de codage.
