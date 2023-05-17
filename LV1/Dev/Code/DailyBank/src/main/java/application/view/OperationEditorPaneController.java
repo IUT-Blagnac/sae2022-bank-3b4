@@ -1,5 +1,7 @@
 package application.view;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Locale;
 
 import application.DailyBankState;
@@ -242,8 +244,18 @@ public class OperationEditorPaneController {
 					return;
 				}
 				Access_BD_CompteCourant acc = new Access_BD_CompteCourant();
+				ArrayList<CompteCourant> listCptes = new ArrayList<>();
+				listCptes = acc.getCompteCourants(this.compteEdite.idNumCli);
+				boolean trouve = false;
+				for (CompteCourant compteCourant : listCptes) {
+					if(compteCourant.idNumCompte==idCompteDestinataire){
+						trouve = true;
+						break;
+					}
+				}
+
 				
-				if(acc.getCompteCourant(idCompteDestinataire)==null){
+				if(!trouve){
 					this.txtCompteDestinataire.getStyleClass().add("borderred");
 					this.lblCompteDestinataire.getStyleClass().add("borderred");
 					this.txtCompteDestinataire.requestFocus();
@@ -263,10 +275,6 @@ public class OperationEditorPaneController {
 				this.txtMontant.requestFocus();
 				return;
 			}
-			
-			
-			
-			
 			this.primaryStage.close();
 			break;
 		}

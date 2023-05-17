@@ -60,7 +60,7 @@ public class DailyBankMainFrame extends Application {
 			
 			 try { Employe e; Access_BD_Employe ae = new Access_BD_Employe();
 			 
-			 e = ae.getEmploye("Tuff", "Lejeune");
+			 e = ae.getEmploye("", "");
 			 
 			  if (e == null) { System.out.println("\n\nPB DE CONNEXION\n\n"); } else {
 			  this.dailyBankState.setEmployeActuel(e); } } catch
