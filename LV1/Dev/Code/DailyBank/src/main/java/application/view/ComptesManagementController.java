@@ -126,6 +126,16 @@ public class ComptesManagementController {
 		}
 	}
 
+	@FXML
+	private void doEmprunt(){
+		int selectedIndice = this.lvComptes.getSelectionModel().getSelectedIndex();
+		if (selectedIndice >= 0) {
+			CompteCourant cliMod = this.oListCompteCourant.get(selectedIndice);
+			this.cmDialogController.creerEmprunt(cliMod);
+
+		}
+	}
+
 	private void loadList() {
 		ArrayList<CompteCourant> listeCpt;
 		listeCpt = this.cmDialogController.getComptesDunClient();

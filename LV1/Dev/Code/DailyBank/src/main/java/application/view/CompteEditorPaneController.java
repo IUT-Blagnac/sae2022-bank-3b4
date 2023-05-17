@@ -30,6 +30,7 @@ public class CompteEditorPaneController {
 	private Client clientDuCompte;
 	private CompteCourant compteEdite;
 	private CompteCourant compteResultat;
+	private double decAutorise =0;
 
 	// Manipulation de la fenêtre
 	public void initContext(Stage _containingStage, DailyBankState _dbstate) {
@@ -93,6 +94,8 @@ public class CompteEditorPaneController {
 		this.txtIdAgence.setText("" + this.dailyBankState.getEmployeActuel().idAg);
 		this.txtDecAutorise.setText("" + this.compteEdite.debitAutorise);
 		this.txtSolde.setText(String.format(Locale.ENGLISH, "%10.02f", this.compteEdite.solde));
+
+
 
 		this.compteResultat = null;
 		this.primaryStage.showAndWait();
@@ -191,13 +194,19 @@ public class CompteEditorPaneController {
 	}
 
 	private boolean isSaisieValide() {
+		// double decAutorise = Double.parseDouble(txtDecAutorise.getText().trim());
+		// || decAutorise > 0
+		System.out.println("teste1");
 		 if (txtIdclient.getText().isEmpty()
 		 		|| txtIdAgence.getText().isEmpty()
 		 		|| txtIdNumCompte.getText().isEmpty()
-		 		|| txtDecAutorise.getText().isEmpty()
+		 		|| txtDecAutorise.getText().isEmpty() 
 		 		|| txtSolde.getText().isEmpty()) {
+			System.out.println("false");
 		 	return false; // Au moins un champ est vide
+
 		 } else {
+			System.out.println("true");
 		 	return true; // Tous les champs sont remplis
 		 }
 	}

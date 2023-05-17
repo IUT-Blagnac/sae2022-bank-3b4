@@ -118,6 +118,9 @@ public class ComptesManagement {
 			return result;
 		}
 	
+		public void creerEmprunt(CompteCourant compte){
+			ComptesEmprunt cep = new ComptesEmprunt(this.primaryStage, this.dailyBankState);
+		}
 	
 	public ArrayList<CompteCourant> getComptesDunClient() {
 		ArrayList<CompteCourant> listeCpt = new ArrayList<>();
