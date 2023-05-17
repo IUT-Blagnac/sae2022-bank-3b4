@@ -18,6 +18,10 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import model.data.CompteCourant;
 import model.data.Operation;
+import model.orm.Access_BD_CompteCourant;
+import model.orm.exception.DataAccessException;
+import model.orm.exception.DatabaseConnexionException;
+import model.orm.exception.RowNotFoundOrTooManyRowsException;
 
 public class OperationEditorPaneController {
 
@@ -158,7 +162,7 @@ public class OperationEditorPaneController {
 	}
 
 	@FXML
-	private void doAjouter() {
+	private void doAjouter() throws RowNotFoundOrTooManyRowsException, DataAccessException, DatabaseConnexionException {
 		switch (this.categorieOperation) {
 		case DEBIT:
 			// règles de validation d'un débit :
@@ -177,8 +181,13 @@ public class OperationEditorPaneController {
 
 			try {
 				montant = Double.parseDouble(this.txtMontant.getText().trim());
-				if (montant <= 0)
-					throw new NumberFormatException();
+				if (montant <= 0){
+					this.txtMontant.getStyleClass().add("borderred");
+					this.lblMontant.getStyleClass().add("borderred");
+					this.txtMontant.requestFocus();
+					return;
+				}
+					
 			} catch (NumberFormatException nfe) {
 				this.txtMontant.getStyleClass().add("borderred");
 				this.lblMontant.getStyleClass().add("borderred");
@@ -228,8 +237,21 @@ public class OperationEditorPaneController {
 				montant3 = Double.parseDouble(this.txtMontant.getText().trim());
 				this.idCompteDestinataire =Integer.parseInt(this.txtCompteDestinataire.getText().trim()) ;
 				this.operationResultat = new Operation(-1, montant3, null, null,idCompteDestinataire, typeOp3);
-				if (montant3 <= 0)
-					throw new NumberFormatException();
+				if (montant3 <= 0){
+					this.txtMontant.getStyleClass().add("borderred");
+					this.lblMontant.getStyleClass().add("borderred");
+					this.txtMontant.requestFocus();
+					return;
+				}
+				Access_BD_CompteCourant acc = new Access_BD_CompteCourant();
+				
+				if(acc.getCompteCourant(idCompteDestinataire)==null){
+					this.txtCompteDestinataire.getStyleClass().add("borderred");
+					this.lblCompteDestinataire.getStyleClass().add("borderred");
+					this.txtCompteDestinataire.requestFocus();
+					return;
+				}
+					
 			} catch (NumberFormatException nfe) {
 				this.txtMontant.getStyleClass().add("borderred");
 				this.lblMontant.getStyleClass().add("borderred");
