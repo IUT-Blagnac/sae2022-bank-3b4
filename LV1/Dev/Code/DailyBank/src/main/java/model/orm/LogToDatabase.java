@@ -21,7 +21,7 @@ public class LogToDatabase {
 
 	// Gloabl : accès à la base de donnée : à ajuster selon le compte
 	private static final String user = "G3B4S2";
-	private static final String passwd = "groupeMdp";
+	private static final String passwd ="groupeMdp";
 
 	private static final String hoteOracle = "oracle.iut-blagnac.fr";
 	private static final String portOracle = "1521";
