@@ -189,9 +189,11 @@ public class Access_BD_Operation {
     }
 	
 	public void insertVirement(int idNumCompte,int idNumDestinataire, double montant, String idTypeOp) throws DatabaseConnexionException, DataAccessException, ManagementRuleViolation{
-		insertDebit(idNumCompte, montant, idTypeOp);
-
-		insertCredit(idNumDestinataire, montant, idTypeOp);
+		if (idNumDestinataire!=idNumCompte){
+			insertDebit(idNumCompte, montant, idTypeOp);
+			insertCredit(idNumDestinataire, montant, idTypeOp);
+		}
+		
 		
 
 	} 
