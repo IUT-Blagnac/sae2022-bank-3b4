@@ -1,0 +1,39 @@
+= Doc technique
+
+:toc:
+:toc-title: Sommaire
+
+== Présentation de l’Application
+L’application permet de gérer des comptes bancaires de dépôt pour des clients. L’application possède actuellement quelques fonctionnalités tels que modifier les informations clients, créer un nouveau client, consulter un compte, créer un compte, créditer/débiter un compte, effectuer un virement, clôturer un compte, gérer les employés et rendre inactif un client à l’aide des boutons interactifs et des champs à remplir.
+
+== Architecture
+Le projet de l’application est travaillé sous Eclipse ou Visual Studio Code. Ces applications nous permettent de catégoriser les classes sous des packages afin d’avoir une meilleure visibilité et un meilleur repère pour travailler.
+
+Nous avons des packages :
+* application : contient tous les packages dans lesquels on retrouve les .java liés à l’application.
+* model.orm : contient les classes qui contrôlent les accès à la base de données.
+* model.data : contient toutes nos classe d’objet (Employe, Client, AgenceBancaire, ect..).
+* application.view : contient les classes qui gère les actions du fichier fxml.
+* application.control : contient les classes qui gère les différentes opérations des contrôleurs.
+
+== Présentation et explication de tous les diagrammes demandés 
+=== Use Case de l’application :  
+
+Nous avons deux types d’utilisateurs : 
+* Le guichetier peut : 
+** Modifier les infos client 
+** Créer un nouveau client
+** Consulter un compte
+** Créditer/débiter un compte
+** Créer un compte
+** Effectuer un virement de compte à compte
+** Clôturer un compte
+
+* Le chef d’agence en plus des fonctionnalités du guichetier, il peut : 
+** Gérer les employés
+** Rendre inactif un client
+
+== Diagramme des classes
+
+
+== Éléments de codes significatifs commentés
