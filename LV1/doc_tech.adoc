@@ -1,7 +1,6 @@
 = *Doc technique*
 :toc:
 :doctype: book
-:toc: left
 :toc-title: Sommaire
 :sectnums:
 :Equipe:
@@ -59,6 +58,8 @@ Pour faire un virement, il faut que le compte source et le compte destination so
 //insertion image nommée conditionVirement
 image::image/conditionVirement.png[]
 
-
-
-
+=== CRDU
+==== Créer un employer
+==== Consulter un employé
+==== Supprimer un employé
+==== Modifié un employé
