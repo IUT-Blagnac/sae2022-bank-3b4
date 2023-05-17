@@ -49,7 +49,7 @@ image::image/Capture d'écran 2023-05-17 155956.png[]
 === Créer/ Cloturer un compte
 Pour créer un compte, certaines conditions doivent être remplies. Tout d'abord, le solde initial du compte doit être supérieur à zéro, ce qui signifie que le client doit déposer une somme d'argent minimale pour ouvrir le compte. De plus, le compte doit disposer d'une autorisation de découvert égale ou supérieure à zéro, ce qui permet au titulaire du compte de retirer de l'argent même s'il n'y a pas suffisamment de fonds disponibles. Ces deux critères sont essentiels pour pouvoir créer un compte.
 
-En ce qui concerne la clôture d'un compte, la principale exigence est que le solde du compte soit supérieur à zéro. Cela signifie que le titulaire du compte doit s'assurer qu'il ne reste aucun montant dû ou de transactions en attente sur le compte avant de pouvoir le clôturer. Une fois que le solde est positif, le compte peut être fermé conformément aux procédures établies par la banque.
+En ce qui concerne la clôture d'un compte, la principale exigence est que le solde du compte soit égal à zéro. Cela signifie que le titulaire du compte doit s'assurer qu'il ne reste aucun montant dû ou de transactions en attente sur le compte avant de pouvoir le clôturer. Une fois que le solde est positif, le compte peut être fermé conformément aux procédures établies par la banque.
 
 Ces règles garantissent une gestion saine des comptes et contribuent à maintenir l'intégrité financière des clients et de la banque.
 
@@ -57,5 +57,8 @@ Ces règles garantissent une gestion saine des comptes et contribuent à mainten
 
 Pour faire un virement, il faut que le compte source et le compte destination soient distinct. Il faut aussi que le compte source ait un solde supérieur ou égal au montant du virement. Et le compte destinataire doit exister et etre actif.
 //insertion image nommée conditionVirement
-image::image/LV1/conditionVirement.png[]
+image::image/conditionVirement.png[]
+
+
+
 
