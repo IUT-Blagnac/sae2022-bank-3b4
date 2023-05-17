@@ -34,6 +34,6 @@ Nous avons deux types d’utilisateurs :
 ** Rendre inactif un client
 
 == Diagramme des classes
-
+image::image/Capture d'écran 2023-05-17 155056.png[]
 
 == Éléments de codes significatifs commentés
