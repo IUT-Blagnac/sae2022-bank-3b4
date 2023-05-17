@@ -22,10 +22,7 @@ import model.orm.Access_BD_CompteCourant;
 import model.orm.exception.DataAccessException;
 import model.orm.exception.DatabaseConnexionException;
 import model.orm.exception.RowNotFoundOrTooManyRowsException;
-<<<<<<< Updated upstream
-=======
 import oracle.net.aso.c;
->>>>>>> Stashed changes
 
 public class OperationEditorPaneController {
 
@@ -183,15 +180,6 @@ public class OperationEditorPaneController {
 			montant = -1;
 			try {
 				montant = Double.parseDouble(this.txtMontant.getText().trim());
-<<<<<<< Updated upstream
-				if (montant <= 0){
-					this.txtMontant.getStyleClass().add("borderred");
-					this.lblMontant.getStyleClass().add("borderred");
-					this.txtMontant.requestFocus();
-					return;
-				}
-=======
->>>>>>> Stashed changes
 					
 			} catch (NumberFormatException nfe) {
 				this.txtMontant.getStyleClass().add("borderred");
@@ -247,17 +235,12 @@ public class OperationEditorPaneController {
 				montant3 = Double.parseDouble(this.txtMontant.getText().trim());
 				this.idCompteDestinataire =Integer.parseInt(this.txtCompteDestinataire.getText().trim()) ;
 				this.operationResultat = new Operation(-1, montant3, null, null,idCompteDestinataire, typeOp3);
-<<<<<<< Updated upstream
-=======
-				//Ici on gere les exceptions
->>>>>>> Stashed changes
 				if (montant3 <= 0){
 					this.txtMontant.getStyleClass().add("borderred");
 					this.lblMontant.getStyleClass().add("borderred");
 					this.txtMontant.requestFocus();
 					return;
 				}
-<<<<<<< Updated upstream
 				Access_BD_CompteCourant acc = new Access_BD_CompteCourant();
 				
 				if(acc.getCompteCourant(idCompteDestinataire)==null){
@@ -274,42 +257,6 @@ public class OperationEditorPaneController {
 					return;
 				}
 					
-=======
-				
-				if(this.idCompteDestinataire == this.compteEdite.idNumCompte){
-					this.txtCompteDestinataire.getStyleClass().add("borderred");
-					this.lblCompteDestinataire.getStyleClass().add("borderred");
-					this.txtCompteDestinataire.requestFocus();
-					return;
-				}
-				Access_BD_CompteCourant acc = new Access_BD_CompteCourant();
-				try {
-					CompteCourant compteExiste =acc.getCompteCourant(idCompteDestinataire);
-					if(compteExiste==null){
-						this.txtCompteDestinataire.getStyleClass().add("borderred");
-						this.lblCompteDestinataire.getStyleClass().add("borderred");
-						this.txtCompteDestinataire.requestFocus();
-						return;
-					}
-				} catch (RowNotFoundOrTooManyRowsException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (DataAccessException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (DatabaseConnexionException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				
-				
-				
-
-				
-				
-					
-
->>>>>>> Stashed changes
 			} catch (NumberFormatException nfe) {
 				this.txtMontant.getStyleClass().add("borderred");
 				this.lblMontant.getStyleClass().add("borderred");
