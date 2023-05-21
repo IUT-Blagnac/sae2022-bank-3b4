@@ -60,11 +60,13 @@ Pour faire un virement, il faut que le compte source et le compte destination so
 
 image::image/conditionVirement.png[]
 
+image::image/conditionVirement2.png[]
+
 le premiers "if" sert a controler que le montant du virement est supérieur à 0. Si c'est le cas, on continue, sinon on affiche un message d'erreur en mettant le label et le textfield du montant en rouge et on return.
 
-le deuxieme "if" sert a controler que le compte destinataire existe et est actif. Si c'est le cas, on continue, sinon on affiche un message d'erreur en mettant le label et le textfield du compte destinataire en rouge et on return.
+le deuxieme  et troisieme "if" servent a controler que le compte destinataire existe chez le client et est actif. Si c'est le cas, on continue, sinon on affiche un message d'erreur en mettant le label et le textfield du compte destinataire en rouge et on return.
 
-Le troisieme "if" sert a controler que le compte source et le compte destination sont distinct. Si c'est le cas, on continue, sinon on affiche un message d'erreur en mettant le label et le textfield du compte destination en rouge et on return.
+Le quatrieme "if" sert a controler que le compte source et le compte destination sont distinct. Si c'est le cas, on continue, sinon on affiche un message d'erreur en mettant le label et le textfield du compte destination en rouge et on return.
 
 
 
