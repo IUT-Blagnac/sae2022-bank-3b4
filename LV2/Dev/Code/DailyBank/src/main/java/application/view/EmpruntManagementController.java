@@ -1,32 +1,21 @@
 package application.view;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Locale;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import application.DailyBankState;
 import application.control.EmpruntManagement;
-import application.control.OperationsManagement;
 import application.tools.AlertUtilities;
-import application.tools.NoSelectionModel;
-import application.tools.PairsOfValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
-import model.data.Client;
 import model.data.CompteCourant;
-import model.data.Operation;
 import model.orm.Access_BD_Emprunt;
 import model.orm.exception.DataAccessException;
 import model.orm.exception.DatabaseConnexionException;
@@ -133,7 +122,6 @@ public class EmpruntManagementController {
 			this.duree = Integer.parseInt(this.txtDuree.getText());
 			this.taux = Double.parseDouble(this.txtTaux.getText()) / 100;
 
-			int num = omDialogController.getNumCli();
 			CompteCourant getCompteCourant = omDialogController.getCompteCourant();
 			Access_BD_Emprunt acc = new Access_BD_Emprunt();
 

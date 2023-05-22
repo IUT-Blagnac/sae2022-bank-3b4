@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import application.tools.AlertUtilities;
 import model.data.CompteCourant;
 import model.orm.exception.DataAccessException;
 import model.orm.exception.DatabaseConnexionException;
@@ -177,8 +176,9 @@ public class Access_BD_CompteCourant {
 
 			Connection con = LogToDatabase.getConnexion();
 
-			String query = "INSERT INTO comptecourant VALUES (" + "seq_id_compte.NEXTVAL" + ", " + "?" + ", " + "?" + ", "
-			+ "?" + ", " + "?"+ ")";
+			String query = "INSERT INTO comptecourant VALUES (" + "seq_id_compte.NEXTVAL" + ", " + "?" + ", " + "?"
+					+ ", "
+					+ "?" + ", " + "?" + ")";
 			PreparedStatement pst = con.prepareStatement(query);
 			pst.setInt(1, -compte.debitAutorise);
 			pst.setDouble(2, compte.solde);
@@ -215,32 +215,32 @@ public class Access_BD_CompteCourant {
 		}
 	}
 
-    public void deleteCompte(CompteCourant cc) throws RowNotFoundOrTooManyRowsException, DataAccessException,
-	DatabaseConnexionException, ManagementRuleViolation {
-try {
+	public void deleteCompte(CompteCourant cc) throws RowNotFoundOrTooManyRowsException, DataAccessException,
+			DatabaseConnexionException, ManagementRuleViolation {
+		try {
 
-	Connection con = LogToDatabase.getConnexion();
+			Connection con = LogToDatabase.getConnexion();
 
-	String query = "UPDATE CompteCourant SET " + "estcloture = ? " + "WHERE idNumCompte = ?";
+			String query = "UPDATE CompteCourant SET " + "estcloture = ? " + "WHERE idNumCompte = ?";
 
-	PreparedStatement pst = con.prepareStatement(query);
-	pst.setString(1, ""+ cc.estCloture.charAt(0));
-	pst.setInt(2, cc.idNumCompte);
+			PreparedStatement pst = con.prepareStatement(query);
+			pst.setString(1, "" + cc.estCloture.charAt(0));
+			pst.setInt(2, cc.idNumCompte);
 
-	System.err.println(query);
+			System.err.println(query);
 
-	int result = pst.executeUpdate();
-	pst.close();
-	if (result != 1) {
-		con.rollback();
-		throw new RowNotFoundOrTooManyRowsException(Table.CompteCourant, Order.UPDATE,
-				"Update anormal (update de moins ou plus d'une ligne)", null, result);
+			int result = pst.executeUpdate();
+			pst.close();
+			if (result != 1) {
+				con.rollback();
+				throw new RowNotFoundOrTooManyRowsException(Table.CompteCourant, Order.UPDATE,
+						"Update anormal (update de moins ou plus d'une ligne)", null, result);
+			}
+			con.commit();
+
+		} catch (SQLException e) {
+			throw new DataAccessException(Table.CompteCourant, Order.UPDATE, "Erreur accès", e);
+		}
+
 	}
-	con.commit();
-	
-} catch (SQLException e) {
-	throw new DataAccessException(Table.CompteCourant, Order.UPDATE, "Erreur accès", e);
 }
-
-    
-	}}

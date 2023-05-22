@@ -13,6 +13,7 @@ import model.orm.exception.RowNotFoundOrTooManyRowsException;
 import model.orm.exception.Table;
 
 public class Access_BD_Emprunt {
+
     public Access_BD_Emprunt() {
     }
 
@@ -53,6 +54,7 @@ public class Access_BD_Emprunt {
             con.commit();
             rs.close();
             pst2.close();
+
         } catch (SQLException e) {
             throw new DataAccessException(Table.CompteCourant, Order.INSERT, "Erreur accès", e);
         }
