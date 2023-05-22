@@ -6,6 +6,7 @@ import application.view.DailyBankMainFrameController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import model.data.Employe;
@@ -16,7 +17,7 @@ import model.orm.exception.DatabaseConnexionException;
 
 /**
  * Classe de controleur de Dialogue de la fenêtre principale.
- *
+ * On va aussi rajouter un logo ici
  */
 
 public class DailyBankMainFrame extends Application {
@@ -34,6 +35,8 @@ public class DailyBankMainFrame extends Application {
 	public void start(Stage primaryStage) {
 
 		this.primaryStage = primaryStage;
+		//ajouter une icone
+		primaryStage.getIcons().add(new Image(DailyBankMainFrame.class.getResourceAsStream("DailybankApp.png")));
 
 		try {
 
@@ -57,7 +60,7 @@ public class DailyBankMainFrame extends Application {
 			 * // En mise au point : // Forcer une connexion existante pour rentrer dans
 			 * l'appli en mode connecté
 			 */
-			/*
+			
 			 try { Employe e; Access_BD_Employe ae = new Access_BD_Employe();
 			 
 			 e = ae.getEmploye("Tuff", "Lejeune");
@@ -74,7 +77,7 @@ public class DailyBankMainFrame extends Application {
 			  if (this.dailyBankState.getEmployeActuel() != null) {
 			  this.dailyBankState.setEmployeActuel(this.dailyBankState.getEmployeActuel());
 			  }
-			  */
+			  
 			 
 
 			// Récupération du contrôleur et initialisation (stage, contrôleur de dialogue,

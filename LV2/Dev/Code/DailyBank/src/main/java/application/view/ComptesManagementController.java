@@ -42,7 +42,7 @@ public class ComptesManagementController {
 
 	private void configure() {
 		String info;
-
+		
 		this.primaryStage.setOnCloseRequest(e -> this.closeWindow(e));
 
 		this.oListCompteCourant = FXCollections.observableArrayList();
@@ -82,6 +82,10 @@ public class ComptesManagementController {
 	private Button btnModifierCompte;
 	@FXML
 	private Button btnSupprCompte;
+	@FXML
+	private Button btnPrelevements;
+	@FXML
+	private Button btnEmprunt;
 
 	@FXML
 	private void doCancel() {
@@ -136,6 +140,18 @@ public class ComptesManagementController {
 		}
 	}
 
+	@FXML
+	private void doPrelevements(){
+		int selectedIndice = this.lvComptes.getSelectionModel().getSelectedIndex();
+		
+		if (selectedIndice >= 0) {
+			CompteCourant cptCourant = this.oListCompteCourant.get(selectedIndice);
+
+			this.cmDialogController.gererPrelevements(cptCourant);
+
+		}
+	}
+
 	private void loadList() {
 		ArrayList<CompteCourant> listeCpt;
 		listeCpt = this.cmDialogController.getComptesDunClient();
@@ -145,9 +161,8 @@ public class ComptesManagementController {
 
 	private void validateComponentState() {
 		// Non implémenté => désactivé
-		this.btnModifierCompte.setDisable(true);
-		this.btnSupprCompte.setDisable(true);
-
+		this.btnEmprunt.setDisable(true);
+		
 		int selectedIndice = this.lvComptes.getSelectionModel().getSelectedIndex();
 		if (selectedIndice >= 0) {
 			this.btnVoirOpes.setDisable(false);
@@ -155,10 +170,16 @@ public class ComptesManagementController {
 			if(oListCompteCourant.get(selectedIndice).estCloture.equals("N")){
 				this.btnSupprCompte.setDisable(false);
 				this.btnModifierCompte.setDisable(false);
+				this.btnPrelevements.setDisable(false);
+				this.btnEmprunt.setDisable(false);
 			}
 			
 		} else {
 			this.btnVoirOpes.setDisable(true);
+			this.btnModifierCompte.setDisable(true);
+			this.btnSupprCompte.setDisable(true);
+			this.btnPrelevements.setDisable(true);
+			this.btnEmprunt.setDisable(true);
 		}
 		
 	}

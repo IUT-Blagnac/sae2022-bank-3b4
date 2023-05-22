@@ -33,13 +33,12 @@
          <center>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
-                  <GridPane alignment="CENTER">
+                  <GridPane alignment="CENTER" prefHeight="267.0" prefWidth="190.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                     </columnConstraints>
                     <rowConstraints>
                       <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                     </rowConstraints>
@@ -49,17 +48,16 @@
                               <Insets bottom="10.0" top="10.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="btnModifClient" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doModifierClient" text="Modifier client" GridPane.rowIndex="2">
+                        <Button fx:id="btnModifClient" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doModifierClient" text="Modifier client" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets bottom="10.0" top="10.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="btnDesactClient" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doDesactiverClient" text="Désactiver client" GridPane.rowIndex="3">
+                        <Button fx:id="btnDesactClient" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doDesactiverClient" text="Désactiver client" GridPane.rowIndex="2">
                            <GridPane.margin>
                               <Insets bottom="10.0" top="10.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button layoutX="10.0" layoutY="20.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" visible="false" GridPane.rowIndex="1" />
                      </children>
                   </GridPane>
                </children>

@@ -11,53 +11,79 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.ComptesManagementController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="866.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.ComptesManagementController">
    <right>
-      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <BorderPane prefHeight="399.0" prefWidth="340.0" BorderPane.alignment="CENTER">
          <bottom>
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doNouveauCompte" text="Nouveau compte" BorderPane.alignment="CENTER">
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doNouveauCompte" stylesheets="@../application.css" text="Nouveau compte" BorderPane.alignment="CENTER">
                <BorderPane.margin>
                   <Insets bottom="10.0" right="10.0" top="10.0" />
                </BorderPane.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
             </Button>
          </bottom>
          <center>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
-                  <GridPane alignment="CENTER">
+                  <GridPane alignment="CENTER" prefHeight="336.0" prefWidth="443.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                     </columnConstraints>
                     <rowConstraints>
                       <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="46.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button fx:id="btnVoirOpes" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doVoirOperations" text="Voir opérations">
+                        <Button fx:id="btnVoirOpes" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doVoirOperations" styleClass=".but" stylesheets="@../application.css" text="Opérations">
                            <GridPane.margin>
                               <Insets bottom="10.0" top="10.0" />
                            </GridPane.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
                         </Button>
-                        <Button fx:id="btnModifierCompte" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doModifierCompte" text="Modifier compte" GridPane.rowIndex="3">
+                        <Button fx:id="btnModifierCompte" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doModifierCompte" stylesheets="@../application.css" text="Modifier compte" GridPane.rowIndex="3">
                            <GridPane.margin>
                               <Insets bottom="10.0" top="10.0" />
                            </GridPane.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
                         </Button>
-                        <Button fx:id="btnSupprCompte" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doSupprimerCompte" text="Supprimer compte" GridPane.rowIndex="4">
+                        <Button fx:id="btnSupprCompte" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doSupprimerCompte" stylesheets="@../application.css" text="Supprimer compte" GridPane.rowIndex="4">
                            <GridPane.margin>
                               <Insets bottom="10.0" top="10.0" />
                            </GridPane.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
                         </Button>
                         <Button mnemonicParsing="false" text="Button" visible="false" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets bottom="10.0" top="10.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#doEmprunt" prefHeight="31.0" prefWidth="245.0" text="Emprunt" GridPane.rowIndex="2" />
+                        <Button fx:id="btnPrelevements" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doPrelevements" stylesheets="@../application.css" text="Prélèvements" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font></Button>
+                        <Button fx:id="btnEmprunt" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doEmprunt" stylesheets="@../application.css" text="Emprunt" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font></Button>
                      </children>
                   </GridPane>
                </children>
@@ -73,7 +99,7 @@
          <bottom>
             <HBox BorderPane.alignment="CENTER">
                <children>
-                  <Button mnemonicParsing="false" onAction="#doCancel" prefHeight="31.0" prefWidth="214.0" text="Retour gestion clients">
+                  <Button mnemonicParsing="false" onAction="#doCancel" prefHeight="31.0" prefWidth="214.0" stylesheets="@../application.css" text="Retour">
                      <HBox.margin>
                         <Insets bottom="10.0" left="10.0" top="10.0" />
                      </HBox.margin>
@@ -82,7 +108,7 @@
             </HBox>
          </bottom>
          <center>
-            <ListView fx:id="lvComptes" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <ListView fx:id="lvComptes" prefHeight="319.0" prefWidth="400.0" BorderPane.alignment="CENTER">
                <BorderPane.margin>
                   <Insets bottom="10.0" left="10.0" right="20.0" top="10.0" />
                </BorderPane.margin>
@@ -96,7 +122,10 @@
    <top>
       <AnchorPane styleClass="borderlight" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="lblInfosClient" layoutX="68.0" layoutY="47.0" maxWidth="1.7976931348623157E308" styleClass="bold" text="Numéro" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+            <Label fx:id="lblInfosClient" layoutX="68.0" layoutY="47.0" maxWidth="1.7976931348623157E308" styleClass="bold" text="Numéro" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
          </children>
          <BorderPane.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

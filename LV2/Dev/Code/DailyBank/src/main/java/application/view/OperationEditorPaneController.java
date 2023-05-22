@@ -268,6 +268,13 @@ public class OperationEditorPaneController {
 					this.txtCompteDestinataire.requestFocus();
 					return;
 				}
+
+				if(acc.getCompteCourant(idCompteDestinataire).estCloture.equals("O")){
+                    this.txtCompteDestinataire.getStyleClass().add("borderred");
+					this.lblCompteDestinataire.getStyleClass().add("borderred");
+					this.txtCompteDestinataire.requestFocus();
+					return;
+                }
 					
 			} catch (NumberFormatException nfe) {
 				this.txtMontant.getStyleClass().add("borderred");

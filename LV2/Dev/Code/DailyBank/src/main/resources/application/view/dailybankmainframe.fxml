@@ -16,11 +16,11 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="350.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.DailyBankMainFrameController">
+<BorderPane prefHeight="350.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.DailyBankMainFrameController">
    <top>
       <BorderPane BorderPane.alignment="CENTER">
          <center>
-            <MenuBar BorderPane.alignment="CENTER">
+            <MenuBar style="-fx-background-color: #26a292;;" stylesheets="@../application.css" BorderPane.alignment="CENTER">
               <menus>
                 <Menu mnemonicParsing="false" text="Utilisateur">
                   <items>

@@ -1,16 +1,22 @@
 package application.tools;
 
 /**
- *
- * Mode d'édition possibles pour des données (client, employé, compte, ...). 3
- * modes définis : - CREATION : l'employé va créer une nouvelle donnée. La
- * fenêtre sera a priori vide. L'employé pourra saisir et valider ou annuler. -
- * MODIFICATION : l'employé va modifier une donnée existante. La fenêtre
- * affichera au départ la donnée à modifier. L'employé pourra saisir et valider
- * ou annuler. - SUPPRESSION : l'employé va supprimer une donnée La fenêtre
- * affichera au départ la donnée à supprimer. Pas de saisie possible. L'employé
- * pourra valider ou annuler.
- */
+*
+*
+*Différents modes d'édition sont disponibles pour les données 
+*(client, employé, compte, etc.). Trois modes sont définis :
+*
+*CRÉATION : L'employé crée une nouvelle donnée. La fenêtre est initialement
+*vide et l'employé peut saisir les informations avant de les valider ou d'annuler.
+*
+*MODIFICATION : L'employé modifie une donnée existante. La fenêtre affiche 
+*initialement les informations à modifier. L'employé peut ensuite saisir les modifications
+*et les valider ou les annuler.
+*
+*SUPPRESSION : L'employé supprime une donnée.
+*La fenêtre affiche initialement la donnée à supprimer et aucune saisie n'est possible.
+*L'employé peut ensuite confirmer ou annuler la suppression.
+*/
 public enum EditionMode {
 	CREATION, MODIFICATION, SUPPRESSION
 }

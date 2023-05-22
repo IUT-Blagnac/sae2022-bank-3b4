@@ -1,5 +1,8 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,700;1,400;1,600&display=swap');
+
+
 .root {
 	-fx-font-size:12pt;
 }
@@ -19,3 +22,24 @@
 .borderred {
 	-fx-text-fill: red;
 }
+
+.button {
+	-fx-background-color: #124d43;
+	-fx-background-radius: 30;
+	-fx-text-fill: white;
+	-fx-font-size: 15pt;
+	-fx-font-family: "Montserrat";
+	
+}
+
+.button:hover {
+	-fx-background-color: #26a292;
+	-fx-text-fill:#11322d;
+}
+
+
+*{
+	-fx-font-family: "Montserrat";
+	-fx-font-size: 10pt;
+}
+

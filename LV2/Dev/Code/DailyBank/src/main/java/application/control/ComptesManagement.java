@@ -35,24 +35,30 @@ public class ComptesManagement {
 		this.dailyBankState = _dbstate;
 		try {
 			FXMLLoader loader = new FXMLLoader(ComptesManagementController.class.getResource("comptesmanagement.fxml"));
+			
 			BorderPane root = loader.load();
 
 			Scene scene = new Scene(root, root.getPrefWidth() + 50, root.getPrefHeight() + 10);
 			scene.getStylesheets().add(DailyBankApp.class.getResource("application.css").toExternalForm());
-
+			
 			this.primaryStage = new Stage();
 			this.primaryStage.initModality(Modality.WINDOW_MODAL);
 			this.primaryStage.initOwner(_parentStage);
 			StageManagement.manageCenteringStage(_parentStage, this.primaryStage);
 			this.primaryStage.setScene(scene);
 			this.primaryStage.setTitle("Gestion des comptes");
+			
+			
+			
 			this.primaryStage.setResizable(false);
 
 			this.cmcViewController = loader.getController();
+			
 			this.cmcViewController.initContext(this.primaryStage, this, _dbstate, client);
 
 		} catch (Exception e) {
 			e.printStackTrace();
+			System.out.println();
 		}
 	}
 
@@ -140,5 +146,10 @@ public class ComptesManagement {
 		}
 		return listeCpt;
 	}
+
+    public void gererPrelevements(CompteCourant cliMod) {
+		PrelevementsManagement pm = new PrelevementsManagement(this.primaryStage, this.dailyBankState, this.clientDesComptes, cliMod);
+		pm.doPrelevementsManagementDialog();
+    }
 	
 }
