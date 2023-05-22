@@ -22,15 +22,15 @@ import model.orm.exception.DatabaseConnexionException;
 import model.orm.exception.Order;
 import model.orm.exception.Table;
 
-public class ComptesEmprunt {
+public class CompteNouvEmprunt {
 
 	private Stage primaryStage;
 	private ComptesManagementController cmcViewController;
 
-	public ComptesEmprunt(Stage _parentStage, DailyBankState _dbstate) {
+	public CompteNouvEmprunt(Stage _parentStage, DailyBankState _dbstate) {
 
 		try {
-			FXMLLoader loader = new FXMLLoader(ComptesManagementController.class.getResource("compteemprunt.fxml"));
+			FXMLLoader loader = new FXMLLoader(ComptesManagementController.class.getResource("emprunt.fxml"));
 			BorderPane root = loader.load();
 
 			Scene scene = new Scene(root, root.getPrefWidth() + 50, root.getPrefHeight() + 10);
@@ -57,5 +57,4 @@ public class ComptesEmprunt {
 	public void compteNouvEmprunt(Stage stage, DailyBankState _dbstate) {
 		CompteNouvEmprunt cep = new CompteNouvEmprunt(stage, _dbstate);
 	}
-
 }

@@ -35,25 +35,23 @@ public class ComptesManagement {
 		this.dailyBankState = _dbstate;
 		try {
 			FXMLLoader loader = new FXMLLoader(ComptesManagementController.class.getResource("comptesmanagement.fxml"));
-			
+
 			BorderPane root = loader.load();
 
 			Scene scene = new Scene(root, root.getPrefWidth() + 50, root.getPrefHeight() + 10);
 			scene.getStylesheets().add(DailyBankApp.class.getResource("application.css").toExternalForm());
-			
+
 			this.primaryStage = new Stage();
 			this.primaryStage.initModality(Modality.WINDOW_MODAL);
 			this.primaryStage.initOwner(_parentStage);
 			StageManagement.manageCenteringStage(_parentStage, this.primaryStage);
 			this.primaryStage.setScene(scene);
 			this.primaryStage.setTitle("Gestion des comptes");
-			
-			
-			
+
 			this.primaryStage.setResizable(false);
 
 			this.cmcViewController = loader.getController();
-			
+
 			this.cmcViewController.initContext(this.primaryStage, this, _dbstate, client);
 
 		} catch (Exception e) {
@@ -67,7 +65,8 @@ public class ComptesManagement {
 	}
 
 	public void gererOperationsDUnCompte(CompteCourant cpt) {
-		OperationsManagement om = new OperationsManagement(this.primaryStage, this.dailyBankState,this.clientDesComptes, cpt);
+		OperationsManagement om = new OperationsManagement(this.primaryStage, this.dailyBankState,
+				this.clientDesComptes, cpt);
 		om.doOperationsManagementDialog();
 	}
 
@@ -81,7 +80,7 @@ public class ComptesManagement {
 				// compte = null;
 				Access_BD_CompteCourant acc = new Access_BD_CompteCourant();
 				acc.insertCompte(compte);
-				
+
 				if (Math.random() < -1) {
 					throw new ApplicationException(Table.CompteCourant, Order.INSERT, "todo : test exceptions", null);
 				}
@@ -97,37 +96,37 @@ public class ComptesManagement {
 		return compte;
 	}
 
-	
-		public CompteCourant cloturerCompte(CompteCourant c) {
-			CompteEditorPane cep = new CompteEditorPane(this.primaryStage, this.dailyBankState);
-			CompteCourant result = cep.doCompteEditorDialog(this.clientDesComptes,c, EditionMode.SUPPRESSION);
-			if (result != null) {
-				try {
-					if(c.solde>0){
-						AlertUtilities.showAlert(primaryStage, "Erreur cloturation", "Le solde trop grand", "Le solde doit etre égal a 0", AlertType.ERROR);
-						return null;
-					}
-					Access_BD_CompteCourant ac = new Access_BD_CompteCourant();
-					result.setCloturer();
-					ac.deleteCompte(result);
-				} catch (DatabaseConnexionException e) {
-					ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dailyBankState, e);
-					ed.doExceptionDialog();
-					result = null;
-					this.primaryStage.close();
-				} catch (ApplicationException ae) {
-					ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dailyBankState, ae);
-					ed.doExceptionDialog();
-					result = null;
+	public CompteCourant cloturerCompte(CompteCourant c) {
+		CompteEditorPane cep = new CompteEditorPane(this.primaryStage, this.dailyBankState);
+		CompteCourant result = cep.doCompteEditorDialog(this.clientDesComptes, c, EditionMode.SUPPRESSION);
+		if (result != null) {
+			try {
+				if (c.solde > 0) {
+					AlertUtilities.showAlert(primaryStage, "Erreur cloturation", "Le solde trop grand",
+							"Le solde doit etre égal a 0", AlertType.ERROR);
+					return null;
 				}
+				Access_BD_CompteCourant ac = new Access_BD_CompteCourant();
+				result.setCloturer();
+				ac.deleteCompte(result);
+			} catch (DatabaseConnexionException e) {
+				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dailyBankState, e);
+				ed.doExceptionDialog();
+				result = null;
+				this.primaryStage.close();
+			} catch (ApplicationException ae) {
+				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dailyBankState, ae);
+				ed.doExceptionDialog();
+				result = null;
 			}
-			return result;
 		}
-	
-		public void creerEmprunt(CompteCourant compte){
-			ComptesEmprunt cep = new ComptesEmprunt(this.primaryStage, this.dailyBankState);
-		}
-	
+		return result;
+	}
+
+	public void creerEmprunt(CompteCourant compte) {
+		EmpruntManagement cep = new EmpruntManagement(this.primaryStage, this.dailyBankState, compte);
+	}
+
 	public ArrayList<CompteCourant> getComptesDunClient() {
 		ArrayList<CompteCourant> listeCpt = new ArrayList<>();
 
@@ -147,9 +146,10 @@ public class ComptesManagement {
 		return listeCpt;
 	}
 
-    public void gererPrelevements(CompteCourant cliMod) {
-		PrelevementsManagement pm = new PrelevementsManagement(this.primaryStage, this.dailyBankState, this.clientDesComptes, cliMod);
+	public void gererPrelevements(CompteCourant cliMod) {
+		PrelevementsManagement pm = new PrelevementsManagement(this.primaryStage, this.dailyBankState,
+				this.clientDesComptes, cliMod);
 		pm.doPrelevementsManagementDialog();
-    }
-	
+	}
+
 }
