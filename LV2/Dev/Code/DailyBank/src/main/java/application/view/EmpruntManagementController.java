@@ -139,13 +139,13 @@ public class EmpruntManagementController {
 			this.duree = Integer.parseInt(this.txtDuree.getText());
 			this.taux = Double.parseDouble(this.txtTaux.getText()) / 100;
 		} catch (NumberFormatException e) {
-			e.printStackTrace();
+			AlertUtilities.showAlert(primaryStage, "Erreur saisie", "Saisie invalide", "Veillez saisier des nombres.", AlertType.ERROR);
+			return false;
 		}
 		if (this.montant >= 0 && this.duree >= 0 && this.taux >= 0) {
-
 			return true;
 		} else {
-
+			AlertUtilities.showAlert(primaryStage, "Erreur saisie", "Saisie invalide", "Veillez saisier des nombres.", AlertType.ERROR);
 			return false;
 		}
 	}

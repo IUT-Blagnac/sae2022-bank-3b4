@@ -68,6 +68,7 @@ public class Access_BD_Client {
 				pst.setInt(1, idAg);
 				pst.setString(2, debutNom);
 				pst.setString(3, debutPrenom);
+				
 			} else {
 				query = "SELECT * FROM Client where idAg = ?";
 				query += " ORDER BY nom";
