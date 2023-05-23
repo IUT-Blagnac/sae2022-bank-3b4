@@ -162,16 +162,21 @@ public class ComptesManagementController {
 	private void validateComponentState() {
 		// Non implémenté => désactivé
 		this.btnEmprunt.setDisable(true);
-		
+		this.btnVoirOpes.setDisable(true);
+		this.btnModifierCompte.setDisable(true);
+		this.btnSupprCompte.setDisable(true);
+		this.btnPrelevements.setDisable(true);
+
 		int selectedIndice = this.lvComptes.getSelectionModel().getSelectedIndex();
 		if (selectedIndice >= 0) {
-			this.btnVoirOpes.setDisable(false);
+			
 
 			if(oListCompteCourant.get(selectedIndice).estCloture.equals("N")){
 				this.btnSupprCompte.setDisable(false);
 				this.btnModifierCompte.setDisable(false);
 				this.btnPrelevements.setDisable(false);
 				this.btnEmprunt.setDisable(false);
+				this.btnVoirOpes.setDisable(false);
 			}
 			
 		} else {
