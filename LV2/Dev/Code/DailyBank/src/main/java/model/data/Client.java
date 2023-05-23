@@ -11,6 +11,7 @@ public class Client {
 	public String estInactif;
 
 	public int idAg;
+    public String estCloture;
 
 	public Client(int idNumCli, String nom, String prenom, String adressePostale, String email, String telephone,
 			String estInactif, int idAg) {

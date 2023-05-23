@@ -166,9 +166,10 @@ public class ClientsManagementController {
 		if (selectedIndice >= 0) {
 			this.btnModifClient.setDisable(false);
 			this.btnComptesClient.setDisable(false);
+			
 		} else {
 			this.btnModifClient.setDisable(true);
 			this.btnComptesClient.setDisable(true);
 		}
 	}
-}
+} 

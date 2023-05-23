@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import model.data.Employe;
 import model.orm.Access_BD_Employe;
@@ -29,14 +30,15 @@ public class DailyBankMainFrame extends Application {
 	private Stage primaryStage;
 
 	/**
+	 * 
 	 * Méthode de démarrage (JavaFX).
 	 */
 	@Override
 	public void start(Stage primaryStage) {
 
 		this.primaryStage = primaryStage;
-		//ajouter d'une icone
-		primaryStage.getIcons().add(new Image(DailyBankMainFrame.class.getResourceAsStream("DailybankApp.png")));
+		//ajouter d'une icone sans fond blanc
+		this.primaryStage.getIcons().add(new Image(DailyBankMainFrame.class.getResourceAsStream("DailybankApp.png")));
 
 		try {
 
@@ -51,6 +53,7 @@ public class DailyBankMainFrame extends Application {
 
 			// Paramétrage du Stage : feuille de style, titre
 			Scene scene = new Scene(root, root.getPrefWidth() + 20, root.getPrefHeight() + 10);
+			
 			scene.getStylesheets().add(DailyBankApp.class.getResource("application.css").toExternalForm());
 
 			primaryStage.setScene(scene);

@@ -11,6 +11,7 @@ import application.view.ComptesManagementController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -42,6 +43,7 @@ public class ComptesManagement {
 			scene.getStylesheets().add(DailyBankApp.class.getResource("application.css").toExternalForm());
 
 			this.primaryStage = new Stage();
+			
 			this.primaryStage.initModality(Modality.WINDOW_MODAL);
 			this.primaryStage.initOwner(_parentStage);
 			StageManagement.manageCenteringStage(_parentStage, this.primaryStage);
