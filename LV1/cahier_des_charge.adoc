@@ -1,5 +1,9 @@
-= Cahier des charges
+= *Cahier des charges*
 :toc:
+:doctype: book
+:toc-title: Sommaire
+:sectnums:
+:Equipe:
 
 == 1. Contexte général
 Les banques françaises ont intensifié leurs efforts de modernisation et de transformation digitale pour répondre aux attentes de leurs clients en termes d'instantanéité et de services bancaires rapides. Cela implique des investissements importants dans les outils bureautiques, l'automatisation des tâches et la restructuration des réseaux bancaires.
