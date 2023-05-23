@@ -1,4 +1,5 @@
-=== Exemple readme étudiant
+Lien du jar de l'application (impossible de l'upload sur github): https://we.tl/t-zfCRGkTijx
+Le lien expire dans une semaine à compté du 17/05/2023 23h25. Pour tout problèmes liés à ce transfert veuillez contacter: loispacqueteau@gmail.com .
 
 ==== Présentation de l'équipe et rôles respectifs
 Etudiant 1: Loïs Pacqueteau +
@@ -42,15 +43,15 @@ Dans sa colonne il doit remplir la ligne correspondant à chaque partie qu'il a 
 [cols="1,2,2,5",options=header]
 |===
 | Date    | Nom         |  Lien                             | Retour
-| Sem.19  | CDC V1      |https://github.com/IUT-Blagnac/sae2022-bank-3b4/blob/main/LV1/cahier_des_charge.adoc |           
-|         |Gantt V1 Prévu|https://github.com/IUT-Blagnac/sae2022-bank-3b4/blob/main/LV1/GantSAE.pdf |
-| 16/05  | CdC V2final| https://github.com/IUT-Blagnac/sae2022-bank-3b4/blob/main/LV1/cahier_des_charge.adoc  |  
-|         | Gantt V1 Réalisé |       https://github.com/IUT-Blagnac/sae2023-bank-2b4/blob/main/Gant-V1-Lois_Bradley_Clement.pdf                        |     
-|         | Gantt V2 Prevu|  https://github.com/IUT-Blagnac/sae2023-bank-2b4/blob/main/GantV2-Lois_Bradley_Clement.pdf       |     
+| Sem.19  | CDC V1      |https://github.com/IUT-Blagnac/sae2022-bank-3b4/blob/main/LV1/cahier_des_charge.adoc |revoir pas de garde il manque des éléments, faire un sommaire,  il manque une problématique et à étoffer un peu le contexte,  présenter les utilisateurs et rôles.Utiliser les UC pour décrire la V0 V1 et V2,  présenter dans l'existant les fichiers fournis. Donner les règle de gestion des fonctionnalités (ex. Pour supprimer un compte, il doit être à 0 ).  Il faut prioriser les fonctions à développer . Il manque les contraintes organisationnelles avec entre autres la liste des livrables attendus et les dates de livraison.           
+|         |Gantt V1 Prévu|https://github.com/IUT-Blagnac/sae2022-bank-3b4/blob/main/LV1/GantSAE.pdf |détailler par fonctonnalités les tâches de dev de la V1. Il faut affecter les tâches : qui fait quoi. Il faut indiquer les jalons (date de livrable) et essayer un affichage sur une page.
+| 16/05  | CdC V2final| https://github.com/IUT-Blagnac/sae2022-bank-3b4/blob/main/LV1/cahier_des_charge.adoc  |  Contexte toujours trop succinct. Manque pages de garde, sommaire. Vous confondez chef de projet et chef d'agence ! Je n'ai pas les UC, les règles de gestion, la priorisation. Les remarques V1 ne sont pas prises en compte, c'est dommage. Contraintes OK. Note 8/20
+|         | Gantt V1 Réalisé |       https://github.com/IUT-Blagnac/sae2023-bank-2b4/blob/main/Gant-V1-Lois_Bradley_Clement.pdf                        |     Je n'ai pas de légende couleur, je ne sais pas ce qui est terminé, en cours ...
+|         | Gantt V2 Prevu|  https://github.com/IUT-Blagnac/sae2023-bank-2b4/blob/main/GantV2-Lois_Bradley_Clement.pdf       |     Le titre n'indique pas V2. CDCU V2 est une tâche de V1 qui n'est plus à faire.
 |         | Doc. Tec. V1 |https://github.com/IUT-Blagnac/sae2023-bank-2b4/blob/main/LV1/doc_tech.adoc        |    
-|         | Doc User V1    | https://github.com/IUT-Blagnac/sae2023-bank-2b4/blob/main/LV1/Doc_Utilisateur.adoc        |
-|         | Recette V1  |                      | 
-|         | Suivi projet V1|   | 
+|         | Doc User V1    | https://github.com/IUT-Blagnac/sae2023-bank-2b4/blob/main/LV1/Doc_Utilisateur.adoc        | Numéroter les pragraphe, revoir les éléments de l'entete cf. grille éval. Présenter les utilisateurs. Préciser la config nécéssaire pour l'installation., le nom du jar à télécharger. Il faut détailler davantage, ex débit dans quels cas le débit est impossible. Si possible, comment je vérifie qu'il a été fait. Chaque developpeur doit idenitifier la fonction qu'il a codé dans la doc.
+|         | Recette V1  | https://github.com/IUT-Blagnac/sae2023-bank-2b4/blob/main/cahier%20de%20recetteV1.adoc | 
+|         | Suivi projet V1|   | Votre dépôt n'apparait toujours pas dans classroom SAE 2023 mes collègues dev ne vont pas vous trouver. Merci de revoir l'arborescence du dépôt c'est la pagaille. J'ai quelques issues créées mais pas de projet.Il manque les issues V2.Le tableau dans le readme n'est pas complété pour V2.
 | 26/05   | Gantt V2  réalisé    |       | 
 |         | Doc. Util. V2 |         |         
 |         | Doc. Tec. V2 |                |     

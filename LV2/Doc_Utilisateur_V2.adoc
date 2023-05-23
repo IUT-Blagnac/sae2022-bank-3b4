@@ -1,5 +1,22 @@
-= SOMMAIRE
+:numbered: true
 :toc:
+
+= Doc user V2
+
+
+[cols="3a,2a,1a", options="header"]
+|===
+| Etudiant | Groupe | Développement
+| Bradley Djedje | 3B4 | Créer un compte, gérer les employés
+| Lois Pacqueteau | 3B4 | Créditer/débiter un compte, virement de compte à compte
+| Clément Dejean Gourrier | 3B4 | CRUD V1
+|===
+
+
+<<<
+
+    
+
 
 == Présentation générale
 
@@ -20,7 +37,7 @@ Simuler une assurance d'emprunt +
 
 == Installation
 
-Pour l'installation et l'utilisation, il suffit de double-cliquer sur le fichier avec l'extension .jar ou de lancer l'extraction du fichier compressé.
+Pour l'installation et l'utilisation, il suffit de double-cliquer sur le fichier 'DailyBank' avec l'extension .jar ou de lancer l'extraction du fichier compressé.
 Afin de modifier les employés et les autres chefs d'agence, une connexion à un compte chef d'agence est requise.
 Lorsque vous naviguez sur les pages de type "management" des clients ou des employés, il est important de rechercher et de cliquer sur le nom d'une personne pour savoir quelles fonctionnalités elle peut accéder.
 
@@ -133,5 +150,8 @@ Sélectionner l’employé et cliquer sur 'Nouveau Employé'. +
 === Use Case Diagram
 
 image::image/diagrammedeclasse.jpg[width=500, alt=Exemple d'image, title= ]
+
+
+
  
 
