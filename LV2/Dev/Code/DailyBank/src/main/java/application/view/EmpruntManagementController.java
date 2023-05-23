@@ -108,19 +108,16 @@ public class EmpruntManagementController {
 		}
 
 		this.oListCompteCourantList = FXCollections.observableArrayList();
+		this.oListCompteCourantList.addAll(listeCpt);
 		this.lvComptes.setItems(this.oListCompteCourantList);
 		this.oListCompteCourantList.clear();
-		this.oListCompteCourantList.addAll(listeCpt);
+
 	}
 
 	@FXML
 	private void doSimuler() throws RowNotFoundOrTooManyRowsException, DataAccessException, DatabaseConnexionException {
 		if (isSaisieValide()) {
 			this.genererSimu();
-
-			this.montant = Double.parseDouble(this.txtMontant.getText());
-			this.duree = Integer.parseInt(this.txtDuree.getText());
-			this.taux = Double.parseDouble(this.txtTaux.getText()) / 100;
 
 			CompteCourant getCompteCourant = omDialogController.getCompteCourant();
 			Access_BD_Emprunt acc = new Access_BD_Emprunt();
@@ -139,13 +136,15 @@ public class EmpruntManagementController {
 			this.duree = Integer.parseInt(this.txtDuree.getText());
 			this.taux = Double.parseDouble(this.txtTaux.getText()) / 100;
 		} catch (NumberFormatException e) {
-			AlertUtilities.showAlert(primaryStage, "Erreur saisie", "Saisie invalide", "Veillez saisier des nombres.", AlertType.ERROR);
+			AlertUtilities.showAlert(primaryStage, "Erreur saisie", "Saisie invalide", "Veillez saisier des nombres.",
+					AlertType.ERROR);
 			return false;
 		}
 		if (this.montant >= 0 && this.duree >= 0 && this.taux >= 0) {
 			return true;
 		} else {
-			AlertUtilities.showAlert(primaryStage, "Erreur saisie", "Saisie invalide", "Veillez saisier des nombres.", AlertType.ERROR);
+			AlertUtilities.showAlert(primaryStage, "Erreur saisie", "Saisie invalide", "Veillez saisier des nombres.",
+					AlertType.ERROR);
 			return false;
 		}
 	}

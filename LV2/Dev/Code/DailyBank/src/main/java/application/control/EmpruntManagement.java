@@ -52,7 +52,6 @@ public class EmpruntManagement {
 		this.cc = _cc;
 		this.dailyBankState = _dbstate;
 		try {
-			System.out.println("dadadadad");
 			FXMLLoader loader = new FXMLLoader(EmpruntManagementController.class.getResource("empruntsimuler.fxml"));
 			BorderPane root = loader.load();
 
