@@ -43,3 +43,6 @@
 	-fx-font-size: 10pt;
 }
 
+.list-view .list-cell:selected {
+    -fx-background-color: #26a292;
+}

@@ -35,7 +35,7 @@ public class DailyBankMainFrame extends Application {
 	public void start(Stage primaryStage) {
 
 		this.primaryStage = primaryStage;
-		//ajouter une icone
+		//ajouter d'une icone
 		primaryStage.getIcons().add(new Image(DailyBankMainFrame.class.getResourceAsStream("DailybankApp.png")));
 
 		try {
