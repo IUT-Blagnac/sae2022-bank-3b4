@@ -41,6 +41,7 @@
 *{
 	-fx-font-family: "Montserrat";
 	-fx-font-size: 10pt;
+	-fx-font-weight: bold;
 }
 
 .list-view .list-cell:selected {
