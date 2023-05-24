@@ -5,6 +5,22 @@
 :sectnums:
 :Equipe:
 
+
+= *Page de garde*
+[cols="2*"]
+|===
+| Version | 2
+
+| Date | 24/05/2023
+
+| Équipe | 2B4: +
+Loïs Pacqueteau +
+Bradley Djedje +
+Clement Dejean Gourrié
+
+| Projet | sae2023-bank
+|===
+
 == *Présentation de l’Application*
 L’application permet de gérer des comptes bancaires de dépôt pour des clients. L’application possède actuellement quelques fonctionnalités tels que modifier les informations clients, créer un nouveau client, consulter un compte, créer un compte, créditer/débiter un compte, effectuer un virement, clôturer un compte, gérer les employés et rendre inactif un client à l’aide des boutons interactifs et des champs à remplir.
 
