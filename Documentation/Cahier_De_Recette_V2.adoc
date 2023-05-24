@@ -2,11 +2,25 @@
 :toc:
 :toc-title: Sommaire
 
+
+= *Page de garde*
+[cols="2*"]
+|===
+| Version | 2
+
+| Date | 24/05/2023
+
+| Équipe | 2B4: +
+Loïs Pacqueteau +
+Bradley Djedje +
+Clement Dejean Gourrié
+
+| Projet | sae2023-bank
+|===
+
+
 :Entreprise: DailyBank
 :Equipe:  
-
-Créé par : Loïs Pacqueteau
-Créé pour :  DailyBank
 
  
 
