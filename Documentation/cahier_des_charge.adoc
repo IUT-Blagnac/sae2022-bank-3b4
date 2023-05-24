@@ -1,0 +1,140 @@
+<<<<<<< HEAD
+= *Cahier des charges*
+:toc:
+:doctype: book
+:toc-title: Sommaire
+:sectnums:
+:Equipe:
+=======
+= Cahier des charges
+:toc:
+>>>>>>> 1b7ed0a65666f943002567eed530cc96dfe710d4
+
+== 1. Contexte général
+Les banques françaises ont intensifié leurs efforts de modernisation et de transformation digitale pour répondre aux attentes de leurs clients en termes d'instantanéité et de services bancaires rapides. Cela implique des investissements importants dans les outils bureautiques, l'automatisation des tâches et la restructuration des réseaux bancaires.
+
+== 2. Sujet
+La banque DailyBank souhaite développer une application JAVA-Oracle de gestion des comptes clients pour remplacer ses outils obsolètes. L'objectif est de moderniser ses services bancaires et de déployer l'application dans ses 100 agences.
+
+== 3. Problematique
+Comment développer et déployer de manière efficace une application de gestion des comptes clients pour répondre aux besoins de modernisation et de transformation digitale de la banque DailyBank, tout en tenant compte des contraintes techniques et organisationnelles spécifiques ?
+
+== 4. Objectifs/Analyse de l'existant
+L'application doit permettre la gestion des comptes bancaires de dépôt pour les clients existants. Elle doit offrir la possibilité de réaliser des opérations de débit, de crédit et de virement entre comptes. Les fonctionnalités doivent être développées en plusieurs versions (V1, V2).
+
+=== 4.1. Version existante (V0)
+Dans la version existante (V0), les guichetiers peuvent :
+
+* Modifier les informations client (adresse, téléphone, etc.).
+* Créer de nouveaux clients.
+* Consulter les comptes.
+* Débiter un compte.
+
+=== 4.2. Versions à développer
+==== Dans la version 1 (V1), les fonctionnalités à développer sont :
+
+* Guichetier :
+
+** Créditer/débiter un compte (Java et BD avec procédure stockée).
+** Créer un compte.
+** Effectuer un virement de compte à compte.
+** Clôturer un compte (doit avoir un solde égale a 0).
+
+* Chef d'Agence :
+** Gérer les employés (guichetier et chef d'agence).
+
+==== Dans la version 2 (V2), les fonctionnalités à développer sont :
+
+* Guichetier :
+
+** Générer un relevé mensuel d'un compte en PDF.
+** Gérer les prélèvements automatiques.
+
+* Chef d'Agence :
+** Uniquement les spécifications.
+
+* Éventuellement :
+** Chef d’Agence :
+*** Les spécifications finalisées de la version 2
+*** Supers options pour les tops …
+*** Développer une ou plusieurs fonctionnalités au choix et selon vos compétences
+
+** « Batch »:
+*** Générer les relevés mensuels en PDF
+*** Exécuter les prélèvements automatiques
+
+* Chef d'Agence :
+** Spécifications finalisées de la version 2.
+** Supers options pour les tops.
+** Développer une ou plusieurs fonctionnalités au choix en fonction des compétences.
+
+== 5. Analyse des Contraintes
+Cette section du cahier des charges vise à analyser les différentes contraintes techniques et organisationnelles qui doivent être prises en compte lors du développement et du déploiement de l'application de gestion des comptes clients de la banque DailyBank.
+
+=== 5.1. Contraintes Techniques
+Les contraintes techniques suivantes doivent être considérées :
+
+* Plateforme : L'application doit être développée en utilisant la technologie Java-Oracle. Il est nécessaire de s'assurer que l'environnement de développement et les serveurs d'exécution prennent en charge cette plateforme.
+
+* Base de données : L'application doitêtre intégrée à une base de données pour stocker les informations relatives aux comptes clients. Il convient de choisir une base de données compatible avec la technologie Java-Oracle, telle que Oracle Database.
+
+* Performance : L'application doit être conçue de manière à garantir des performances optimales, même en cas d'utilisation intensive par de nombreux utilisateurs simultanés. Cela peut nécessiter l'utilisation de techniques d'optimisation du code, de mise en cache des données, etc.
+
+* Intégration avec les systèmes existants : Il est possible que l'application de gestion des comptes clients ait besoin d'être intégrée à d'autres systèmes ou applications existants au sein de la banque DailyBank. Il est important de prendre en compte ces intégrations potentielles et de s'assurer de leur compatibilité.
+
+* Documentation technique : Il est essentiel de fournir une documentation technique détaillée qui explique l'architecture de l'application, les choix technologiques, les configurations requises, les dépendances, etc., afin de faciliter la maintenance future de l'application.
+
+=== 5.2. Contraintes Organisationnelles
+Les contraintes organisationnelles suivantes doivent également être prises en compte :
+
+* Restructuration des services bancaires : L'application de gestion des comptes clients fait partie intégrante de la restructuration des services bancaires de la banque DailyBank. Il est nécessaire de collaborer avec les équipes concernées et de s'aligner sur les objectifs de cette restructuration.
+
+* Déploiement dans les agences : L'application doit être déployée dans les 100 agences du réseau de la banque DailyBank. Il est important de prévoir les ressources nécessaires pour le déploiement, la formation des utilisateurs finaux et le support post-déploiement.
+
+* Gestion de projet : Le développement de l'application doit suivre une méthodologie de gestion de projet rigoureuse. Il est nécessaire d'établir un plan de projet détaillé, de définir les rôles et les responsabilités, de gérer les risques et les problèmes, et de suivre régulièrement l'avancement du projet.
+
+== 6. Utilisateur et roles
+
+=== 6.1 Chef de projet
+
+Le chef de projet est responsable de la gestion complète du projet, depuis la planification initiale jusqu'à la mise en œuvre finale de l'application de gestion des comptes clients. Il définit les objectifs du projet en collaboration avec les parties prenantes, élabore un plan détaillé avec les étapes, les ressources et les délais, coordonne les équipes et les intervenants, gère les risques et les problèmes, assure le suivi de l'avancement du projet, évalue sa conformité aux objectifs, communique avec les parties prenantes, et veille à la qualité du produit final. En résumé, le chef de projet garantit la réussite du projet en respectant les délais, les budgets et les exigences de qualité, tout en assurant la satisfaction des parties prenantes.
+
+=== 6.2 Guichetier
+
+En tant qu'utilisateur principal de l'application, le guichetier est chargé d'effectuer diverses tâches liées à la gestion des comptes bancaires des clients. Il peut créditer ou débiter un compte, enregistrer les dépôts et les retraits, et maintenir un suivi précis des transactions financières. Le guichetier peut également créer de nouveaux comptes pour les clients, en collectant les informations nécessaires et en les enregistrant dans le système. Il est responsable des virements entre les comptes des clients, en respectant les instructions fournies et en vérifiant la disponibilité des fonds. De plus, il peut clôturer un compte bancaire sur demande du client en suivant les procédures établies par la banque. En exécutant ces tâches, le guichetier assure un service de qualité aux clients, en traitant leurs opérations de manière précise, sécurisée et efficace.
+
+== 7. Livrable et date de rendu
+
+=== SAE 2.05
+
+* Semaine 19 : 
+** Rendu GANT V1.
+** CDCU V1.
+
+* Semaine 20 : 
+** Doc. Util. V1. 
+** CDCU V2.
+** Gantt V2.
+
+* Semaine 21 :
+** Doc Util V2.
+** Gantt V2 Réalisé.
+** Chiffrage projet.
+
+* Semaine 22 :
+** Soutenace oral.
+
+=== SAE 2.01
+
+* Semaine 20 : 
+** Doc. Tech. V1. 
+** Cahier Test V1.
+** Jar V1.
+
+* Semaine 21 :
+** Doc. Tech. V2.
+** Cahier Test V2 et recette finale.
+** Jar V2.
+
+* Semaine 22 :
+** Eval indiv.
