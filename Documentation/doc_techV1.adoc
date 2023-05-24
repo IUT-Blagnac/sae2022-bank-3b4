@@ -1,4 +1,4 @@
-= *Doc technique*
+= *Documentation technique V1*
 :toc:
 :doctype: book
 :toc-title: Sommaire
@@ -71,7 +71,7 @@ Le quatrieme "if" sert a controler que le compte source et le compte destination
 
 
 
-=== CRDU
+=== CRUD Employé
 ==== Créer un employé(Create)
 Créer un employe : Permet de créer un nouvel employe avec ses informations personnelles telles que nom, prénom, adresse, etc. Cette fonctionnalité permet d'ajouter un nouvel employe à la base de données.
 

@@ -126,7 +126,7 @@ public class DailyBankMainFrameController {
 	 */
 	@FXML
 	private void doActionAide() {
-		String contenu = "DailyBank v1.01\nSAE 2.01 Développement\nIUT-Blagnac";
+		String contenu = "DailyBank v2\nSAE 2.01 Développement\nIUT-Blagnac\nRéalisation Graphique: Loïs Pacqueteau";
 		AlertUtilities.showAlert(this.primaryStage, "Aide", null, contenu, AlertType.INFORMATION);
 	}
 
