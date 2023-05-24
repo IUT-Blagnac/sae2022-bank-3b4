@@ -37,7 +37,7 @@ public class DailyBankMainFrame extends Application {
 	public void start(Stage primaryStage) {
 
 		this.primaryStage = primaryStage;
-		//ajouter d'une icone sans fond blanc
+		//ajout d'une icone 
 		this.primaryStage.getIcons().add(new Image(DailyBankMainFrame.class.getResourceAsStream("DailybankApp.png")));
 
 		try {
