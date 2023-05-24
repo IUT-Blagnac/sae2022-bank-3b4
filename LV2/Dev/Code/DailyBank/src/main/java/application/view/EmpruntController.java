@@ -75,8 +75,6 @@ public class EmpruntController {
 
     private EmpruntControllerPane controller;
 
-    private EmpruntManagement empruntCotroller;
-
     @FXML
     private void doSimuler() {
         controller.simuler();

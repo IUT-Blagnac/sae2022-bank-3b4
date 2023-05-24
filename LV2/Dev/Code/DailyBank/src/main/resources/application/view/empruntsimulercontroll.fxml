@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.EmpruntController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.EmpruntController">
    <center>
       <ListView fx:id="lView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
    </center>
@@ -27,7 +27,7 @@
                   <Insets left="55.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="emprunt" mnemonicParsing="false" onAction="#doSimuler" text="Simuler un emprunt" textAlignment="CENTER">
+            <Button fx:id="emprunt" mnemonicParsing="false" onAction="#doSimuler" text="Simuler un emprunt " textAlignment="CENTER">
                <GridPane.margin>
                   <Insets left="89.0" />
                </GridPane.margin>

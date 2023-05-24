@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.EmpruntManagementController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="459.0" prefWidth="1010.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.EmpruntManagementController">
    <center>
       <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <bottom>
@@ -18,11 +18,6 @@
                   <Button mnemonicParsing="false" onAction="#doCancel" prefHeight="31.0" prefWidth="214.0" text="Retour gestion clients">
                      <HBox.margin>
                         <Insets bottom="10.0" left="10.0" top="10.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" text="Valider">
-                     <HBox.margin>
-                        <Insets left="600.0" right="10.0" top="10.0" />
                      </HBox.margin>
                   </Button>
                </children>
@@ -44,12 +39,13 @@
       <AnchorPane styleClass="borderlight" BorderPane.alignment="CENTER">
          <children>
             <Label fx:id="lblInfosClient" layoutX="-1.0" layoutY="7.0" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="70.0" styleClass="bold" text="Montant :" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="811.0" AnchorPane.topAnchor="7.0" />
-            <TextField fx:id="txtMontant" layoutX="74.0" layoutY="8.0" prefHeight="31.0" prefWidth="73.0" text="500" />
-            <Label layoutX="183.0" layoutY="13.0" text="Durée (en mois) :" />
-            <TextField fx:id="txtDuree" layoutX="310.0" layoutY="7.0" prefHeight="31.0" prefWidth="39.0" text="24" />
-            <Label layoutX="405.0" layoutY="12.0" text="Taux :" />
-            <TextField fx:id="txtTaux" layoutX="451.0" layoutY="7.0" prefHeight="31.0" prefWidth="40.0" text="0.5" />
-            <Button fx:id="valider" layoutX="713.0" layoutY="4.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doSimuler" prefHeight="38.0" prefWidth="153.0" text="Simuler" />
+            <TextField fx:id="txtMontant" layoutX="69.0" layoutY="8.0" prefHeight="31.0" prefWidth="73.0" text="500" />
+            <Label layoutX="170.0" layoutY="14.0" text="Durée (en mois) :" />
+            <TextField fx:id="txtDuree" layoutX="292.0" layoutY="9.0" prefHeight="31.0" prefWidth="39.0" text="24" />
+            <Label layoutX="351.0" layoutY="13.0" text="Taux (applicable/assurance):" />
+            <TextField fx:id="txtTaux" layoutX="556.0" layoutY="7.0" prefHeight="31.0" prefWidth="40.0" text="0.5" />
+            <Button layoutX="815.0" layoutY="6.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doSimuler" prefHeight="38.0" prefWidth="153.0" text="Simuler emprunt" />
+            <Button layoutX="618.0" layoutY="5.0" mnemonicParsing="false" onAction="#doAssurance" prefHeight="38.0" text="Assurance d'emprunt" />
          </children>
          <BorderPane.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
