@@ -120,7 +120,7 @@ public class EmpruntManagementController {
 
         double montantAssurance = (this.montant * this.taux);
 
-        double montantAssuranceMensuelle = montantAssurance / (this.duree * 12);
+        // double montantAssuranceMensuelle = montantAssurance / (this.duree * 12);
 
 		listeCpt.add("Le montant de l'assurance d'emprunt par an est de :" + montantAssurance);
 
@@ -140,7 +140,6 @@ public class EmpruntManagementController {
 			// Access_BD_Emprunt acc = new Access_BD_Emprunt();
 			// acc.insertEmprunt(this.taux, this.montant, this.duree, getCompteCourant);
 
-
 		} else {
 			AlertUtilities.showAlert(this.primaryStage, "Erreur", "Merci de saisir des valeurs valides", null,
 					AlertType.INFORMATION);
@@ -151,7 +150,6 @@ public class EmpruntManagementController {
 	private void doAssurance(){
 		if(isSaisieValide()){
 			this.calculerAssurance();
-
 		} else {
 			AlertUtilities.showAlert(this.primaryStage, "Erreur", "Merci de saisir des valeurs valides", null,
 					AlertType.INFORMATION);
