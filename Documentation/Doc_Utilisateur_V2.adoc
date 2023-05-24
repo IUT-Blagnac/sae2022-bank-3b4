@@ -35,9 +35,9 @@ Effectuer un débit exceptionnel
 Simuler un emprunt
 Simuler une assurance d'emprunt +
 
-== Installation
+== Installation/Pré-requis 
 
-Pour l'installation et l'utilisation, il suffit de double-cliquer sur le fichier 'DailyBank' avec l'extension .jar ou de lancer l'extraction du fichier compressé.
+Pour l'installation de l'application vous devez avoir
 Afin de modifier les employés et les autres chefs d'agence, une connexion à un compte chef d'agence est requise.
 Lorsque vous naviguez sur les pages de type "management" des clients ou des employés, il est important de rechercher et de cliquer sur le nom d'une personne pour savoir quelles fonctionnalités elle peut accéder.
 
