@@ -67,16 +67,22 @@ image::image/crediterdebiter.png[width=500, alt=Exemple d'image, title=Credit de
 
 Renseignez les informations du client et cliquez sur 'Rechercher'.
 
-image::image/crediterdebiter2.png[width=500, alt=Exemple d'image, title= ] 
+image::image/crediterdebiter2.png[width=500] 
 
-Sélectionnez le client recherché et cliquez sur 'Comptes client'.
+Sélectionnez le client recherché et les boutons 'Comptes Client' et 'Modifier Client' deviennent maintenant cliquable. Cliquez sur 'Comptes client'.
 Sélectionnez le compte concerné et cliquez sur 'Voir opérations' pour enregistrer un crédit ou un débit.
 
-image::image/crediterdebiter3.png[width=500, alt=Exemple d'image, title= ] 
+image::image/crediterdebiter3.png[width=500] 
 
 Vous n'avez plus qu'à sélectionner 'Enregistrer débit' ou 'Enregistrer un crédit' et indiquer un montant avant de valider.
 
-image::image/crediterdebiter4.png[width=500, alt=Exemple d'image, title= ] 
+image::image/crediterdebiter4.png[width=500] 
+
+==== Cas Exceptionnel
+
+Si le montant indiquer est negatif l'operation ne s'effectue pas et le label et textfield devient rouge pour indiquer l'erreur et on remet le focus sur le textfield pour que l'utilisateur puisse modifier le montant.
+
+
 
 === Créer un Client :
 

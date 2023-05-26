@@ -38,7 +38,15 @@ public class PrelevementsManagementController implements Initializable {
 	private CompteCourant compteConcerne;
 	private ObservableList<Prelevement> olPrelevements;
 
-	// Manipulation de la fenêtre
+	/**
+	 * Constructeur de la classe PrelevementsManagementController permettant de charger la vu de gestion des prelevements
+	 * @param _primaryStage Stage parent de la vue
+	 * @param _dbstate Etat actuel de l'application DailyBank
+	 * @param _pm Controleur de la vue
+	 * @param client Client dont on veut afficher les prelevements
+	 * @param compte Compte dont on veut afficher les prelevements
+	 * 
+	 */
 	public void initContext(Stage _primaryStage, PrelevementsManagement _pm, DailyBankState _dbstate, Client client, CompteCourant compte) {
 		this.primaryStage = _primaryStage;
 		this.dbs = _dbstate;
@@ -48,6 +56,9 @@ public class PrelevementsManagementController implements Initializable {
 		this.configure();
 	}
 
+	/**
+	 * Met à jour les informations du compte client
+	 */
 	private void configure() {
 		this.primaryStage.setOnCloseRequest(e -> this.closeWindow(e));
 
@@ -93,11 +104,17 @@ public class PrelevementsManagementController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 	}
 
+	/**
+	 * Ferme la fenêtre
+	 */
 	@FXML
 	private void doCancel() {
 		this.primaryStage.close();
 	}
 
+	/**
+	 * Créer un prélèvement
+	 */
 	@FXML
 	private void doCreerPrelev() {
 
@@ -108,6 +125,10 @@ public class PrelevementsManagementController implements Initializable {
 		}
 	}
 
+
+	/**
+	 * Modifie un prélèvement
+	 */
 	@FXML
 	private void doModifierPrelev() {
 		int selectedIndex = this.lvPrelevements.getSelectionModel().getSelectedIndex();
@@ -123,6 +144,9 @@ public class PrelevementsManagementController implements Initializable {
 
 	}
 
+	/**
+	 * Supprime un prélèvement
+	 */
 	@FXML
 	private void doSupprimerPrelev() {
 		int selectedIndex = this.lvPrelevements.getSelectionModel().getSelectedIndex();
@@ -137,6 +161,7 @@ public class PrelevementsManagementController implements Initializable {
 		}
 	}
 
+
 	private void validateComponentState() {
 		int selectedIndex = this.lvPrelevements.getSelectionModel().getSelectedIndex();
 		if (selectedIndex >= 0) {
@@ -149,6 +174,9 @@ public class PrelevementsManagementController implements Initializable {
 		this.btnCreerPrelev.setDisable(false);
 	}
 
+	/**
+	 * Met à jour l'état des composants de la fenêtre
+	 */
 	private void updateInfoCompteClient() {
 
 		PairsOfValue<CompteCourant, ArrayList<Prelevement>> prelevEtCompte;

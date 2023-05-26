@@ -18,7 +18,7 @@ import model.orm.exception.DatabaseConnexionException;
 
 /**
  * Classe de controleur de Dialogue de la fenêtre principale.
- * On va aussi rajouter un logo ici
+ * On va aussi rajouter une icone ici
  */
 
 public class DailyBankMainFrame extends Application {
@@ -32,6 +32,7 @@ public class DailyBankMainFrame extends Application {
 	/**
 	 * 
 	 * Méthode de démarrage (JavaFX).
+	 * @param Stage primaryStage : Stage de la fenêtre principale
 	 */
 	@Override
 	public void start(Stage primaryStage) {
@@ -103,8 +104,9 @@ public class DailyBankMainFrame extends Application {
 		Application.launch();
 	}
 
-	/**
-	 * Réaliser la déconnexion de l'application.
+	/** 
+	 *  Réaliser la déconnexion de l'application.
+	 * 
 	 */
 	public void deconnexionEmploye() {
 		this.dailyBankState.setEmployeActuel(null);
