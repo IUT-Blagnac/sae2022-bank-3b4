@@ -22,6 +22,7 @@ Clement Dejean Gourrié
 |===
 
 == *Présentation de l’Application*
+
 L’application permet de gérer des comptes bancaires de dépôt pour des clients. L’application possède actuellement quelques fonctionnalités tels que modifier les informations clients, créer un nouveau client, consulter un compte, créer un compte, créditer/débiter un compte, effectuer un virement, clôturer un compte, gérer les employés, rendre inactif un client à l’aide des boutons interactifs et des champs à remplir, similer un emprunt, ect...
 
 === *Use Case*
@@ -82,6 +83,11 @@ En résumé, ce diagramme de classe des données représente la structure de la 
 == *Architecture*
 
 === *Architecture générale*
+Il y a plusieur sous-systèmes comme...
+
+ressource externe :
+
+* il faut avoir java 17 au minimum
+* avoir un pc
 
 === *Fonctionnalité*
-
