@@ -1,6 +1,3 @@
-Lien du jar de l'application (impossible de l'upload sur github): https://we.tl/t-zfCRGkTijx
-Le lien expire dans une semaine à compté du 17/05/2023 23h25. Pour tout problèmes liés à ce transfert veuillez contacter: loispacqueteau@gmail.com .
-
 ==== Présentation de l'équipe et rôles respectifs
 Etudiant 1: Loïs Pacqueteau +
 Etudiant 2: Bradley Djedje +
