@@ -25,7 +25,9 @@ Clement Dejean Gourrié
 L’application permet de gérer des comptes bancaires de dépôt pour des clients. L’application possède actuellement quelques fonctionnalités tels que modifier les informations clients, créer un nouveau client, consulter un compte, créer un compte, créditer/débiter un compte, effectuer un virement, clôturer un compte, gérer les employés, rendre inactif un client à l’aide des boutons interactifs et des champs à remplir, similer un emprunt, ect...
 
 === *Use Case*
-image::C:\tmp\sae2022-bank-3b4\Documentation\image\doc tech v2\uc-initialv2.svg[svg,opts=inline]
+// image::C:\tmp\sae2022-bank-3b4\Documentation\image\doc tech v2\uc-initialv2.svg[svg,opts=inline]
+image::image/doc tech v2/uc-initialv2.jpg[]
+
 
 Le guichetier et le chef d'agence bancaire sont des rôles clés dans le domaine bancaire. Voici une explication de leurs responsabilités respectives :
 
@@ -70,7 +72,8 @@ Voici les différentes tables de la base de données ainsi qu'une explication de
 * CompteEpargne : Cette table représente les comptes d'épargne des clients. Elle contient des informations similaires à la table CompteCourant, telles que l'identifiant du compte (idNumCompte), le solde du compte (solde) et l'identifiant du client auquel le compte est associé (idNumCli).
 
 //image diagramme de classe
-image::C:\tmp\sae2022-bank-3b4\Documentation\image\doc tech v2\dc-initialv2.svg[svg,opts=inline]
+// image::C:\tmp\sae2022-bank-3b4\Documentation\image\doc tech v2\dc-initialv2.svg[svg,opts=inline]
+image::image/doc tech v2/dc-initialv2.jpg[]
 
 Les flèches entre les différentes tables représentent les relations entre elles. Par exemple, la relation entre AgenceBancaire et Employe indique que chaque agence peut avoir plusieurs employés, tandis que la relation entre Client et AgenceBancaire indique que chaque client est rattaché à une agence spécifique.
 
