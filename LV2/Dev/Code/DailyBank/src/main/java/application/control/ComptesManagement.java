@@ -148,9 +148,8 @@ public class ComptesManagement {
 		return listeCpt;
 	}
 
-	public void gererPrelevements(CompteCourant cliMod) {
-		PrelevementsManagement pm = new PrelevementsManagement(this.primaryStage, this.dailyBankState,
-				this.clientDesComptes, cliMod);
+	public void gererPrelevements(CompteCourant cptCourant) {
+		PrelevementsManagement pm = new PrelevementsManagement(this.primaryStage, this.dailyBankState,this.clientDesComptes, cptCourant);
 		pm.doPrelevementsManagementDialog();
 	}
 
