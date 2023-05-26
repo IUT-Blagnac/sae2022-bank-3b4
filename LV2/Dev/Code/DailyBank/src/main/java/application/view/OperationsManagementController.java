@@ -35,7 +35,16 @@ public class OperationsManagementController {
 	private CompteCourant compteConcerne;
 	private ObservableList<Operation> oListOperations;
 
-	// Manipulation de la fenêtre
+	/**
+	 * Méthode permettant d'initialiser le contexte de la fenêtre
+	 * 
+	 * @param _containingStage Stage parent de la vue
+	 * @param _om              Contrôleur de Dialogue associé à
+	 * @param _dbstate         Etat courant de l'application
+	 * @param client           Client dont on veut afficher les comptes
+	 * @param compte           Compte dont on veut afficher les opérations
+	 * 
+	 */
 	public void initContext(Stage _containingStage, OperationsManagement _om, DailyBankState _dbstate, Client client,
 			CompteCourant compte) {
 		this.primaryStage = _containingStage;
@@ -46,6 +55,7 @@ public class OperationsManagementController {
 		this.configure();
 	}
 
+	
 	private void configure() {
 		this.primaryStage.setOnCloseRequest(e -> this.closeWindow(e));
 
@@ -83,12 +93,17 @@ public class OperationsManagementController {
 	private Button btnVirement;
 
 	
-
+	/**
+	 * Méthode permettant de fermer la fenêtre
+	 */
 	@FXML
 	private void doCancel() {
 		this.primaryStage.close();
 	}
 
+	/**
+	 * Méthode permettant de réaliser un débit
+	 */
 	@FXML
 	private void doDebit() {
 
@@ -99,6 +114,9 @@ public class OperationsManagementController {
 		}
 	}
 
+	/**
+	 * Méthode permettant de réaliser un crédit
+	 */
 	@FXML
 	private void doCredit() {
 		Operation op = this.omDialogController.enregistrerCredit();
@@ -108,6 +126,10 @@ public class OperationsManagementController {
 		}
 	}
 
+
+	/**
+	 * Méthode permettant de réaliser un virement
+	 */
 	@FXML
 	private void doVirement() {
 		Operation op = this.omDialogController.enregistrerVirement();
@@ -117,6 +139,9 @@ public class OperationsManagementController {
 		}
 	}
 
+	/**
+	 * Méthode permettant d'activer les boutons de la fenêtre
+	 */
 	private void validateComponentState() {
 		// Non implémenté => désactivé
 		this.btnCredit.setDisable(false);
@@ -124,6 +149,9 @@ public class OperationsManagementController {
 		this.btnVirement.setDisable(false);
 	}
 
+	/**
+	 * Méthode permettant de mettre à jour les informations du compte client
+	 */
 	private void updateInfoCompteClient() {
 
 		PairsOfValue<CompteCourant, ArrayList<Operation>> opesEtCompte;

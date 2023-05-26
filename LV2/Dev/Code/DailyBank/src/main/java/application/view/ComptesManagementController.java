@@ -40,6 +40,7 @@ public class ComptesManagementController {
 		this.configure();
 	}
 
+	
 	private void configure() {
 		String info;
 		

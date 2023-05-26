@@ -23,6 +23,7 @@ import model.orm.exception.DatabaseConnexionException;
 import model.orm.exception.Order;
 import model.orm.exception.Table;
 
+
 public class ComptesManagement {
 
 	private Stage primaryStage;
@@ -30,6 +31,14 @@ public class ComptesManagement {
 	private DailyBankState dailyBankState;
 	private Client clientDesComptes;
 
+	/**
+	 * Constructeur de la classe ComptesManagement permettant de charger la vue de
+	 * gestion des comptes
+	 * 
+	 * @param _parentStage Stage parent de la vue
+	 * @param _dbstate     Etat actuel de l'application DailyBank
+	 * @param client       Client dont on veut afficher les comptes
+	 */
 	public ComptesManagement(Stage _parentStage, DailyBankState _dbstate, Client client) {
 
 		this.clientDesComptes = client;
@@ -62,16 +71,27 @@ public class ComptesManagement {
 		}
 	}
 
+	/**
+	 * Methode permettant d'afficher la vue de gestion des comptes
+	 */
 	public void doComptesManagementDialog() {
 		this.cmcViewController.displayDialog();
 	}
 
+	/**
+	 * Methode permettant de gerer les operations d'un compte
+	 */
 	public void gererOperationsDUnCompte(CompteCourant cpt) {
 		OperationsManagement om = new OperationsManagement(this.primaryStage, this.dailyBankState,
 				this.clientDesComptes, cpt);
 		om.doOperationsManagementDialog();
 	}
 
+	/**
+	 * Methode permettant de creer un nouveau compte
+	 * 
+	 * @return Le compte cree
+	 */
 	public CompteCourant creerNouveauCompte() {
 		CompteCourant compte;
 		CompteEditorPane cep = new CompteEditorPane(this.primaryStage, this.dailyBankState);
@@ -98,6 +118,12 @@ public class ComptesManagement {
 		return compte;
 	}
 
+	/**
+	 * Methode permettant de cloturer un compte
+	 * 
+	 * @param c Compte courant a cloturer
+	 * 
+	 */
 	public CompteCourant cloturerCompte(CompteCourant c) {
 		CompteEditorPane cep = new CompteEditorPane(this.primaryStage, this.dailyBankState);
 		CompteCourant result = cep.doCompteEditorDialog(this.clientDesComptes, c, EditionMode.SUPPRESSION);
@@ -125,10 +151,19 @@ public class ComptesManagement {
 		return result;
 	}
 
+	/**
+	 * Methode permettant de creer un emprunt
+	 * 
+	 * @param compte Compte courant pour lequel on veut creer un emprunt
+	 */
 	public void creerEmprunt(CompteCourant compte) {
 		EmpruntManagement cep = new EmpruntManagement(this.primaryStage, this.dailyBankState, compte);
 	}
 
+	/**
+	 * Methode permettant de recuperer les comptes d'un client
+	 *  return ArrayList<CompteCourant> Liste des comptes du client
+	 */
 	public ArrayList<CompteCourant> getComptesDunClient() {
 		ArrayList<CompteCourant> listeCpt = new ArrayList<>();
 
@@ -148,6 +183,11 @@ public class ComptesManagement {
 		return listeCpt;
 	}
 
+	/**
+	 * Methode permettant de gerer les prelevements d'un compte
+	 * 
+	 * @param cptCourant Compte courant pour lequel on veut gerer les prelevements
+	 */
 	public void gererPrelevements(CompteCourant cptCourant) {
 		PrelevementsManagement pm = new PrelevementsManagement(this.primaryStage, this.dailyBankState,this.clientDesComptes, cptCourant);
 		pm.doPrelevementsManagementDialog();
