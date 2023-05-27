@@ -82,6 +82,7 @@ image::image/crediterdebiter4.png[width=500]
 
 Si le montant indiquer est negatif l'operation ne s'effectue pas et le label et textfield devient rouge pour indiquer l'erreur et on remet le focus sur le textfield pour que l'utilisateur puisse modifier le montant.
 
+image::image/crediterdebiter5.png[width=500]
 
 
 === Créer un Client :
@@ -131,27 +132,60 @@ image::image/virementcompte.png[width=500, alt=Exemple d'image, title= ]
  
 puis valilder le virement +
 
-=== Fonctions pour le Chef d'agence +
+==== Cas Exceptionnel
 
-Note: ces fonctions ne sont pas encore implémentées dans l’application mais seront bientôt disponible
+Si le montant indiquer est negatif l'operation ne s'effectue pas et le label et textfield devient rouge pour indiquer l'erreur et on remet le focus sur le textfield pour que l'utilisateur puisse modifier le montant.
+Si le compte destinataire n'existe pas ou n'appartient pas client, le label et textfield devient rouge pour indiquer l'erreur et on remet le focus sur le textfield pour que l'utilisateur puisse modifier le destinataire.
 
-=== Désactiver un employé +
+image::image/virementcompte2.png[width=500, alt=Exemple d'image, title=cas de virement negatif]
 
-Après s’être connecté, cliquer sur gestion et sélectionner 'Employé'.
-Renseigner les informations du client et cliquer sur 'Rechercher'. +
-Sélectionner l’employé et cliquer sur 'Désactiver Employé'. +
+image::image/virementcompte3.png[width=500, alt=Exemple d'image, title=cas de virement vers un compte inexistant]
 
-=== Modifier un employé +
 
-Après s’être connecté, cliquer sur gestion et sélectionner 'Employé'. +
-Renseigner les informations du client et cliquer sur 'Rechercher'. +
-Sélectionner l’employé et cliquer sur 'Modifier Employé'. +
+=== Ajouter un nouveau prelevement automatique +
 
-=== Ajouter un nouvel employé +
+Dans le gestionnaire des comptes  d'un client , cliquer sur 'Prelevement' 
 
-Après s’être connecté, cliquer sur gestion et sélectionner 'Employé'. +
-Renseigner les informations du client et cliquer sur 'Rechercher'. +
-Sélectionner l’employé et cliquer sur 'Nouveau Employé'. +
+image::image/prelevement.png[width=500, alt=Exemple d'image, title= ]
+
+et sélectionner ensuite 'Creer Prelevement'. +
+
+image::image/prelevement2.png[width=500, alt=Exemple d'image, title= ]
+
+Renseigner les informations du Prelevement (jour de prelevement, Beneficiaire et montant ) et cliquer sur 'Ajouter'. +
+
+==== Cas Exceptionnel
+
+Si le montant indiquer est negatif le prelevement ne s'effectue pas et une fenetre d'erreur s'affiche pour indiquer l'erreur 
+
+image::image/erreurprelevement.png[width=500, alt=Exemple d'image, title= ]
+
+Si le jour de prelevement est superieur a 31 ou inferieur a 0 le prelevement ne s'effectue pas et une fenetre d'erreur s'affiche pour indiquer l'erreur
+
+image::image/erreurprelevement2.png[width=500, alt=Exemple d'image, title= ]
+
+
+
+=== Suprimmer un prelevement automatique +
+
+Dans le gestionnaire des prelevements du compte  d'un client , cliquer sur le prelevement a supprimer et cliquer sur 'Supprimer Prelevement'. +
+
+image::image/supressionprelevement.png[width=500, alt=Exemple d'image, title= ]
+
+Puis valider la supression du prelevement. +
+
+=== Modifier un prelevement automatique +
+
+Dans le gestionnaire des prelevements du compte  d'un client , cliquer sur le prelevement a modifier et cliquer sur 'Modifier Prelevement'. +
+
+
+image::image/modifierprelevement.png[width=500, alt=Exemple d'image, title= ]
+
+Renseigner les informations du Prelevement (jour de prelevement, Beneficiaire et montant ) et cliquer sur 'Ajouter'. +
+
+image::image/modifierprelevement2.png[width=500, alt=Exemple d'image, title= ]
+
+les modifications ont les memes exceptions que lors de la creation du prelevement et sont gerer de la meme facon +
 
 === Use Case Diagram
 
