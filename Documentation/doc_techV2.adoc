@@ -108,11 +108,11 @@ image::image/doc tech v2/DC emprunt.jpg[]
 
 Package application.view
 
-* SimulerEditorPaneController.java
+* EmpruntManagementController.java
 
 Package application.control
 
-* SimulerEditorPane.java
+* EmpruntManagement.java
 
 *Extrait de code significatifs :*
 
