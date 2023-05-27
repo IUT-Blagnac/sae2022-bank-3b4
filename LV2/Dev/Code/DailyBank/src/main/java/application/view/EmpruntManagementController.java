@@ -79,7 +79,14 @@ public class EmpruntManagementController {
 	@FXML
 	private ListView lvComptes;
 
-	private void genererSimu() {
+	/**
+	 * Génère la simulation de remboursement du prêt et affiche les détails dans une
+	 * ListView.
+	 * Les détails comprennent le mois, le capital restant, les intérêts, le montant
+	 * principal et la mensualité.
+	 * Les détails sont affichés dans cinq colonnes séparées.
+	 */
+	private void genererSimulation() {
 		ArrayList<String> listeCpt = new ArrayList<>();
 
 		double capitalRestant = this.montant;
@@ -92,12 +99,12 @@ public class EmpruntManagementController {
 			double montantPrincipal = mensualite - interets;
 			double capitalFinPeriode = capitalRestant - montantPrincipal;
 
-			String ligne = "Mois : " + mois +
-					" | Capital restant : " + decimalFormat.format(capitalRestant) +
-					" | Intérêts : " + decimalFormat.format(interets) +
-					" | Montant principal : " + decimalFormat.format(montantPrincipal) +
-					" | Mensualité : " + decimalFormat.format(mensualite) +
-					" | Capital fin période : " + decimalFormat.format(capitalFinPeriode);
+			String ligne = "Mois: " + mois +
+					" | Capital restant: " + decimalFormat.format(capitalRestant) +
+					" | Intérêts: " + decimalFormat.format(interets) +
+					" | Montant principal: " + decimalFormat.format(montantPrincipal) +
+					" | Mensualité: " + decimalFormat.format(mensualite) +
+					" | Capital fin période: " + decimalFormat.format(capitalFinPeriode);
 
 			listeCpt.add(ligne);
 
@@ -108,7 +115,6 @@ public class EmpruntManagementController {
 		this.lvComptes.setItems(this.oListCompteCourantList);
 		this.oListCompteCourantList.clear();
 		this.oListCompteCourantList.addAll(listeCpt);
-
 	}
 
 	/**
@@ -152,7 +158,7 @@ public class EmpruntManagementController {
 	@FXML
 	private void doSimuler() throws RowNotFoundOrTooManyRowsException, DataAccessException, DatabaseConnexionException {
 		if (isSaisieValide()) {
-			this.genererSimu();
+			this.genererSimulation();
 
 			// CompteCourant getCompteCourant = omDialogController.getCompteCourant();
 			// Access_BD_Emprunt acc = new Access_BD_Emprunt();
