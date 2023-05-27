@@ -79,10 +79,24 @@ Les flèches entre les différentes tables représentent les relations entre ell
 
 En résumé, ce diagramme de classe des données représente la structure de la base de données du système bancaire, en détaillant les tables et les relations entre elles. Il offre une vision globale des entités et de leurs attributs, permettant de gérer les informations relatives aux agences, aux employés, aux clients, aux comptes courants et d'épargne, ainsi qu'aux opérations bancaires.
 
+<<<<<<< HEAD
 == *Architecture*
 Le projet de l’application est travaillé sous Eclipse ou Visual Studio Code. Ces applications nous permettent de catégoriser les classes sous des packages afin d’avoir une meilleure visibilité et un meilleur repère pour travailler.
 
 Nous avons des packages :
+=======
+
+== *Architecture*
+Le projet de l’application est travaillé sous Eclipse ou Visual Studio Code. Ces applications nous permettent de catégoriser les classes sous des packages afin d’avoir une meilleure visibilité et un meilleur repère pour travailler.
+
+Nous avons des packages :
+
+* application : contient tous les packages dans lesquels on retrouve les .java liés à l’application.
+* model.orm : contient les classes qui contrôlent les accès à la base de données.
+* model.data : contient toutes nos classe d’objet (Employe, Client, AgenceBancaire, ect..).
+* application.view : contient les classes qui gère les actions du fichier fxml.
+* application.control : contient les classes qui gère les différentes opérations des contrôleurs.
+>>>>>>> 1a8ef8f7e1869283e388ff4d507dcd9e73267883
 
 * application : contient tous les packages dans lesquels on retrouve les .java liés à l’application.
 * model.orm : contient les classes qui contrôlent les accès à la base de données.
@@ -126,6 +140,7 @@ image::image/doc tech v2/cap ecran code emprunt.jpg[]
 La simulation d'emprunt et d'assurance d'emprunt est une mécanique simple qui traite simplement les données entrées par l'utilisateur et effectue les calculs nécessaires en fonction du bouton qui a été cliqué.
 
 Bradley DJEDJE V2
+<<<<<<< HEAD
 
 
 === Créer/ Cloturer un compte
@@ -152,3 +167,5 @@ le deuxieme  et troisieme "if" servent a controler que le compte destinataire ex
 Le quatrieme "if" sert a controler que le compte source et le compte destination sont distinct. Si c'est le cas, on continue, sinon on affiche un message d'erreur en mettant le label et le textfield du compte destination en rouge et on return.
 
 Lois Pacqueteau V2
+=======
+>>>>>>> 1a8ef8f7e1869283e388ff4d507dcd9e73267883
