@@ -85,7 +85,7 @@ Si le montant indiquer est negatif l'operation ne s'effectue pas et le label et 
 image::image/crediterdebiter5.png[width=500]
 
 
-=== Créer un Client :
+=== Créer un Client (Lois PACQUETEAU) :
 
 Une fois connecté, cliquez sur 'Gestion' puis sélectionnez 'Clients'.
 Ensuite, cliquez en bas à droite sur 'Nouveau client'.
@@ -97,7 +97,7 @@ Enfin, cliquez sur ajouter pour finaliser la création du client.
 
 image::image/creeclient2.png[width=500, alt=Exemple d'image, title= ]
 
-=== Créer un Compte 
+=== Créer un Compte (Bradley DJEDJE)
 
 Une fois connecté, cliquez sur 'Gestion' puis sélectionnez 'Clients'.
 Renseignez les informations du client et cliquez sur 'Rechercher'.
@@ -110,7 +110,7 @@ Indiquez le montant du découvert autorisé ainsi que le solde de début (qui do
 
 image::image/creecompte2.png[width=500, alt=Exemple d'image, title= ] 
 
-=== Clôturer un Compte 
+=== Clôturer un Compte (Bradley DJEDJE)
 
 Après s’être connecté, cliquer sur 'Gestion' et sélectionner 'Client'.
 Renseigner les informations du client et cliquer sur rechercher.
@@ -122,7 +122,7 @@ image::image/cloturercompte.png[width=500, alt=Exemple d'image, title= ]
  
 Puis valider la clôturassions du compte.
 
-=== Virement Compte à Compte
+=== Virement Compte à Compte (Lois PACQUETEAU)
 
 Après s’être connecté, cliquer sur 'Gestion'
 Sélectionner un client, son compte
@@ -142,7 +142,7 @@ image::image/virementcompte2.png[width=500, alt=Exemple d'image, title=cas de vi
 image::image/virementcompte3.png[width=500, alt=Exemple d'image, title=cas de virement vers un compte inexistant]
 
 
-=== Ajouter un nouveau prelevement automatique +
+=== Ajouter un nouveau prelevement automatique(Lois PACQUETEAU)  +
 
 Dans le gestionnaire des comptes  d'un client , cliquer sur 'Prelevement' 
 
@@ -166,7 +166,7 @@ image::image/erreurprelevement2.png[width=500, alt=Exemple d'image, title= ]
 
 
 
-=== Suprimmer un prelevement automatique +
+=== Suprimmer un prelevement automatique (Lois PACQUETEAU) +
 
 Dans le gestionnaire des prelevements du compte  d'un client , cliquer sur le prelevement a supprimer et cliquer sur 'Supprimer Prelevement'. +
 
@@ -174,7 +174,7 @@ image::image/supressionprelevement.png[width=500, alt=Exemple d'image, title= ]
 
 Puis valider la supression du prelevement. +
 
-=== Modifier un prelevement automatique +
+=== Modifier un prelevement automatique (Lois PACQUETEAU) +
 
 Dans le gestionnaire des prelevements du compte  d'un client , cliquer sur le prelevement a modifier et cliquer sur 'Modifier Prelevement'. +
 
