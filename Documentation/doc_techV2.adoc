@@ -85,9 +85,39 @@ En résumé, ce diagramme de classe des données représente la structure de la 
 === *Architecture générale*
 Il y a plusieur sous-systèmes comme...
 
-ressource externe :
+*ressource externe :*
 
 * il faut avoir java 17 au minimum
 * avoir un pc
 
 === *Fonctionnalité*
+
+==== *Simuler un emprunt et l'assurance d'emprunt*
+La simulation d'emprunt et la simulation d'asurance permet de faire une simulation
+et d'emprunt ou une simulation d'assurance.
+
+*Use Case :*
+
+image::image/doc tech v2/Use case empruntV2.jpg[]
+
+*Diagramme de classes données nécessaires :*
+
+image::image/doc tech v2/DC emprunt.jpg[]
+
+*Package necessaire*
+
+Package application.view
+
+* SimulerEditorPaneController.java
+
+Package application.control
+
+* SimulerEditorPane.java
+
+*Extrait de code significatifs :*
+
+image::image/doc tech v2/cap ecran code emprunt.jpg[]
+
+La simulation d'emprunt et d'assurance d'emprunt est une mécanique simple qui traite simplement les données entrées par l'utilisateur et effectue les calculs nécessaires en fonction du bouton qui a été cliqué.
+
+Bradley DJEDJE V2

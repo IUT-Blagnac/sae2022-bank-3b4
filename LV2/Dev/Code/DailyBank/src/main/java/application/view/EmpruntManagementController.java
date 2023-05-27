@@ -41,8 +41,6 @@ public class EmpruntManagementController {
 	private int duree;
 	private double taux;
 
-	
-
 	// Manipulation de la fenêtre
 	public void initContext(Stage _containingStage, EmpruntManagement _om, DailyBankState _dbstate) {
 		this.primaryStage = _containingStage;
@@ -78,10 +76,8 @@ public class EmpruntManagementController {
 	@FXML
 	private TextField txtTaux;
 
-	
 	@FXML
 	private ListView lvComptes;
-
 
 	private void genererSimu() {
 		ArrayList<String> listeCpt = new ArrayList<>();
@@ -115,12 +111,20 @@ public class EmpruntManagementController {
 
 	}
 
+	/**
+	 * Effectue le calcul de l'assurance en utilisant les valeurs saisies.
+	 * Calcule le montant de l'assurance en fonction des paramètres de saisie.
+	 * Si la saisie est valide, l'opération de calcul de l'assurance est effectuée.
+	 * Sinon, une alerte d'erreur est affichée.
+	 * 
+	 * @author Bradley DJEDJE
+	 */
 	public void calculerAssurance() {
 		ArrayList<String> listeCpt = new ArrayList<>();
 
-        double montantAssurance = (this.montant * this.taux);
+		double montantAssurance = (this.montant * this.taux);
 
-        // double montantAssuranceMensuelle = montantAssurance / (this.duree * 12);
+		// double montantAssuranceMensuelle = montantAssurance / (this.duree * 12);
 
 		listeCpt.add("Le montant de l'assurance d'emprunt par an est de :" + montantAssurance);
 
@@ -128,9 +132,23 @@ public class EmpruntManagementController {
 		this.lvComptes.setItems(this.oListCompteCourantList);
 		this.oListCompteCourantList.clear();
 		this.oListCompteCourantList.addAll(listeCpt);
-    }
+	}
 
-
+	/**
+	 * Effectue la simulation en utilisant les valeurs saisies.
+	 * Génère une simulation en fonction des paramètres de saisie.
+	 * Si la saisie est valide, l'opération de simulation est effectuée.
+	 * Sinon, une alerte d'erreur est affichée.
+	 *
+	 * @throws RowNotFoundOrTooManyRowsException si une ligne n'est pas trouvée ou
+	 *                                           si trop de lignes sont trouvées
+	 *                                           lors de l'accès aux données.
+	 * @throws DataAccessException               si une exception d'accès aux
+	 *                                           données se produit.
+	 * @throws DatabaseConnexionException        si une exception de connexion à la
+	 *                                           base de données se produit.
+	 * @author Bradley DJEDJE
+	 */
 	@FXML
 	private void doSimuler() throws RowNotFoundOrTooManyRowsException, DataAccessException, DatabaseConnexionException {
 		if (isSaisieValide()) {
@@ -146,9 +164,17 @@ public class EmpruntManagementController {
 		}
 	}
 
+	/**
+	 * Effectue le calcul de l'assurance en utilisant les valeurs saisies.
+	 * Calcule le montant de l'assurance en fonction des paramètres de saisie.
+	 * Si la saisie est valide, l'opération de calcul de l'assurance est effectuée.
+	 * Sinon, une alerte d'erreur est affichée.
+	 * 
+	 * @author Bradley DJEDJE
+	 */
 	@FXML
-	private void doAssurance(){
-		if(isSaisieValide()){
+	private void doAssurance() {
+		if (isSaisieValide()) {
 			this.calculerAssurance();
 		} else {
 			AlertUtilities.showAlert(this.primaryStage, "Erreur", "Merci de saisir des valeurs valides", null,
@@ -157,11 +183,12 @@ public class EmpruntManagementController {
 	}
 
 	// @FXML
-	// private void valider() throws RowNotFoundOrTooManyRowsException, DataAccessException, DatabaseConnexionException{
-	// 	CompteCourant getCompteCourant = omDialogController.getCompteCourant();
-	// 	Access_BD_Emprunt acc = new Access_BD_Emprunt();
-	// 	acc.insertEmprunt(this.taux, this.montant, this.duree, getCompteCourant);
-		
+	// private void valider() throws RowNotFoundOrTooManyRowsException,
+	// DataAccessException, DatabaseConnexionException{
+	// CompteCourant getCompteCourant = omDialogController.getCompteCourant();
+	// Access_BD_Emprunt acc = new Access_BD_Emprunt();
+	// acc.insertEmprunt(this.taux, this.montant, this.duree, getCompteCourant);
+
 	// }
 
 	private boolean isSaisieValide() {
@@ -176,7 +203,8 @@ public class EmpruntManagementController {
 		}
 		if (this.montant >= 0 && this.duree >= 0 && this.taux >= 0) {
 			return true;
-		} else {			
+		} else {
 			return false;
 		}
-	}}
+	}
+}

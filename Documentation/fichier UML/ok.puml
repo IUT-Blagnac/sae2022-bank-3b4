@@ -1,0 +1,26 @@
+' Simuler emprunt-------------------------------------------------------------------
+@startuml
+left to right direction
+
+actor "Chef d'agence" as Chef
+
+Chef --> (Simuler un emprunt)
+Chef --> (Simuler une assurance  d'emprunt)
+
+' note right: C'est une bulle de texte
+
+
+@enduml
+
+' Simuler assurance d'emprunt----------------------------------------------------
+@startuml
+left to right direction
+
+actor "Chef d'agence" as Chef
+
+Chef --> (Simuler une assurance  d'emprunt)
+
+' note right: C'est une bulle de texte
+
+
+@enduml
