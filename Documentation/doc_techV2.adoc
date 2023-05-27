@@ -79,24 +79,10 @@ Les flèches entre les différentes tables représentent les relations entre ell
 
 En résumé, ce diagramme de classe des données représente la structure de la base de données du système bancaire, en détaillant les tables et les relations entre elles. Il offre une vision globale des entités et de leurs attributs, permettant de gérer les informations relatives aux agences, aux employés, aux clients, aux comptes courants et d'épargne, ainsi qu'aux opérations bancaires.
 
-<<<<<<< HEAD
 == *Architecture*
 Le projet de l’application est travaillé sous Eclipse ou Visual Studio Code. Ces applications nous permettent de catégoriser les classes sous des packages afin d’avoir une meilleure visibilité et un meilleur repère pour travailler.
 
 Nous avons des packages :
-=======
-
-== *Architecture*
-Le projet de l’application est travaillé sous Eclipse ou Visual Studio Code. Ces applications nous permettent de catégoriser les classes sous des packages afin d’avoir une meilleure visibilité et un meilleur repère pour travailler.
-
-Nous avons des packages :
-
-* application : contient tous les packages dans lesquels on retrouve les .java liés à l’application.
-* model.orm : contient les classes qui contrôlent les accès à la base de données.
-* model.data : contient toutes nos classe d’objet (Employe, Client, AgenceBancaire, ect..).
-* application.view : contient les classes qui gère les actions du fichier fxml.
-* application.control : contient les classes qui gère les différentes opérations des contrôleurs.
->>>>>>> 1a8ef8f7e1869283e388ff4d507dcd9e73267883
 
 * application : contient tous les packages dans lesquels on retrouve les .java liés à l’application.
 * model.orm : contient les classes qui contrôlent les accès à la base de données.
@@ -133,14 +119,13 @@ Package application.control
 
 * EmpruntManagement.java
 
-*Extrait de code significatifs :*
+== *Extrait de code significatifs :*
 
 image::image/doc tech v2/cap ecran code emprunt.jpg[]
 
 La simulation d'emprunt et d'assurance d'emprunt est une mécanique simple qui traite simplement les données entrées par l'utilisateur et effectue les calculs nécessaires en fonction du bouton qui a été cliqué.
 
 Bradley DJEDJE V2
-<<<<<<< HEAD
 
 
 === Créer/ Cloturer un compte
@@ -154,7 +139,6 @@ Ces règles garantissent une gestion saine des comptes et contribuent à mainten
 
 Pour faire un virement, il faut que le compte source et le compte destination soient distinct. Il faut aussi que le compte source ait un solde supérieur ou égal au montant du virement. Et le compte destinataire doit exister et etre actif.
 
-//insertion image nommée conditionVirement
 
 image::image/conditionVirement.png[]
 
@@ -167,5 +151,27 @@ le deuxieme  et troisieme "if" servent a controler que le compte destinataire ex
 Le quatrieme "if" sert a controler que le compte source et le compte destination sont distinct. Si c'est le cas, on continue, sinon on affiche un message d'erreur en mettant le label et le textfield du compte destination en rouge et on return.
 
 Lois Pacqueteau V2
-=======
->>>>>>> 1a8ef8f7e1869283e388ff4d507dcd9e73267883
+
+=== *CRUD de prelevement automatiques*
+
+==== *Créer un prélèvement automatique*
+
+Le prelevement automatique est une opération qui permet de prélever une somme d'argent sur un compte à une date précise. Pour créer un prélèvement automatique, il faut que le compte source existe et soit actif. Il faut aussi que le compte source ait un solde supérieur ou égal au montant du prélèvement. Et le compte destinataire doit exister et etre actif. Cependant etant donnée que le rendre fonctionnel n'etait qu'une option je me suis contenté de faire juste le CRUD pour les prelevements automatiques.
+
+Lors de la creation du prelevement automatique, il faut que le numero du jour de prelevement soit compris entre 1 et 31. Il faut aussi que le montant du prelevement soit supérieur à 0 et que le nom du beneficiaire ne soit pas vide(Je n'ai pas rajouté d'option pour voir si le beneficiaire existait vu que le prelevement n'est que theorique dans cette application). Toutes ces conditions sont vérifiées dans le fichier PrelevementEditorPaneController.java dans la methode boolean isSaisieValide().
+
+image::image/conditionPrelevement.png[]
+
+Les 5 premiers "this" servent a mettre les donnes taper au clavier dans le constructeur qui va permettre de faires les conditions par la suite.
+Les 6 "this" suivent a retirer les zones en rouges (si elles existent) au moment de l'initialisation de la methode.
+
+Le premier "if" sert a controler que le nom du beneficiaire n'est pas vide. Si c'est le cas, on continue, sinon on affiche un message d'erreur en mettant le label et le textfield du nom du beneficiaire en rouge et on return false.
+
+Le deuxieme "if" sert a controler que le numero du jour de prelevement est compris entre 1 et 31. Si c'est le cas, on continue, sinon on affiche un message d'erreur en mettant le label et le textfield du numero du jour de prelevement en rouge et on return false.
+
+Le troisieme "if" sert a controler que le montant du prelevement est supérieur à 0. Si c'est le cas, on continue, sinon on affiche un message d'erreur en mettant le label et le textfield du montant en rouge et on return false.
+
+A la fin de la methode, on return true si toutes les conditions sont respectées.
+
+Lois Pacqueteau V2
+
