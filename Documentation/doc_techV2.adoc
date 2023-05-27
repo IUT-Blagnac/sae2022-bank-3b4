@@ -80,10 +80,17 @@ Les flèches entre les différentes tables représentent les relations entre ell
 
 En résumé, ce diagramme de classe des données représente la structure de la base de données du système bancaire, en détaillant les tables et les relations entre elles. Il offre une vision globale des entités et de leurs attributs, permettant de gérer les informations relatives aux agences, aux employés, aux clients, aux comptes courants et d'épargne, ainsi qu'aux opérations bancaires.
 
-== *Architecture*
 
-=== *Architecture générale*
-Il y a plusieur sous-systèmes comme...
+== *Architecture*
+Le projet de l’application est travaillé sous Eclipse ou Visual Studio Code. Ces applications nous permettent de catégoriser les classes sous des packages afin d’avoir une meilleure visibilité et un meilleur repère pour travailler.
+
+Nous avons des packages :
+
+* application : contient tous les packages dans lesquels on retrouve les .java liés à l’application.
+* model.orm : contient les classes qui contrôlent les accès à la base de données.
+* model.data : contient toutes nos classe d’objet (Employe, Client, AgenceBancaire, ect..).
+* application.view : contient les classes qui gère les actions du fichier fxml.
+* application.control : contient les classes qui gère les différentes opérations des contrôleurs.
 
 *ressource externe :*
 
