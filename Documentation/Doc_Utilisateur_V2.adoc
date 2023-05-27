@@ -58,7 +58,7 @@ Vous êtes maintenant connecté à l'application bancaire !
 
 ===Les fonctions pour le Guichetier :
 
-=== Créditer/Débiter 
+=== Créditer/Débiter (Lois PACQUETEAU)
 
 
 Une fois connecté, cliquez sur 'Gestion' puis sélectionnez 'Clients'.
@@ -85,7 +85,7 @@ Si le montant indiquer est negatif l'operation ne s'effectue pas et le label et 
 image::image/crediterdebiter5.png[width=500]
 
 
-=== Créer un Client (Lois PACQUETEAU) :
+=== Créer un Client :
 
 Une fois connecté, cliquez sur 'Gestion' puis sélectionnez 'Clients'.
 Ensuite, cliquez en bas à droite sur 'Nouveau client'.
