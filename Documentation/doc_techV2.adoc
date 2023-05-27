@@ -1,4 +1,4 @@
-= *Documentation technique V1*
+= *Documentation technique V2*
 :toc:
 :doctype: book
 :toc-title: Sommaire
