@@ -56,7 +56,7 @@ Le chef d'agence bancaire joue un rôle clé dans la supervision et la coordinat
 
 En résumé, le guichetier travaille directement avec les clients au guichet pour effectuer des opérations courantes, tandis que le chef d'agence bancaire est responsable de la gestion globale d'une agence bancaire, y compris la supervision des employés, la réalisation des objectifs et la gestion des opérations.
 
-=== *Diagramme de classe des données global*
+== *Diagramme de classe des données global*
 Nous avons une base de donnée aui possede un totale de 8 tables.
 Nous avons principalement manipulé 5 tables :
 
@@ -72,8 +72,7 @@ Voici les différentes tables de la base de données ainsi qu'une explication de
 
 * CompteEpargne : Cette table représente les comptes d'épargne des clients. Elle contient des informations similaires à la table CompteCourant, telles que l'identifiant du compte (idNumCompte), le solde du compte (solde) et l'identifiant du client auquel le compte est associé (idNumCli).
 
-//image diagramme de classe
-// image::C:\tmp\sae2022-bank-3b4\Documentation\image\doc tech v2\dc-initialv2.svg[svg,opts=inline]
+
 image::image/doc tech v2/dc-initialv2.jpg[]
 
 Les flèches entre les différentes tables représentent les relations entre elles. Par exemple, la relation entre AgenceBancaire et Employe indique que chaque agence peut avoir plusieurs employés, tandis que la relation entre Client et AgenceBancaire indique que chaque client est rattaché à une agence spécifique.
@@ -81,11 +80,17 @@ Les flèches entre les différentes tables représentent les relations entre ell
 En résumé, ce diagramme de classe des données représente la structure de la base de données du système bancaire, en détaillant les tables et les relations entre elles. Il offre une vision globale des entités et de leurs attributs, permettant de gérer les informations relatives aux agences, aux employés, aux clients, aux comptes courants et d'épargne, ainsi qu'aux opérations bancaires.
 
 == *Architecture*
+Le projet de l’application est travaillé sous Eclipse ou Visual Studio Code. Ces applications nous permettent de catégoriser les classes sous des packages afin d’avoir une meilleure visibilité et un meilleur repère pour travailler.
 
-=== *Architecture générale*
-Il y a plusieur sous-systèmes comme...
+Nous avons des packages :
 
-*ressource externe :*
+* application : contient tous les packages dans lesquels on retrouve les .java liés à l’application.
+* model.orm : contient les classes qui contrôlent les accès à la base de données.
+* model.data : contient toutes nos classe d’objet (Employe, Client, AgenceBancaire, ect..).
+* application.view : contient les classes qui gère les actions du fichier fxml.
+* application.control : contient les classes qui gère les différentes opérations des contrôleurs.
+
+== *Ressource externe :*
 
 * il faut avoir java 17 au minimum
 * avoir un pc
@@ -121,3 +126,29 @@ image::image/doc tech v2/cap ecran code emprunt.jpg[]
 La simulation d'emprunt et d'assurance d'emprunt est une mécanique simple qui traite simplement les données entrées par l'utilisateur et effectue les calculs nécessaires en fonction du bouton qui a été cliqué.
 
 Bradley DJEDJE V2
+
+
+=== Créer/ Cloturer un compte
+Pour créer un compte, certaines conditions doivent être remplies. Tout d'abord, le solde initial du compte doit être supérieur à zéro, ce qui signifie que le client doit déposer une somme d'argent minimale pour ouvrir le compte. De plus, le compte doit disposer d'une autorisation de découvert égale ou supérieure à zéro, ce qui permet au titulaire du compte de retirer de l'argent même s'il n'y a pas suffisamment de fonds disponibles. Ces deux critères sont essentiels pour pouvoir créer un compte.
+
+En ce qui concerne la clôture d'un compte, la principale exigence est que le solde du compte soit égal à zéro. Cela signifie que le titulaire du compte doit s'assurer qu'il ne reste aucun montant dû ou de transactions en attente sur le compte avant de pouvoir le clôturer. Une fois que le solde est égal a zéro, le compte peut être fermé conformément aux procédures établies par la banque.
+
+Ces règles garantissent une gestion saine des comptes et contribuent à maintenir l'intégrité financière des clients et de la banque.
+
+=== Faire un virement
+
+Pour faire un virement, il faut que le compte source et le compte destination soient distinct. Il faut aussi que le compte source ait un solde supérieur ou égal au montant du virement. Et le compte destinataire doit exister et etre actif.
+
+//insertion image nommée conditionVirement
+
+image::image/conditionVirement.png[]
+
+image::image/conditionVirement2.png[]
+
+le premiers "if" sert a controler que le montant du virement est supérieur à 0. Si c'est le cas, on continue, sinon on affiche un message d'erreur en mettant le label et le textfield du montant en rouge et on return.
+
+le deuxieme  et troisieme "if" servent a controler que le compte destinataire existe chez le client et est actif. Si c'est le cas, on continue, sinon on affiche un message d'erreur en mettant le label et le textfield du compte destinataire en rouge et on return.
+
+Le quatrieme "if" sert a controler que le compte source et le compte destination sont distinct. Si c'est le cas, on continue, sinon on affiche un message d'erreur en mettant le label et le textfield du compte destination en rouge et on return.
+
+Lois Pacqueteau V2
