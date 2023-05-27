@@ -18,6 +18,13 @@ public class OperationEditorPane {
 	private Stage primaryStage;
 	private OperationEditorPaneController oepcViewController;
 
+	/**
+	 * Constructeur de la fenêtre d'opération
+	 * 
+	 * @param _parentStage
+	 * @param _dbstate
+	 * 
+	 * */
 	public OperationEditorPane(Stage _parentStage, DailyBankState _dbstate) {
 
 		try {
@@ -44,6 +51,9 @@ public class OperationEditorPane {
 		}
 	}
 
+	/**
+	 * Affiche la fenêtre d'opération
+	 * */
 	public Operation doOperationEditorDialog(CompteCourant cpte, CategorieOperation cm) {
 		return this.oepcViewController.displayDialog(cpte, cm);
 	}

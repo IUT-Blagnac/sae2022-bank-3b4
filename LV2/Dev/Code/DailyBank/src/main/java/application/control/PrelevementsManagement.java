@@ -14,7 +14,6 @@ import javafx.stage.Stage;
 import model.data.Client;
 import model.data.CompteCourant;
 import model.data.Prelevement;
-//import model.orm.AccessCompteCourant;
 import model.orm.Access_BD_Prelevement;
 import model.orm.exception.ApplicationException;
 import model.orm.exception.DataAccessException;
@@ -32,6 +31,7 @@ public class PrelevementsManagement {
 
     /**
      * Constructeur de la classe PrelevementsManagement permettant de charger la vu de gestion des prelevements
+     * @autor Lois Pacqueteau
      * @param _primaryStage Stage parent de la vue
      * @param _dbs Etat actuel de l'application DailyBank
      * @param _clientDuCompte Client dont on veut afficher les prelevements
@@ -74,6 +74,7 @@ public class PrelevementsManagement {
 
     /**
      * Active la vu d'ajout d'un prelevement
+     * @autor Lois Pacqueteau
      * @return Le nouveau prelevement créé
      */
     public Prelevement creerPrelev() {
@@ -108,6 +109,7 @@ public class PrelevementsManagement {
 
     /**
      * Active la vu de modification d'un prelevement
+     * @autor Lois Pacqueteau
      * @param p Le prelevement à modifier
      * @return Le prelevement modifie
      */
@@ -135,8 +137,9 @@ public class PrelevementsManagement {
     }
 
     /**
+     * @autor Lois Pacqueteau
      * Active la vu de suppression d'un prelevement
-     * @param prelev Le prelevement à supprimer
+     * @param prelev Le prelevement à supprimer 
      */
     public void supprimerPrelev(Prelevement prelev) {
         try {
@@ -155,7 +158,9 @@ public class PrelevementsManagement {
 
     /**
      * Recupere les prelevements d'un compte
+     * @autor Lois Pacqueteau
      * @return La liste des prelevements du compte avec le compte associe
+     * 
      */
     public PairsOfValue<CompteCourant, ArrayList<Prelevement>> prelevementsEtSoldeDunCompte() {
         ArrayList<Prelevement> listeP = new ArrayList<>();

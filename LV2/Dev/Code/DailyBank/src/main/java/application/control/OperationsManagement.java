@@ -29,6 +29,14 @@ public class OperationsManagement {
 	private Client clientDuCompte;
 	private CompteCourant compteConcerne;
 
+
+	/**
+	 * Constructeur de la classe OperationsManagement
+	 * @param _parentStage
+	 * @param _dbstate
+	 * @param client
+	 * @param compte
+	 */
 	public OperationsManagement(Stage _parentStage, DailyBankState _dbstate, Client client, CompteCourant compte) {
 
 		this.clientDuCompte = client;
@@ -58,10 +66,20 @@ public class OperationsManagement {
 		}
 	}
 
+	/**
+	 * Affiche la fenêtre de gestion des opérations
+	 */
 	public void doOperationsManagementDialog() {
 		this.omcViewController.displayDialog();
 	}
 
+	/**
+	 * creation d'une fenetre de saisie de données pour un débit
+	 * creation d'une opération de débit
+	 * enregistrement de l'opération dans la base de données
+	 * 
+	 * @return Operation op (le débit enregistré)
+	 */
 	public Operation enregistrerDebit() {
 
 		OperationEditorPane oep = new OperationEditorPane(this.primaryStage, this.dailyBankState);
@@ -85,6 +103,14 @@ public class OperationsManagement {
 		}
 		return op;
 	}
+
+	/**
+	 * creation d'une fenetre de saisie de données pour un crédit
+	 * creation d'une opération de crédit
+	 * enregistrement de l'opération dans la base de données
+	 * @author Lois	Pacqueteau
+	 * @return Operation op (le crédit enregistré)
+	 */
 	public Operation enregistrerCredit() {
         OperationEditorPane oep = new OperationEditorPane(this.primaryStage, this.dailyBankState);
 		Operation op = oep.doOperationEditorDialog(this.compteConcerne, CategorieOperation.CREDIT);
@@ -108,6 +134,16 @@ public class OperationsManagement {
 		return op;
     }
 
+	/**
+	 * creation d'une fenetre de saisie de données pour un virement
+	 * creation d'une opération de virement
+	 * enregistrement de l'opération dans la base de données
+	 * @author Lois Pacqueteau
+	 * @return Operation op (le virement enregistré)
+	 * @throws DatabaseConnexionException
+	 * @throws ApplicationException
+	 * 
+	 */
 	public Operation enregistrerVirement(){
 		// le virement est un débit sur le compte source et un crédit sur le compte cible
 		OperationEditorPane oep = new OperationEditorPane(this.primaryStage, this.dailyBankState);
@@ -134,6 +170,13 @@ public class OperationsManagement {
 
 	}
 
+	/**
+	 * ACCESSEURS		
+	 * @return PairsOfValue<CompteCourant, ArrayList<Operation>> (le compte courant et la liste des opérations)
+	 * @throws DatabaseConnexionException
+	 * @throws ApplicationException
+	 * @author Lois Pacqueteau
+	 */
 	public PairsOfValue<CompteCourant, ArrayList<Operation>> operationsEtSoldeDunCompte() {
 		ArrayList<Operation> listeOP = new ArrayList<>();
 

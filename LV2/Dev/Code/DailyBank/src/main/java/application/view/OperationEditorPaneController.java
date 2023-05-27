@@ -54,7 +54,15 @@ public class OperationEditorPaneController {
 		this.primaryStage.setOnCloseRequest(e -> this.closeWindow(e));
 	}
 
-	public Operation displayDialog(CompteCourant cpte, CategorieOperation mode) {
+	/**
+	 * fenetre de dialogue qui varie en fonction du mode de l'operation (CREDIT, DEBIT, VIREMENT)
+	 * @param cpte
+	 * @param mode
+	 * @return Operation operationResultat le resultat de l'operation
+	 * @author Loïs Pacqueteau
+	 * 
+	 * */
+		public Operation displayDialog(CompteCourant cpte, CategorieOperation mode) {
 		this.categorieOperation = mode;
 		this.compteEdite = cpte;
 		
@@ -153,14 +161,23 @@ public class OperationEditorPaneController {
 	@FXML
 	private TextField txtCompteDestinataire;
 	
-
+	/**
+	 * Action sur le bouton annuler
+	 */
 	@FXML
 	private void doCancel() {
 		this.operationResultat = null;
 		this.primaryStage.close();
 	}
 	
-
+	/**
+	 * Action sur le bouton ok cette methode sert a gerer les exceptions et a verifier les regles de gestion,
+	 * si tout est bon elle enregistre l'operation dans la base de données
+	 * @throws RowNotFoundOrTooManyRowsException
+	 * @throws DataAccessException
+	 * @throws DatabaseConnexionException
+	 * 
+	 */
 	@FXML
 	private void doAjouter() throws RowNotFoundOrTooManyRowsException, DataAccessException, DatabaseConnexionException {
 		switch (this.categorieOperation) {
@@ -231,7 +248,6 @@ public class OperationEditorPaneController {
 			break;
 		case VIREMENT:
 			double montant3;
-			
 			String typeOp3 = this.cbTypeOpe.getValue();
 			try {
 				montant3 = Double.parseDouble(this.txtMontant.getText().trim());

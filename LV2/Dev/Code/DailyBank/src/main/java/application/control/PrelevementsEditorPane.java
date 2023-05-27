@@ -23,7 +23,8 @@ public class PrelevementsEditorPane {
 
 	/**
 	 * Constructeur de la classe PrelevementEditorPane permettant de charger la vu d'édition des prelevements d'un compte
-	* @param _parentStage Stage parent de la vue
+	 * @author Lois Pacqueteau
+	 * param _parentStage Stage parent de la vue
 	 * @param _dbstate Etat actuel de l'application DailyBank
 	 */
 	public PrelevementsEditorPane(Stage _parentStage, DailyBankState _dbstate) {
@@ -54,6 +55,7 @@ public class PrelevementsEditorPane {
 
 	/**
 	 * Active l'affichage de la vu d'édition des prelevments d'un compte
+	 * @author Lois Pacqueteau
 	 * @param cpte Compte dont on veut modifier les prelevements
 	 * @return Le prelevement modifié
 	 */
