@@ -26,7 +26,7 @@ Clement Dejean Gourrié
 L’application permet de gérer des comptes bancaires de dépôt pour des clients. L’application possède actuellement quelques fonctionnalités tels que modifier les informations clients, créer un nouveau client, consulter un compte, créer un compte, créditer/débiter un compte, effectuer un virement, clôturer un compte, gérer les employés, rendre inactif un client à l’aide des boutons interactifs et des champs à remplir, similer un emprunt, ect...
 
 === *Use Case*
-// image::C:\tmp\sae2022-bank-3b4\Documentation\image\doc tech v2\uc-initialv2.svg[svg,opts=inline]
+
 image::image/doc tech v2/uc-initialv2.jpg[width=400]
 
 
