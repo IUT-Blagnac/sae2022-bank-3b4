@@ -6,9 +6,10 @@ package application.tools;
  * Elle permet d'encapsuler 2 valeurs de retour dans un seul objet pour
  * certaines méthodes qui nécessitent un retour de deux valeurs simultanément
  * (une méthode ne peut retourner que un seul objet).
- *
+ * 
  * @param <T> Type de la première valeur (left)
  * @param <U> Type de la deuxième valeur (right)
+ * @author Lois Pacqueteau
  */
 public class PairsOfValue<T, U> {
 	private T left;

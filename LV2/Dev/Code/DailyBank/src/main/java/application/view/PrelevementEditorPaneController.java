@@ -127,7 +127,7 @@ public class PrelevementEditorPaneController implements Initializable {
 		this.prelevementResult = null;
 		this.primaryStage.close();
 	}
-
+	
 	@FXML
 	private void doAjouter() {
 		if (this.isSaisieValide()) {
@@ -136,6 +136,10 @@ public class PrelevementEditorPaneController implements Initializable {
 		}
 	}
 
+	/**
+	 * Vérifie que les données saisies sont valides
+	 * @return true si les données sont valides, false sinon
+	 */
 	private boolean isSaisieValide() {
 		this.prelevementEdite.montant = Double.parseDouble(this.txtMontant.getText().trim());
 		this.prelevementEdite.beneficiaire = this.txtBeneficiaire.getText().trim();
