@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2023-05-10" view-index="0" gantt-divider-location="812" resource-divider-location="300" version="3.2.3230" locale="fr_FR">
+    <description/>
+    <view zooming-state="default:0" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="310" order="0"/>
+        <field id="tpd4" name="Date de début" width="73" order="1"/>
+        <field id="tpd5" name="Date de fin" width="72" order="2"/>
+        <field id="tpc0" name="Durée " width="70" order="3"/>
+        <field id="tpc1" name="Commentaire" width="185" order="4"/>
+        <field id="tpc2" name="Eleve attribué" width="101" order="5"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="color.recent">
+            <![CDATA[#33ffff #3333ff #9900cc #cc00cc #66ff66]]>
+        </option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="210" order="0"/>
+        <field id="1" name="Rôle par défaut" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+            <taskproperty id="tpc0" name="Durée " type="custom" valuetype="text"/>
+            <taskproperty id="tpc1" name="Commentaire" type="custom" valuetype="text"/>
+            <taskproperty id="tpc2" name="Eleve attribué" type="custom" valuetype="text"/>
+        </taskproperties>
+        <task id="0" name="V2" color="#66ff66" meeting="false" start="2023-05-15" duration="4" complete="77" thirdDate="2023-05-04" thirdDate-constraint="0" expand="true">
+            <customproperty taskproperty-id="tpc0" value=""/>
+            <task id="158" name="Prendre en compte les commentaires" color="#8cb6ce" meeting="false" start="2023-05-15" duration="1" complete="0" thirdDate="2023-05-11" thirdDate-constraint="0" expand="true">
+                <customproperty taskproperty-id="tpc0" value="20m"/>
+                <customproperty taskproperty-id="tpc1" value=""/>
+                <customproperty taskproperty-id="tpc2" value="Tous"/>
+            </task>
+            <task id="9" name="repatir les issues sur GIT" color="#8cb6ce" meeting="false" start="2023-05-16" duration="3" complete="100" thirdDate="2023-05-03" thirdDate-constraint="0" expand="true">
+                <customproperty taskproperty-id="tpc0" value="15 min"/>
+                <customproperty taskproperty-id="tpc2" value="Lois"/>
+            </task>
+            <task id="10" name="realiser le gantt V2" color="#8cb6ce" meeting="false" start="2023-05-16" duration="1" complete="100" thirdDate="2023-05-03" thirdDate-constraint="0" expand="true">
+                <customproperty taskproperty-id="tpc0" value="1h30"/>
+                <customproperty taskproperty-id="tpc2" value="Clément"/>
+            </task>
+            <task id="11" name="Creer la doc Tech de la V2" color="#8cb6ce" meeting="false" start="2023-05-16" duration="1" complete="100" thirdDate="2023-05-10" thirdDate-constraint="0" expand="true">
+                <customproperty taskproperty-id="tpc0" value="1h30"/>
+                <customproperty taskproperty-id="tpc2" value="Tous"/>
+            </task>
+            <task id="15" name="Modifier le code pour la V2" color="#8cb6ce" meeting="false" start="2023-05-16" duration="1" complete="100" thirdDate="2023-05-09" thirdDate-constraint="0" expand="true">
+                <depend id="12" type="2" difference="0" hardness="Strong"/>
+                <depend id="165" type="2" difference="0" hardness="Strong"/>
+                <depend id="166" type="2" difference="0" hardness="Strong"/>
+                <depend id="168" type="2" difference="0" hardness="Strong"/>
+                <depend id="179" type="2" difference="0" hardness="Strong"/>
+                <depend id="180" type="2" difference="0" hardness="Strong"/>
+                <depend id="181" type="2" difference="0" hardness="Strong"/>
+                <depend id="182" type="2" difference="0" hardness="Strong"/>
+                <depend id="183" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="8h"/>
+                <customproperty taskproperty-id="tpc2" value="Tous"/>
+            </task>
+            <task id="64" name="Réaliser la doc Utilisateur de la V2" color="#8cb6ce" meeting="false" start="2023-05-16" duration="1" complete="100" thirdDate="2023-05-05" thirdDate-constraint="0" expand="true">
+                <customproperty taskproperty-id="tpc0" value="45 min"/>
+                <customproperty taskproperty-id="tpc2" value="Lois"/>
+            </task>
+            <task id="165" name="Cas d’utilisation Créer, cloturer un compte" color="#8cb6ce" meeting="false" start="2023-05-17" duration="2" complete="100" thirdDate="2023-05-11" thirdDate-constraint="0" expand="true">
+                <customproperty taskproperty-id="tpc0" value="3h"/>
+                <customproperty taskproperty-id="tpc2" value="Bradley"/>
+            </task>
+            <task id="166" name="Cas d’utilisation CRUD" color="#8cb6ce" meeting="false" start="2023-05-17" duration="2" complete="25" thirdDate="2023-05-11" thirdDate-constraint="0" expand="true">
+                <customproperty taskproperty-id="tpc0" value="5h"/>
+                <customproperty taskproperty-id="tpc1" value=""/>
+                <customproperty taskproperty-id="tpc2" value="Clément"/>
+            </task>
+            <task id="168" name="Cas d’utilisation Débiter, Créditer, Virement" color="#8cb6ce" meeting="false" start="2023-05-17" duration="2" complete="100" thirdDate="2023-05-11" thirdDate-constraint="0" expand="true">
+                <customproperty taskproperty-id="tpc0" value="4h"/>
+                <customproperty taskproperty-id="tpc2" value="Lois"/>
+            </task>
+            <task id="179" name="Générer un relevé mensuel d’un compte en PDF" color="#8cb6ce" meeting="false" start="2023-05-17" duration="1" complete="0" thirdDate="2023-05-11" thirdDate-constraint="0" expand="true">
+                <customproperty taskproperty-id="tpc0" value="2h"/>
+                <customproperty taskproperty-id="tpc2" value="Clément"/>
+            </task>
+            <task id="180" name="Effectuer un Débit exceptionnel" color="#8cb6ce" meeting="false" start="2023-05-17" duration="1" complete="0" thirdDate="2023-05-11" thirdDate-constraint="0" expand="true">
+                <customproperty taskproperty-id="tpc0" value="1h30"/>
+                <customproperty taskproperty-id="tpc2" value="Clement"/>
+            </task>
+            <task id="181" name="Gérer les prélèvements automatiques" color="#8cb6ce" meeting="false" start="2023-05-17" duration="1" complete="100" thirdDate="2023-05-11" thirdDate-constraint="0" expand="true">
+                <customproperty taskproperty-id="tpc0" value="2h"/>
+                <customproperty taskproperty-id="tpc2" value="Lois"/>
+            </task>
+            <task id="182" name="Simuler un emprunt" color="#8cb6ce" meeting="false" start="2023-05-17" duration="1" complete="100" thirdDate="2023-05-11" thirdDate-constraint="0" expand="true">
+                <customproperty taskproperty-id="tpc0" value="1h30"/>
+                <customproperty taskproperty-id="tpc2" value="Bradley"/>
+            </task>
+            <task id="183" name="Simuler une assurance d’emprunt" color="#8cb6ce" meeting="false" start="2023-05-17" duration="1" complete="100" thirdDate="2023-05-11" thirdDate-constraint="0" expand="true">
+                <customproperty taskproperty-id="tpc0" value="1h"/>
+                <customproperty taskproperty-id="tpc2" value="Bradley"/>
+            </task>
+            <task id="12" name="Créer le cahier de test V2" color="#8cb6ce" meeting="false" start="2023-05-17" duration="1" complete="100" thirdDate="2023-05-09" thirdDate-constraint="0" expand="true">
+                <customproperty taskproperty-id="tpc0" value="45 min"/>
+                <customproperty taskproperty-id="tpc2" value="Tous"/>
+            </task>
+            <task id="105" name="Rendre la V2" color="#8cb6ce" meeting="true" start="2023-05-19" duration="0" complete="0" thirdDate="2023-05-05" thirdDate-constraint="0" expand="true">
+                <customproperty taskproperty-id="tpc1" value="Le vrai jour de rendu est le 21"/>
+                <customproperty taskproperty-id="tpc2" value="X"/>
+            </task>
+            <task id="110" name="Rendre le Gantt et l'asciidoc" color="#8cb6ce" meeting="true" start="2023-05-19" duration="0" complete="0" thirdDate="2023-05-05" thirdDate-constraint="0" expand="true">
+                <customproperty taskproperty-id="tpc1" value="Le vrai jour de rendu est le 20"/>
+                <customproperty taskproperty-id="tpc2" value="X"/>
+            </task>
+        </task>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
