@@ -137,6 +137,8 @@ En ce qui concerne la clôture d'un compte, la principale exigence est que le so
 
 Ces règles garantissent une gestion saine des comptes et contribuent à maintenir l'intégrité financière des clients et de la banque.
 
+Bradley DJEDJE V2
+
 === Faire un virement
 
 Pour faire un virement, il faut que le compte source et le compte destination soient distinct. Il faut aussi que le compte source ait un solde supérieur ou égal au montant du virement. Et le compte destinataire doit exister et etre actif.
