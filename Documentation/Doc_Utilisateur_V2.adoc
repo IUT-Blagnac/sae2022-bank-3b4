@@ -1,4 +1,5 @@
 :numbered: true
+:toc-title: Sommaire
 :toc:
 
 = Doc user V2
