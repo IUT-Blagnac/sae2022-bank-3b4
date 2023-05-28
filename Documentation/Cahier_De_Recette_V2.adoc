@@ -235,6 +235,25 @@ prelevement est compris entre 1 et 31  ^|OK
 ^|All_G_COP.3  ^|Rentrer le montant 20 dans le champ "Montant" indiquer "Airvoiture" et 1 dans le champ "Jour de prelevement" et valider en cliquant "Modifier". ^|Le prelevement est modifié ^|Le destinataire n'est pas vide le montant est superieur a 0 et le jour de
 prelevement est compris entre 1 et 31  ^|OK
 
+|====
+
+|====
+>|Cas de test 4+|Test-01-03-01
+>|Titre 4+|Supprimer un prelevement
+>|Objectif 4+| Vérifier qu'il est possible de supprimer un prelevement
+
+5+|
+
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|All_G_COP.1 ^|Dans le gestionnaire des prelevements cliquer sur un prelevement. ^|Les boutons "Modifier Prelevement" et "Supprimer Prelevement" du prelevement s’affiche. ^|le client doit au moins avoir un prelevement ^|OK
+^|All_G_COP.2  ^|Cliquer sur Supprimer Prelevement. ^|Une page de confirmation va s'ouvrir ^|Seulement si le prelevement est selectionner ^|OK
+^|All_G_COP.3  ^|Cliquer sur Supprimmer . ^|Le message se ferme est le prelevement est supprimé ^|Aucune ^|OK
+^|All_G_COP.4  ^|Cliquer sur Annuler . ^|Le message se ferme est le prelevement n'est pas supprimé ^|Aucune ^|OK 
+
+|====
+
+
+
 
 === 2. Fonctionnalités des chefs d'agence :
 [.text-justify]
