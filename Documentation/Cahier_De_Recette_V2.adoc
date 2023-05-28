@@ -216,7 +216,7 @@ Les chefs d'agence ont accès aux mêmes fonctionnalités que les guichetiers, a
 
 |====
 
-==== Simuler un emprunt et l’assurance d’emprunt :
+==== Simuler un emprunt :
 
 |====
 
@@ -230,6 +230,9 @@ Les chefs d'agence ont accès aux mêmes fonctionnalités que les guichetiers, a
 ^|C_G_C.1    ^|Sélectionner le bouton "Simuler emprunt". ^|Affichage du mois, du capital restant, de l'interets, du montant principal, de la mensualité et du capital de fin de periode pour chaque mois  ^|Valeur decimale rentrée dans les champ precedent ^| OK
 
 |====
+
+==== Simuler une assurance d’emprunt :
+
 
 |====
 
