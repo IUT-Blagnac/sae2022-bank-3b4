@@ -59,7 +59,7 @@ public class PrelevementsManagement {
             this.primaryStage.setResizable(false);
 
             this.pmc = loader.getController();
-            this.pmc.initContext(this.primaryStage, this, _dbs, _clientDuCompte, this.compteConcerne);
+            this.pmc.initContext(this.primaryStage, this, this.dbs, this.clientDuCompte, this.compteConcerne);
         } catch (Exception e) {
             e.printStackTrace();
         }
