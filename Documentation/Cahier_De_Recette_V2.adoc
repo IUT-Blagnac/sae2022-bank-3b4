@@ -210,7 +210,7 @@ autorisé est de -100 euros.
 
 |====
 >|Cas de test 4+|Test-01-03-01
->|Titre 4+|Crée un prelevement
+>|Titre 4+|Creer un prelevement
 >|Objectif 4+| Vérifier qu'il est possible de crée un prelevement
 
 5+|
