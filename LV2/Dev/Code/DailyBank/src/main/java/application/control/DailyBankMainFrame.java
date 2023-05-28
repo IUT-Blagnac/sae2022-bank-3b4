@@ -38,8 +38,8 @@ public class DailyBankMainFrame extends Application {
 	public void start(Stage primaryStage) {
 
 		this.primaryStage = primaryStage;
-		//ajout d'une icone 
-		this.primaryStage.getIcons().add(new Image(DailyBankMainFrame.class.getResourceAsStream("DailybankApp.png")));
+		//ajout d'une icone specialement realisé pour l'application malheureusement cela bloque le lancement de l'application
+		//this.primaryStage.getIcons().add(new Image(DailyBankMainFrame.class.getResourceAsStream("DailybankApp.png")));
 
 		try {
 
@@ -65,7 +65,7 @@ public class DailyBankMainFrame extends Application {
 			 * l'appli en mode connecté
 			 */
 			
-			 try { Employe e; Access_BD_Employe ae = new Access_BD_Employe();
+			 /*try { Employe e; Access_BD_Employe ae = new Access_BD_Employe();
 			 
 			 e = ae.getEmploye("Tuff", "Lejeune");
 			 
@@ -80,7 +80,7 @@ public class DailyBankMainFrame extends Application {
 			  
 			  if (this.dailyBankState.getEmployeActuel() != null) {
 			  this.dailyBankState.setEmployeActuel(this.dailyBankState.getEmployeActuel());
-			  }
+			  }*/
 			  
 			 
 

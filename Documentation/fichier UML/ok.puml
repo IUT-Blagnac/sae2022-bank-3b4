@@ -54,3 +54,12 @@ actor "Guichetier" as Chef
 
 Chef --> (Effectuer un virement de compte a compte)
 @enduml
+
+' Creer un prelevement-----------------------------------------------------------------------------------------------------------------------------
+@startuml
+left to right direction
+
+actor "Guichetier" as Chef
+
+Chef --> (Creer un prelevement)
+@enduml
