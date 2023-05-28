@@ -1,5 +1,6 @@
 = Cahier De Recette - DailyBankApp
 :toc:
+:numbered: true
 :toc-title: Sommaire
 
 
@@ -26,13 +27,13 @@ Clement Dejean Gourrié
 
 
 
-== I. Introduction
-=== 1. Objet :
+== Introduction
+=== Objet :
 [.text-justify]
 Ce document a été produit dans le cadre d'un projet d'élaboration d'une application bancaire pour ...
 
 
-== II. Pre-Requis :
+== Pre-Requis :
 [.text-justify]
 L'exécution des tests spécifiés au chapitre suivant requiert :
 
@@ -41,20 +42,20 @@ L'exécution des tests spécifiés au chapitre suivant requiert :
 * Les fiches de tests. *À vérifier*
 
 
-=== 1. Éléments à tester :
+=== Éléments à tester :
 [.text-justify]
 Les éléments testés concernent les Use-Cases spécifiés dans la *documentation technique*.
 
 
-=== 2. Environnement de test :
+=== Environnement de test :
 [.text-justify]
 Ordinateur sous Windows ou OS équivalent.
 
 
 
-== III. Cas de test :
-=== 1. Fonctionnalités des guichetiers :
-==== 1.1 Gestion des clients :
+== Cas de test :
+=== Fonctionnalités des guichetiers :
+==== Gestion des clients :
 
 |====
 
@@ -91,7 +92,7 @@ Compléter et si on ne valide pas, ...
 |====
 
 
-==== 1.2 Gestion des comptes bancaires :
+==== Gestion des comptes bancaires :
 
 
 |====
@@ -110,7 +111,7 @@ Compléter et si on ne valide pas, ...
 |====
 
 
-==== 1.3 Gestion des opérations :
+==== Gestion des opérations :
 
 |====
 
@@ -191,11 +192,11 @@ autorisé est de -100 euros.
 
 
 
-=== 2. Fonctionnalités des chefs d'agence :
+=== Fonctionnalités des chefs d'agence :
 [.text-justify]
 Les chefs d'agence ont accès aux mêmes fonctionnalités que les guichetiers, ainsi que d'autres qui leur sont réservées.
 
-==== 2.1 Gestion des clients :
+==== Gestion des clients :
 
 |====
 
@@ -212,5 +213,33 @@ Les chefs d'agence ont accès aux mêmes fonctionnalités que les guichetiers, a
 
 5+|Commentaire : REVOIR AVEC
  *clôturés*.|
+
+|====
+
+==== Simuler un emprunt et l’assurance d’emprunt :
+
+|====
+
+>|Cas de test 4+|Test-02-01-01
+>|Titre 4+|Simuler un emprunt
+>|Objectif 4+| Vérifier qu'il est possible de faire une simulation d'emprunt
+
+5+|
+
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|C_G_C.1    ^|Sélectionner le bouton "Simuler emprunt". ^|Affichage du mois, du capital restant, de l'interets, du montant principal, de la mensualité et du capital de fin de periode pour chaque mois  ^|Valeur decimale rentrée dans les champ precedent ^| OK
+
+|====
+
+|====
+
+>|Cas de test 4+|Test-02-01-01
+>|Titre 4+|Simuler une assurance d'emprunt
+>|Objectif 4+| Vérifier qu'il est possible de faire une simulation d'assurance d'emprunt
+
+5+|
+
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|C_G_C.1    ^|Sélectionner le bouton "Assurance emprunt". ^|Affichage du montant de lassurance d'emprunt de chaque anner  ^|Valeur decimale rentrée dans les champ precedent ^| OK
 
 |====
