@@ -8,9 +8,9 @@
 [cols="3a,2a,1a", options="header"]
 |===
 | Etudiant | Groupe | Développement
-| Bradley Djedje | 3B4 | Créer un compte, gérer les employés
-| Lois Pacqueteau | 3B4 | Créditer/débiter un compte, virement de compte à compte
-| Clément Dejean Gourrier | 3B4 | CRUD V1
+| Bradley Djedje | 3B4 | Simuler emprunt, Simuler assurance
+| Lois Pacqueteau | 3B4 | CRUD Prélèvement
+| Clément Dejean Gourrier | 3B4 | Débit exceptionnel, Relevé PDF
 |===
 
 
@@ -86,7 +86,7 @@ Si le montant indiquer est negatif l'operation ne s'effectue pas et le label et 
 image::image/crediterdebiter5.png[width=500]
 
 
-=== Créer un Client :
+=== Créer un Client
 
 Une fois connecté, cliquez sur 'Gestion' puis sélectionnez 'Clients'.
 Ensuite, cliquez en bas à droite sur 'Nouveau client'.
@@ -116,12 +116,26 @@ image::image/creecompte2.png[width=500, alt=Exemple d'image, title= ]
 Après s’être connecté, cliquer sur 'Gestion' et sélectionner 'Client'.
 Renseigner les informations du client et cliquer sur rechercher.
 Sélectionner le client et cliquer sur Comptes client.
-Sélectionner ensuite un compte.
-Cliquer sur ‘Supprimer compte’.
+Sélectionner ensuite un compte et cliquer sur "Emprunt".
 
 image::image/cloturercompte.png[width=500, alt=Exemple d'image, title= ]
  
 Puis valider la clôturassions du compte.
+
+=== Simuler un emprunt (Bradley DJEDJE)
+
+Après s’être connecté, cliquer sur 'Gestion' et sélectionner 'Client'.
+Renseigner les informations du client et cliquer sur rechercher.
+Sélectionner le client et cliquer sur Comptes client.
+Sélectionner ensuite un compte.
+Cliquer sur ‘Supprimer compte’.
+
+image::image/doc User V2/image1[]
+
+Ensuite en renseigner les information necessaire et cliquer soit sur "Assurance d'emprunt" pour faire la simulation d'une assurance d'emprunt, soit sur "Simuler emprunt" pour faire la simulation d'un emprunt.
+
+image::image/doc User V2/image2[]
+image::image/doc User V2/image3[]
 
 === Virement Compte à Compte (Lois PACQUETEAU)
 

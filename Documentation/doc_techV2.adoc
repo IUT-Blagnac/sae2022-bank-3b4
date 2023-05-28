@@ -4,8 +4,6 @@
 :toc-title: Sommaire
 
 
-
-== *Page de garde*
 [cols="2*"]
 |===
 | Version | 2
