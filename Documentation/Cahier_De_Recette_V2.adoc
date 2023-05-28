@@ -284,31 +284,30 @@ Les chefs d'agence ont accès aux mêmes fonctionnalités que les guichetiers, a
 
 |====
 
->|Cas de test 4+|Test-02-01-01
+>|Cas de test 4+|Test-03-01-01
 >|Titre 4+|Simuler un emprunt
 >|Objectif 4+| Vérifier qu'il est possible de faire une simulation d'emprunt
 
 5+|
 
 ^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
-^|C_G_C.1    ^|Cliquer sur le bouton "Emprunt" ^|Affichage la page de simulation.  ^| Aucun pre-requis ^| OK
-^|C_G_C.1    ^|Sélectionner le bouton "Simuler emprunt". ^|Affichage du mois, du capital restant, de l'interets, du montant principal, de la mensualité et du capital de fin de periode pour chaque mois  ^|Valeur decimale rentrée dans les champ precedent ^| OK
+^|S_M.1    ^|Cliquer sur le bouton "Emprunt" ^|Affichage la page de simulation.  ^| Aucun pre-requis ^| OK
+^|S_M.2    ^|Sélectionner le bouton "Simuler emprunt". ^|Affichage du mois, du capital restant, de l'interets, du montant principal, de la mensualité et du capital de fin de periode pour chaque mois  ^|Valeur decimale rentrée dans les champ precedent ^| OK
 
 |====
 
 ==== Simuler une assurance d’emprunt :
 
-
 |====
 
->|Cas de test 4+|Test-02-01-01
+>|Cas de test 4+|Test-03-02-01
 >|Titre 4+|Simuler une assurance d'emprunt
 >|Objectif 4+| Vérifier qu'il est possible de faire une simulation d'assurance d'emprunt
 
 5+|
 
 ^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
-^|C_G_C.1    ^|Cliquer sur le bouton "Emprunt" ^|Affichage la page de simulation.  ^| Aucun pre-requis ^| OK
-^|C_G_C.1    ^|Sélectionner le bouton "Assurance emprunt". ^|Affichage du montant de lassurance d'emprunt de chaque anner  ^|Valeur decimale rentrée dans les champ precedent ^| OK
+^|S_M.1    ^|Cliquer sur le bouton "Emprunt" ^|Affichage la page de simulation.  ^| Aucun pre-requis ^| OK
+^|S_M.2    ^|Sélectionner le bouton "Assurance emprunt". ^|Affichage du montant de lassurance d'emprunt de chaque anner  ^|Valeur decimale rentrée dans les champ precedent ^| OK
 
 |====
