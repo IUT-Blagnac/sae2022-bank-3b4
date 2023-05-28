@@ -227,6 +227,7 @@ Les chefs d'agence ont accès aux mêmes fonctionnalités que les guichetiers, a
 5+|
 
 ^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|C_G_C.1    ^|Cliquer sur le bouton "Emprunt" ^|Affichage la page de simulation.  ^| Aucun pre-requis ^| OK
 ^|C_G_C.1    ^|Sélectionner le bouton "Simuler emprunt". ^|Affichage du mois, du capital restant, de l'interets, du montant principal, de la mensualité et du capital de fin de periode pour chaque mois  ^|Valeur decimale rentrée dans les champ precedent ^| OK
 
 |====
@@ -243,6 +244,7 @@ Les chefs d'agence ont accès aux mêmes fonctionnalités que les guichetiers, a
 5+|
 
 ^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|C_G_C.1    ^|Cliquer sur le bouton "Emprunt" ^|Affichage la page de simulation.  ^| Aucun pre-requis ^| OK
 ^|C_G_C.1    ^|Sélectionner le bouton "Assurance emprunt". ^|Affichage du montant de lassurance d'emprunt de chaque anner  ^|Valeur decimale rentrée dans les champ precedent ^| OK
 
 |====
