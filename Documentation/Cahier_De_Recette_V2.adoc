@@ -4,6 +4,8 @@
 
 
 = *Page de garde*
+
+
 [cols="2*"]
 |===
 | Version | 2
@@ -91,6 +93,21 @@ Compléter et si on ne valide pas, ...
 |====
 
 
+|====
+>|Cas de test 4+|Test-01-01-03
+>|Titre 4+|Suppression d'un client
+>|Objectif 4+| Vérifier qu'il est possible de supprimer un client
+
+5+|
+
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|All_G_C.6 ^|Cliquer sur le bouton "Supprimer client". ^|La fenêtre de suppression des données du clients s'ouvre. ^|Le client est sélectionné ^|OK
+^|All_G_C.7 ^|Confirmer la suppression. ^|Retour sur la liste des clients. Le client est supprimé. ^|La fenêtre supprimer client est active ^|OK
+^|All_G_C.8 ^|Annuler la suppression. ^|Retour sur la liste des clients. Le client est inchangé. ^|La fenêtre supprimer client est active ^|OK
+
+|====
+
+
 ==== 1.2 Gestion des comptes bancaires :
 
 
@@ -151,7 +168,7 @@ autorisé est de -100 euros.
   
 |====
 
-
+==== 1.4 Gestion des comptes bancaires :
 
 
 |====
@@ -188,7 +205,35 @@ autorisé est de -100 euros.
   
 |====
 
+==== 1.5 Gestion des prelevements :
 
+|====
+>|Cas de test 4+|Test-01-03-01
+>|Titre 4+|Crée un prelevement
+>|Objectif 4+| Vérifier qu'il est possible de crée un prelevement
+
+5+|
+
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|All_G_COP.1 ^|Cliquer sur le bouton "Nouveau Prelevement". ^|La page de creation du prelevement s’affiche. ^| On doit avoir selectionner un compte qui n'est pas cloturer  ^|OK
+^|All_G_COP.2  ^|Rentrer le montant 200 dans le champ "Montant" indiquer "Airbus" et 10 dans le champ "Jour de prelevement" et valider en cliquant "Ajouter". ^|Le nouveau prelevement crée a un montant de 200euros avec une date de 10 et un destinataire nommée "Airbus". ^|Le destinataire n'est pas vide le montant est superieur a 0 et le jour de 
+prelevement est compris entre 1 et 31  ^|OK
+
+   
+|====
+
+|====
+>|Cas de test 4+|Test-01-03-01
+>|Titre 4+|Modifier un prelevement
+>|Objectif 4+| Vérifier qu'il est possible de modifier un prelevement
+
+5+|
+
+^|ID ^|Action ^|Comportement attendu ^|Pré-conditions ^|Résultat
+^|All_G_COP.1 ^|Dans le gestionnaire des prelevements cliquer sur un prelevement. ^|Les boutons "Modifier Prelevement" et "Supprimer Prelevement" du prelevement s’affiche. ^|le client doit au moins avoir un prelevement ^|OK
+^|All_G_COP.2  ^|Cliquer sur Modifier Prelevement. ^|Une page de modification va s'ouvrir ^|Seulement si le prelevement est selectionner ^|OK
+^|All_G_COP.3  ^|Rentrer le montant 20 dans le champ "Montant" indiquer "Airvoiture" et 1 dans le champ "Jour de prelevement" et valider en cliquant "Modifier". ^|Le prelevement est modifié ^|Le destinataire n'est pas vide le montant est superieur a 0 et le jour de
+prelevement est compris entre 1 et 31  ^|OK
 
 
 === 2. Fonctionnalités des chefs d'agence :
