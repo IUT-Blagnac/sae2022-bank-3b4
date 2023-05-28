@@ -135,7 +135,7 @@ Package application.view
 
 package model.orm
 
-* AccessCompteCourant.javas
+* AccessCompteCourant.java
 * LogToDatabase.java
 * AccessClients.java
 
@@ -193,7 +193,7 @@ dans un compte. Lorsque le compte est inactif, nous ne pouvons pas accéder aux 
 
 *Use Case :*
 
-image::image/doc tech v2/Crediter_Debiter/uml.jpg[width=500]
+image::image/doc tech v2/Crediter_Debiter/uml.jpg[]
 
 *Diagramme de classes :*
 
@@ -215,11 +215,7 @@ Package application.view :
 
 *Extrait de code significatif :*
 
-Pour realiser un debit ou un credit, il faut que le compte soit actif et que le montant soit superieur a 0. Si le compte est inactif, on ne peut pas acceder aux operations on a donc pas a gerer l'exception du compte avec un "if". Si le montant est inferieur a 0, on ne peut pas faire l'operation. La condition dont je parle ce trouve dans le fichier OperationsManagementController.java dans la methode doAjouter() a la ligne 237.
-
-image::image/crediterCodeSignificatif.png[]
-
-Comme on peut le voir sur l'image, si le montant est inferieur a 0, on ne peut pas faire l'operation. cela met le style du montant en rouge et remet le focus sur le montant pour pouvoir modifier la somme.
+A completer...
 
 Lois Pacqueteau V1
 
@@ -273,7 +269,7 @@ le deuxieme  et troisieme "if" servent a controler que le compte destinataire ex
 
 Le quatrieme "if" sert a controler que le compte source et le compte destination sont distinct. Si c'est le cas, on continue, sinon on affiche un message d'erreur en mettant le label et le textfield du compte destination en rouge et on return.
 
-Lois Pacqueteau V2
+Lois Pacqueteau V1
 
 === *CRUD de prelevement automatiques*
 
@@ -282,42 +278,6 @@ Lois Pacqueteau V2
 Le prelevement automatique est une opération qui permet de prélever une somme d'argent sur un compte à une date précise. Pour créer un prélèvement automatique, il faut que le compte source existe et soit actif. Il faut aussi que le compte source ait un solde supérieur ou égal au montant du prélèvement. Et le compte destinataire doit exister et etre actif. Cependant etant donnée que le rendre fonctionnel n'etait qu'une option je me suis contenté de faire juste le CRUD pour les prelevements automatiques.
 
 Lors de la creation du prelevement automatique, il faut que le numero du jour de prelevement soit compris entre 1 et 31. Il faut aussi que le montant du prelevement soit supérieur à 0 et que le nom du beneficiaire ne soit pas vide(Je n'ai pas rajouté d'option pour voir si le beneficiaire existait vu que le prelevement n'est que theorique dans cette application). Toutes ces conditions sont vérifiées dans le fichier PrelevementEditorPaneController.java dans la methode boolean isSaisieValide().
-
-
-*Use Case :*
-
-image::image/doc tech v2/Prelevement/uml.png[width=400]
-
-*Diagramme de classe :*
-
-image::image/doc tech v2/Prelevement/diagramme de classe.jpg[]
-
-*Package necessaire :*
-
-Package application :
-
-* DailyBankState.java
-
-Package application.control :
-
-* PrelevementEditorPane.java
-* PrelevementManagement.java
-
-
-Package application.view :
-
-* PrelevementEditorPaneController.java
-* PrelevementManagementController.java
-
-Package model.orm :
-
-* Access_BD_Prelevement.java
-* LogToDatabase.java
-
-Package model.data :
-
-* Client.java
-* CompteCourant.java
 
 *Extrait de code significatifs :*
 
