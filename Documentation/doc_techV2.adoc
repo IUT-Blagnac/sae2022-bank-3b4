@@ -1,12 +1,11 @@
 = *Documentation technique V2*
 :toc:
-:doctype: book
+:numbered: true
 :toc-title: Sommaire
-:sectnums:
-:Equipe:
 
 
-= *Page de garde*
+
+== *Page de garde*
 [cols="2*"]
 |===
 | Version | 2
