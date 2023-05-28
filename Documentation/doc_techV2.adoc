@@ -95,9 +95,68 @@ Nous avons des packages :
 * il faut avoir java 17 au minimum
 * avoir un pc
 
-=== *Fonctionnalité*
+== *Fonctionnalité*
 
-==== *Simuler un emprunt et l'assurance d'emprunt*
+=== *Créer/ Cloturer un compte*
+La création d'un compte permet de crée un compte courant chez un client. Avec ce
+compte, le client pourra effectuer des débits et des crédits. Tous les comptes ont un découvert 
+autorisé et un solde de départ. Cette fonctionnalité peut être effectué par les guichetiers et les 
+chefs d'agences.
+
+Pour créer un compte, certaines conditions doivent être remplies. Tout d'abord, le solde initial du compte doit être supérieur à zéro, ce qui signifie que le client doit déposer une somme d'argent minimale pour ouvrir le compte. De plus, le compte doit disposer d'une autorisation de découvert égale ou supérieure à zéro, ce qui permet au titulaire du compte de retirer de l'argent même s'il n'y a pas suffisamment de fonds disponibles. Ces deux critères sont essentiels pour pouvoir créer un compte.
+
+En ce qui concerne la clôture d'un compte, la principale exigence est que le solde du compte soit égal à zéro. Cela signifie que le titulaire du compte doit s'assurer qu'il ne reste aucun montant dû ou de transactions en attente sur le compte avant de pouvoir le clôturer. Une fois que le solde est égal a zéro, le compte peut être fermé conformément aux procédures établies par la banque.
+
+Ces règles garantissent une gestion saine des comptes et contribuent à maintenir l'intégrité financière des clients et de la banque.
+
+*Use Case :*
+
+image::image/doc tech v2/use case compte.jpg[]
+
+*Diagramme de classe :*
+
+image::image/doc tech v2/Créer compte/diagramme de classe.jpg[]
+
+*Package necessaire*
+
+Package application.control
+
+* CompteManagement.java 
+* ClientsEditorPane.java
+* ClientsManagement.java
+* CompteEditorPane.java
+
+Package application.view
+
+* CompteManagementController.java
+* CompteEditorPane.java
+* CompteManagementController.java
+* CompteEditorPaneController.java
+
+package model.orm
+
+* AccessCompteCourant.java
+* LogToDatabase.java
+* AccessClients.java
+
+package model.date
+
+* CompteCourant.java
+* Clients.java
+
+*Extrait de code significatifs :*
+
+Créer Compte :
+
+image::image/doc tech v2/cap ecrant compte.jpg[]
+
+Cloturer Compte :
+
+image::image/doc tech v2/cap ecran cloturer compte.jpg[]
+
+Bradley DJEDJE V1
+
+=== *Simuler un emprunt et l'assurance d'emprunt*
 La simulation d'emprunt et la simulation d'asurance permet de faire une simulation
 et d'emprunt ou une simulation d'assurance.
 
@@ -127,38 +186,76 @@ La simulation d'emprunt et d'assurance d'emprunt est une mécanique simple qui t
 
 Bradley DJEDJE V2
 
+=== *Créditer/débiter un compte*
 
-=== Créer/ Cloturer un compte
-La création d'un compte permet de crée un compte courant chez un client. Avec ce
-compte, le client pourra effectuer des débits et des crédits. Tous les comptes ont un découvert 
-autorisé et un solde de départ. Cette fonctionnalité peut être effectué par les guichetiers et les 
-chefs d'agences.
-
-Pour créer un compte, certaines conditions doivent être remplies. Tout d'abord, le solde initial du compte doit être supérieur à zéro, ce qui signifie que le client doit déposer une somme d'argent minimale pour ouvrir le compte. De plus, le compte doit disposer d'une autorisation de découvert égale ou supérieure à zéro, ce qui permet au titulaire du compte de retirer de l'argent même s'il n'y a pas suffisamment de fonds disponibles. Ces deux critères sont essentiels pour pouvoir créer un compte.
+La fonctionnalité créditer/débiter un compte permet de rajouter ou de retirer de l'argent 
+dans un compte. Lorsque le compte est inactif, nous ne pouvons pas accéder aux opérations.
 
 *Use Case :*
 
-image::image/doc tech v2/use case compte.jpg[]
+image::image/doc tech v2/Crediter_Debiter/uml.jpg[]
 
-En ce qui concerne la clôture d'un compte, la principale exigence est que le solde du compte soit égal à zéro. Cela signifie que le titulaire du compte doit s'assurer qu'il ne reste aucun montant dû ou de transactions en attente sur le compte avant de pouvoir le clôturer. Une fois que le solde est égal a zéro, le compte peut être fermé conformément aux procédures établies par la banque.
+*Diagramme de classes :*
 
-Ces règles garantissent une gestion saine des comptes et contribuent à maintenir l'intégrité financière des clients et de la banque.
+image::image/doc tech v2/Crediter_Debiter/diagramme de classe.jpg[]
 
-*Extrait de code significatifs :*
+*Package necessaire :*
 
-Créer Compte :
+Package application.control :
 
-image::image/doc tech v2/cap ecrant compte.jpg[]
+* OperationsManagement.java
 
-Cloturer Compte :
+Package model.orm :
 
-image::image/doc tech v2/cap ecran cloturer compte.jpg[]
+* AccessOperation.java
 
-Bradley DJEDJE V2
+Package application.view :
 
-=== Faire un virement
+* OperationsManagementController.java
+
+*Extrait de code significatif :*
+
+A completer...
+
+Lois Pacqueteau V1
+
+=== *Faire un virement*
 
 Pour faire un virement, il faut que le compte source et le compte destination soient distinct. Il faut aussi que le compte source ait un solde supérieur ou égal au montant du virement. Et le compte destinataire doit exister et etre actif.
+
+*Use Case :*
+
+image::image/doc tech v2/Virement/Use Case.jpg[]
+
+*Diagramme de classe :*
+
+image::image/doc tech v2/Crediter_Debiter/diagramme de classe.jpg[]
+
+*Package necessaire :*
+
+Package application :
+
+* DailyBankState.java
+
+Package application.control :
+
+* OperationsManagement.java
+* VirementEditorPane.java
+* ComptesManagement.java
+
+Package application.view :
+
+* VirementEditorPaneController.java
+
+Package model.orm :
+
+* AccessOperation.java
+* LogToDatabase.java
+
+Package model.data :
+
+* Client.java
+* CompteCourant.java
 
 *Extrait de code significatifs :*
 
@@ -176,7 +273,7 @@ Lois Pacqueteau V2
 
 === *CRUD de prelevement automatiques*
 
-==== *Créer un prélèvement automatique*
+*Créer un prélèvement automatique*
 
 Le prelevement automatique est une opération qui permet de prélever une somme d'argent sur un compte à une date précise. Pour créer un prélèvement automatique, il faut que le compte source existe et soit actif. Il faut aussi que le compte source ait un solde supérieur ou égal au montant du prélèvement. Et le compte destinataire doit exister et etre actif. Cependant etant donnée que le rendre fonctionnel n'etait qu'une option je me suis contenté de faire juste le CRUD pour les prelevements automatiques.
 
@@ -198,4 +295,23 @@ Le troisieme "if" sert a controler que le montant du prelevement est supérieur 
 A la fin de la methode, on return true si toutes les conditions sont respectées.
 
 Lois Pacqueteau V2
+
+=== *CRUD Employé*
+==== *Créer un employé(Create)*
+Créer un employe : Permet de créer un nouvel employe avec ses informations personnelles telles que nom, prénom, adresse, etc. Cette fonctionnalité permet d'ajouter un nouvel employe à la base de données.
+
+==== *Consulter un employé(Read)*
+Consulter les informations employe : Permet de visualiser les informations détaillées d'un employe spécifique, telles que son nom, prénom, adresse, numéro de téléphone, etc. Cela permet de récupérer les données d'un employe existant.
+
+==== *Modifié un employé(Update)*
+Modifier les informations employe : Permet de mettre à jour les informations d'un employe existant, telles que son adresse, numéro de téléphone, etc. Cette fonctionnalité permet de modifier les détails d'un employe dans la base de données.
+
+==== *Supprimer un employé(Delete)*
+Supprimer un employe : Permet de supprimer un employe de la base de données. Cette fonctionnalité est utilisée lorsque l'employe est licensié ou quitte l'entreprise.
+Ces actions constituent le CRUD (Create, Read, Update, Delete) spécifique aux employés de l'application de gestion des comptes bancaires.
+
+Ces fonctionnalités n'ont pas étés implémentés dans la v1 dû à des complications de codage.
+
+Clément Dejean-Gourier V1
+
 

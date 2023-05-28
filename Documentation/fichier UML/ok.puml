@@ -1,4 +1,4 @@
-' Simuler emprunt-------------------------------------------------------------------
+' Simuler emprunt-----------------------------------------------------------------------------------------------------------------------------
 @startuml
 left to right direction
 
@@ -12,7 +12,7 @@ Chef --> (Simuler une assurance  d'emprunt)
 
 @enduml
 
-' Simuler assurance d'emprunt----------------------------------------------------
+' Simuler assurance d'emprunt-----------------------------------------------------------------------------------------------------------------------------
 @startuml
 left to right direction
 
@@ -25,7 +25,7 @@ Chef --> (Simuler une assurance  d'emprunt)
 
 @enduml
 
-' Crée un compte------------------------------------------------------------
+' Crée un compte-----------------------------------------------------------------------------------------------------------------------------
 @startuml
 left to right direction
 
@@ -34,4 +34,23 @@ actor "Chef d'agence" as Chef
 Chef --> (Créer un compte)
 Chef --> (Cloturer un compte)
 
+@enduml
+
+' Créditer/débiter un compte-----------------------------------------------------------------------------------------------------------------------------
+@startuml
+left to right direction
+
+actor "Guichetier" as Chef
+
+Chef --> (Créditer)
+Chef --> (Débiter)
+@enduml
+
+' Faire un virement-----------------------------------------------------------------------------------------------------------------------------
+@startuml
+left to right direction
+
+actor "Guichetier" as Chef
+
+Chef --> (Effectuer un virement de compte a compte)
 @enduml
