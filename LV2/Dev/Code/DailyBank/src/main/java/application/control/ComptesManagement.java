@@ -23,7 +23,6 @@ import model.orm.exception.DatabaseConnexionException;
 import model.orm.exception.Order;
 import model.orm.exception.Table;
 
-
 public class ComptesManagement {
 
 	private Stage primaryStage;
@@ -88,9 +87,14 @@ public class ComptesManagement {
 	}
 
 	/**
-	 * Methode permettant de creer un nouveau compte
-	 * 
-	 * @return Le compte cree
+	 * Crée un nouveau compte courant.
+	 *
+	 * @return Le compte courant créé, ou {@code null} si aucun compte n'a été créé.
+	 * @throws DatabaseConnexionException Si une erreur de connexion à la base de
+	 *                                    données se produit.
+	 * @throws ApplicationException       Si une erreur d'application se produit
+	 *                                    lors de l'insertion du compte.
+	 * @author Bradley DJEDJE
 	 */
 	public CompteCourant creerNouveauCompte() {
 		CompteCourant compte;
@@ -119,10 +123,16 @@ public class ComptesManagement {
 	}
 
 	/**
-	 * Methode permettant de cloturer un compte
-	 * 
-	 * @param c Compte courant a cloturer
-	 * 
+	 * Clôture un compte courant spécifié.
+	 *
+	 * @param c Le compte courant à clôturer.
+	 * @return Le compte courant clôturé, ou {@code null} si la clôture n'a pas été
+	 *         effectuée.
+	 * @throws DatabaseConnexionException Si une erreur de connexion à la base de
+	 *                                    données se produit.
+	 * @throws ApplicationException       Si une erreur d'application se produit
+	 *                                    lors de la clôture du compte.
+	 * @author Bradley DJEDJE
 	 */
 	public CompteCourant cloturerCompte(CompteCourant c) {
 		CompteEditorPane cep = new CompteEditorPane(this.primaryStage, this.dailyBankState);
@@ -162,7 +172,7 @@ public class ComptesManagement {
 
 	/**
 	 * Methode permettant de recuperer les comptes d'un client
-	 *  return ArrayList<CompteCourant> Liste des comptes du client
+	 * return ArrayList<CompteCourant> Liste des comptes du client
 	 */
 	public ArrayList<CompteCourant> getComptesDunClient() {
 		ArrayList<CompteCourant> listeCpt = new ArrayList<>();
@@ -189,7 +199,8 @@ public class ComptesManagement {
 	 * @param cptCourant Compte courant pour lequel on veut gerer les prelevements
 	 */
 	public void gererPrelevements(CompteCourant cptCourant) {
-		PrelevementsManagement pm = new PrelevementsManagement(this.primaryStage, this.dailyBankState,this.clientDesComptes, cptCourant);
+		PrelevementsManagement pm = new PrelevementsManagement(this.primaryStage, this.dailyBankState,
+				this.clientDesComptes, cptCourant);
 		pm.doPrelevementsManagementDialog();
 	}
 

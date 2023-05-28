@@ -24,11 +24,10 @@ import model.orm.exception.Table;
 
 public class ComptesEmprunt {
 
-    private Stage primaryStage;
+	private Stage primaryStage;
 	private ComptesManagementController cmcViewController;
-    
 
-    public ComptesEmprunt(Stage _parentStage, DailyBankState _dbstate) {
+	public ComptesEmprunt(Stage _parentStage, DailyBankState _dbstate) {
 
 		try {
 			FXMLLoader loader = new FXMLLoader(ComptesManagementController.class.getResource("compteemprunt.fxml"));
@@ -44,8 +43,7 @@ public class ComptesEmprunt {
 			this.primaryStage.setScene(scene);
 			this.primaryStage.setTitle("Gestion des emprunt");
 			this.primaryStage.setResizable(false);
-            this.primaryStage.show();
-
+			this.primaryStage.show();
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -56,5 +54,4 @@ public class ComptesEmprunt {
 		this.cmcViewController.displayDialog();
 	}
 
-    
 }

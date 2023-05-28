@@ -80,11 +80,13 @@ public class EmpruntManagementController {
 	private ListView lvComptes;
 
 	/**
-	 * Génère la simulation de remboursement du prêt et affiche les détails dans une
-	 * ListView.
-	 * Les détails comprennent le mois, le capital restant, les intérêts, le montant
-	 * principal et la mensualité.
-	 * Les détails sont affichés dans cinq colonnes séparées.
+	 * Génère la simulation de remboursement de l'emprunt.
+	 * La simulation calcule les informations pour chaque période de remboursement
+	 * et les affiche dans une liste.
+	 * Les informations incluent le mois, le capital restant, les intérêts, le
+	 * montant principal, la mensualité et le capital en fin de période.
+	 *
+	 * @author Bradley DJEDJE
 	 */
 	private void genererSimulation() {
 		ArrayList<String> listeCpt = new ArrayList<>();
@@ -194,7 +196,6 @@ public class EmpruntManagementController {
 	// CompteCourant getCompteCourant = omDialogController.getCompteCourant();
 	// Access_BD_Emprunt acc = new Access_BD_Emprunt();
 	// acc.insertEmprunt(this.taux, this.montant, this.duree, getCompteCourant);
-
 	// }
 
 	private boolean isSaisieValide() {

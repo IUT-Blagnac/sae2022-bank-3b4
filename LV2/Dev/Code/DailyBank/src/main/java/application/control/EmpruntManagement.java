@@ -40,7 +40,7 @@ public class EmpruntManagement {
 	private CompteCourant cc;
 
 	/**
-	 * Constructeur de la classe OperationsManagement.
+	 * Constructeur de la classe EmpruntManagement.
 	 * 
 	 * @param _parentStage la fenêtre parente de la fenêtre de gestion des
 	 *                     opérations

@@ -61,10 +61,21 @@ public class ComptesManagement {
 	}
 
 	public void gererOperationsDUnCompte(CompteCourant cpt) {
-		OperationsManagement om = new OperationsManagement(this.primaryStage, this.dailyBankState,this.clientDesComptes, cpt);
+		OperationsManagement om = new OperationsManagement(this.primaryStage, this.dailyBankState,
+				this.clientDesComptes, cpt);
 		om.doOperationsManagementDialog();
 	}
 
+	/**
+	 * Crée un nouveau compte courant.
+	 *
+	 * @return Le compte courant créé, ou {@code null} si aucun compte n'a été créé.
+	 * @throws DatabaseConnexionException Si une erreur de connexion à la base de
+	 *                                    données se produit.
+	 * @throws ApplicationException       Si une erreur d'application se produit
+	 *                                    lors de l'insertion du compte.
+	 * @author Bradley DJEDJE
+	 */
 	public CompteCourant creerNouveauCompte() {
 		CompteCourant compte;
 		CompteEditorPane cep = new CompteEditorPane(this.primaryStage, this.dailyBankState);
@@ -75,7 +86,7 @@ public class ComptesManagement {
 				// compte = null;
 				Access_BD_CompteCourant acc = new Access_BD_CompteCourant();
 				acc.insertCompte(compte);
-				
+
 				if (Math.random() < -1) {
 					throw new ApplicationException(Table.CompteCourant, Order.INSERT, "todo : test exceptions", null);
 				}
@@ -91,37 +102,56 @@ public class ComptesManagement {
 		return compte;
 	}
 
-	
-		public CompteCourant cloturerCompte(CompteCourant c) {
-			CompteEditorPane cep = new CompteEditorPane(this.primaryStage, this.dailyBankState);
-			CompteCourant result = cep.doCompteEditorDialog(this.clientDesComptes,c, EditionMode.SUPPRESSION);
-			if (result != null) {
-				try {
-					if(c.solde>0){
-						AlertUtilities.showAlert(primaryStage, "Erreur cloturation", "Le solde trop grand", "Le solde doit etre égal a 0", AlertType.ERROR);
-						return null;
-					}
-					Access_BD_CompteCourant ac = new Access_BD_CompteCourant();
-					result.setCloturer();
-					ac.deleteCompte(result);
-				} catch (DatabaseConnexionException e) {
-					ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dailyBankState, e);
-					ed.doExceptionDialog();
-					result = null;
-					this.primaryStage.close();
-				} catch (ApplicationException ae) {
-					ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dailyBankState, ae);
-					ed.doExceptionDialog();
-					result = null;
+	/**
+	 * Clôture un compte courant spécifié.
+	 *
+	 * @param c Le compte courant à clôturer.
+	 * @return Le compte courant clôturé, ou {@code null} si la clôture n'a pas été
+	 *         effectuée.
+	 * @throws DatabaseConnexionException Si une erreur de connexion à la base de
+	 *                                    données se produit.
+	 * @throws ApplicationException       Si une erreur d'application se produit
+	 *                                    lors de la clôture du compte.
+	 * @author Bradley DJEDJE
+	 */
+	public CompteCourant cloturerCompte(CompteCourant c) {
+		CompteEditorPane cep = new CompteEditorPane(this.primaryStage, this.dailyBankState);
+		CompteCourant result = cep.doCompteEditorDialog(this.clientDesComptes, c, EditionMode.SUPPRESSION);
+		if (result != null) {
+			try {
+				if (c.solde > 0) {
+					AlertUtilities.showAlert(primaryStage, "Erreur cloturation", "Le solde trop grand",
+							"Le solde doit etre égal a 0", AlertType.ERROR);
+					return null;
 				}
+				Access_BD_CompteCourant ac = new Access_BD_CompteCourant();
+				result.setCloturer();
+				ac.deleteCompte(result);
+			} catch (DatabaseConnexionException e) {
+				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dailyBankState, e);
+				ed.doExceptionDialog();
+				result = null;
+				this.primaryStage.close();
+			} catch (ApplicationException ae) {
+				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dailyBankState, ae);
+				ed.doExceptionDialog();
+				result = null;
 			}
-			return result;
 		}
-	
-		public void creerEmprunt(CompteCourant compte){
-			ComptesEmprunt cep = new ComptesEmprunt(this.primaryStage, this.dailyBankState);
-		}
-	
+		return result;
+	}
+
+	/**
+	 * Crée un nouvel emprunt pour le compte courant spécifié.
+	 *
+	 * @param compte Le compte courant pour lequel créer l'emprunt.
+	 * 
+	 * @author Bradley DJEDJE
+	 */
+	public void creerEmprunt(CompteCourant compte) {
+		ComptesEmprunt cep = new ComptesEmprunt(this.primaryStage, this.dailyBankState);
+	}
+
 	public ArrayList<CompteCourant> getComptesDunClient() {
 		ArrayList<CompteCourant> listeCpt = new ArrayList<>();
 
@@ -140,5 +170,5 @@ public class ComptesManagement {
 		}
 		return listeCpt;
 	}
-	
+
 }
