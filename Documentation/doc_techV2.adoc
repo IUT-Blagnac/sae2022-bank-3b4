@@ -295,23 +295,3 @@ Le troisieme "if" sert a controler que le montant du prelevement est supérieur 
 A la fin de la methode, on return true si toutes les conditions sont respectées.
 
 Lois Pacqueteau V2
-
-=== *CRUD Employé*
-==== *Créer un employé(Create)*
-Créer un employe : Permet de créer un nouvel employe avec ses informations personnelles telles que nom, prénom, adresse, etc. Cette fonctionnalité permet d'ajouter un nouvel employe à la base de données.
-
-==== *Consulter un employé(Read)*
-Consulter les informations employe : Permet de visualiser les informations détaillées d'un employe spécifique, telles que son nom, prénom, adresse, numéro de téléphone, etc. Cela permet de récupérer les données d'un employe existant.
-
-==== *Modifié un employé(Update)*
-Modifier les informations employe : Permet de mettre à jour les informations d'un employe existant, telles que son adresse, numéro de téléphone, etc. Cette fonctionnalité permet de modifier les détails d'un employe dans la base de données.
-
-==== *Supprimer un employé(Delete)*
-Supprimer un employe : Permet de supprimer un employe de la base de données. Cette fonctionnalité est utilisée lorsque l'employe est licensié ou quitte l'entreprise.
-Ces actions constituent le CRUD (Create, Read, Update, Delete) spécifique aux employés de l'application de gestion des comptes bancaires.
-
-Ces fonctionnalités n'ont pas étés implémentés dans la v1 dû à des complications de codage.
-
-Clément Dejean-Gourier V1
-
-
