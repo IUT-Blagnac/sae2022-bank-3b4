@@ -24,3 +24,14 @@ Chef --> (Simuler une assurance  d'emprunt)
 
 
 @enduml
+
+' Crée un compte------------------------------------------------------------
+@startuml
+left to right direction
+
+actor "Chef d'agence" as Chef
+
+Chef --> (Créer un compte)
+Chef --> (Cloturer un compte)
+
+@enduml
