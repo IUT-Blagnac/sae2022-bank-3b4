@@ -135,7 +135,7 @@ Package application.view
 
 package model.orm
 
-* AccessCompteCourant.java
+* AccessCompteCourant.javas
 * LogToDatabase.java
 * AccessClients.java
 
@@ -193,7 +193,7 @@ dans un compte. Lorsque le compte est inactif, nous ne pouvons pas accéder aux 
 
 *Use Case :*
 
-image::image/doc tech v2/Crediter_Debiter/uml.jpg[]
+image::image/doc tech v2/Crediter_Debiter/uml.jpg[width=500]
 
 *Diagramme de classes :*
 
@@ -215,7 +215,11 @@ Package application.view :
 
 *Extrait de code significatif :*
 
-A completer...
+Pour realiser un debit ou un credit, il faut que le compte soit actif et que le montant soit superieur a 0. Si le compte est inactif, on ne peut pas acceder aux operations on a donc pas a gerer l'exception du compte avec un "if". Si le montant est inferieur a 0, on ne peut pas faire l'operation. La condition dont je parle ce trouve dans le fichier OperationsManagementController.java dans la methode doAjouter() a la ligne 237.
+
+image::image/crediterCodeSignificatif.png[]
+
+Comme on peut le voir sur l'image, si le montant est inferieur a 0, on ne peut pas faire l'operation. cela met le style du montant en rouge et remet le focus sur le montant pour pouvoir modifier la somme.
 
 Lois Pacqueteau V1
 
@@ -279,6 +283,42 @@ Le prelevement automatique est une opération qui permet de prélever une somme 
 
 Lors de la creation du prelevement automatique, il faut que le numero du jour de prelevement soit compris entre 1 et 31. Il faut aussi que le montant du prelevement soit supérieur à 0 et que le nom du beneficiaire ne soit pas vide(Je n'ai pas rajouté d'option pour voir si le beneficiaire existait vu que le prelevement n'est que theorique dans cette application). Toutes ces conditions sont vérifiées dans le fichier PrelevementEditorPaneController.java dans la methode boolean isSaisieValide().
 
+
+*Use Case :*
+
+image::image/doc tech v2/Prelevement/uml.png[width=400]
+
+*Diagramme de classe :*
+
+image::image/doc tech v2/Prelevement/diagramme de classe.jpg[]
+
+*Package necessaire :*
+
+Package application :
+
+* DailyBankState.java
+
+Package application.control :
+
+* PrelevementEditorPane.java
+* PrelevementManagement.java
+
+
+Package application.view :
+
+* PrelevementEditorPaneController.java
+* PrelevementManagementController.java
+
+Package model.orm :
+
+* Access_BD_Prelevement.java
+* LogToDatabase.java
+
+Package model.data :
+
+* Client.java
+* CompteCourant.java
+
 *Extrait de code significatifs :*
 
 image::image/conditionPrelevement.png[]
@@ -295,23 +335,3 @@ Le troisieme "if" sert a controler que le montant du prelevement est supérieur 
 A la fin de la methode, on return true si toutes les conditions sont respectées.
 
 Lois Pacqueteau V2
-
-=== *CRUD Employé*
-==== *Créer un employé(Create)*
-Créer un employe : Permet de créer un nouvel employe avec ses informations personnelles telles que nom, prénom, adresse, etc. Cette fonctionnalité permet d'ajouter un nouvel employe à la base de données.
-
-==== *Consulter un employé(Read)*
-Consulter les informations employe : Permet de visualiser les informations détaillées d'un employe spécifique, telles que son nom, prénom, adresse, numéro de téléphone, etc. Cela permet de récupérer les données d'un employe existant.
-
-==== *Modifié un employé(Update)*
-Modifier les informations employe : Permet de mettre à jour les informations d'un employe existant, telles que son adresse, numéro de téléphone, etc. Cette fonctionnalité permet de modifier les détails d'un employe dans la base de données.
-
-==== *Supprimer un employé(Delete)*
-Supprimer un employe : Permet de supprimer un employe de la base de données. Cette fonctionnalité est utilisée lorsque l'employe est licensié ou quitte l'entreprise.
-Ces actions constituent le CRUD (Create, Read, Update, Delete) spécifique aux employés de l'application de gestion des comptes bancaires.
-
-Ces fonctionnalités n'ont pas étés implémentés dans la v1 dû à des complications de codage.
-
-Clément Dejean-Gourier V1
-
-
