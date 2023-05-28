@@ -152,35 +152,28 @@ public class PrelevementEditorPaneController implements Initializable {
 		this.lblBeneficiaire.getStyleClass().remove("borderred");
 		this.lblDate.getStyleClass().remove("borderred");
 		this.lblMontant.getStyleClass().remove("borderred");
-
-
+		
 		if (this.prelevementEdite.beneficiaire.isEmpty()) {
 			AlertUtilities.showAlert(this.primaryStage, "Erreur", "Le nom du bénéficiaire est obligatoire", null, AlertType.ERROR);
 			this.txtBeneficiaire.getStyleClass().add("borderred");
 			this.lblBeneficiaire.getStyleClass().add("borderred");
 			this.txtBeneficiaire.requestFocus();
-
 			return false;
 		}
-
 		if (this.prelevementEdite.dateRecurrente <= 0 || this.prelevementEdite.dateRecurrente > 31) {
 			AlertUtilities.showAlert(this.primaryStage, "Erreur", "La date doit être comprise entre 0 et 31", null, AlertType.ERROR);
 			this.txtDate.getStyleClass().add("borderred");
 			this.lblDate.getStyleClass().add("borderred");
 			this.txtDate.requestFocus();
-
 			return false;
 		}
-
 		if (this.prelevementEdite.montant <= 0) {
 			AlertUtilities.showAlert(this.primaryStage, "Erreur", "Le montant doit être positif", null, AlertType.ERROR);
 			this.txtMontant.getStyleClass().add("borderred");
 			this.lblMontant.getStyleClass().add("borderred");
 			this.txtMontant.requestFocus();
-
 			return false;
 		}
-
 		return true;
 	}
 }
